@@ -1,8 +1,104 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Fidel-Swift-Keybaord</title>
+     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Fidel Script">
+    <meta name="description" content="Fidel Swift is a dynamic Amharic keyboard engine that provides a powerful and AI-driven typing experience.">
+    <meta name="keywords" content="Fidel Swift, Amharic Keyboard, AI-driven typing, dynamic keyboard, Fidel Script">
+
+    <title>Fidel Swift</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.7/build/spline-viewer.js"></script> -->
 </head>
 <body>
-  <h1>Fidel-Swift-Keybaord</h1>
+<nav class="navbar">
+
+    <div class="navbar-wrapper">
+        <div class="navbar-brand"><a href="#" class="logo"><img src="logo/logo.png" alt="Fidel Swift Logo"></a></div>
+        <div class="nav-links-wrapper">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#">How it works</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+            </ul>
+        </div>
+        <div class="nav-button-download">
+            <a href="" class="btn btn-primary"></a>
+        </div>
+    </div>
+</nav>
+<div class="hero">
+    <div class="hero-content">
+        <div class="hero-content-left">
+            <div class="hero-content-left-wrapper">
+                <h1 class="typewriter-container">
+                    <div class="hero-title">
+                        <span id="typewriter"></span>
+            
+                        <span class="cursor">|</span>
+                        </h1>
+                                
+                </div>
+                <p class="hero-description">Dynamic Amharic Keyboard Engine</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">Download</a>
+                    <a href="#" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-content-right">
+            <!-- <spline-viewer url="https://prod.spline.design/3QrjB8BIi1JIXdPx/scene.splinecode"></spline-viewer> -->
+        </div>
+        <div class="small-banner-absolute"></div>
+    </div>
+    
+</div>
 </body>
+<script>
+  const phrases = ["Powerful", "AI-Driven", "Effortless"];
+  const typewriterEl = document.getElementById("typewriter");
+
+  // Timing constants (in milliseconds)
+  const TYPING_DELAY = 90;
+  const DELETING_DELAY = 60;
+  const PAUSE_AFTER_COMPLETION = 1200;
+  const PAUSE_AFTER_DELETION = 600;
+
+  let currentPhraseIndex = 0;
+  let letterIndex = 0;
+  let isDeleting = false;
+
+  function typeText() {
+    const currentPhrase = phrases[currentPhraseIndex];
+    // Update the displayed text based on the current letter index
+    typewriterEl.textContent = currentPhrase.substring(0, letterIndex);
+
+    if (!isDeleting) {
+      letterIndex++;
+      // Pause before deleting when the entire phrase is displayed
+      if (letterIndex > currentPhrase.length) {
+        isDeleting = true;
+        return setTimeout(typeText, PAUSE_AFTER_COMPLETION);
+      }
+    } else {
+      letterIndex--;
+      // Pause before typing the next phrase when deletion is complete
+      if (letterIndex < 0) {
+        isDeleting = false;
+        currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+        letterIndex = 0;
+        return setTimeout(typeText, PAUSE_AFTER_DELETION);
+      }
+    }
+
+    const delay = isDeleting ? DELETING_DELAY : TYPING_DELAY;
+    setTimeout(typeText, delay);
+  }
+
+  // Start the typewriter effect
+  typeText();
+</script>
+
+
 </html>
