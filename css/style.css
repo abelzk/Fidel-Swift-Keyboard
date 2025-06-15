@@ -156,6 +156,7 @@ button {
   align-items: center;
   justify-content: center;
   padding: 30px;
+  /* background-color: var(--background-light); */
 }
 
 .hero-content-left-wrapper {
@@ -169,19 +170,23 @@ button {
 }
 
 .hero-title {
-  font-size: calc(2.5rem/ 1.168);
+  font-size: calc(1.8rem * 1.168);
   font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 1rem;
 }
 
 .hero-description {
-  font-size: 2.2rem;
+  font-size: calc(2.5rem * 1.168);
   color: var(--text-dark);
   margin-bottom: 1.5rem;
   text-align: start;
 }
-
+.hero-tagline{
+  text-align: start;
+  font-size: 14px;
+  width: 80%;
+}
 .hero-content-right {
   width: 50%;
   height: 100%;
@@ -195,8 +200,8 @@ button {
 }
 
 .typewriter-container {
-  /* font-family: monospace; */
-  font-size: 2.5rem;
+  font-family: monospace;
+  font-size: calc(2.5rem/ 1.688);
   color: var(--primary);
   display: inline-block;
   position: relative;
@@ -216,7 +221,7 @@ button {
   right: -15px;
   top: 0;
   animation: blink 0.7s steps(1) infinite;
-  font-weight: bold;
+  /* font-weight: bold; */
   color: var(--text-dark);
 }
 
@@ -233,7 +238,7 @@ button {
   padding: 2px;
   background: radial-gradient(circle 80px at 80% -10%, #ffffff, #181b1b);
   position: relative;
-  margin-top: 20px;
+  margin-top: 28px;
 }
 .button::after {
   content: "";
@@ -267,7 +272,7 @@ button {
   padding: 14px 25px;
   border-radius: 14px;
   color: #fff;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1rem;
   z-index: 3;
   position: relative;
