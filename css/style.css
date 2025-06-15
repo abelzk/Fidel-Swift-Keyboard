@@ -61,41 +61,19 @@ button {
   align-items: center;
   width: 100%;
 }
-/* 
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 15%;
-}
-
-.navbar-brand a {
-  font-size: 16px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.navbar-brand img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-} */
-
 .nav-links-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   width: auto;
-  min-width: 350px;
+  min-width: 400px;
   height: 45px;
   background-color: var(--background-light);
-  /* border: 1px solid var(--border-light); */
   border-radius: 30px;
 }
 
 .nav-links {
+  position: relative;
   display: flex;
   gap: 2rem;
   list-style: none;
@@ -107,24 +85,26 @@ button {
   color: var(--text-black);
 }
 .logo-wrapper{
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   background-color: transparent;
-  border-radius: 50%;
-  border: 2px solid var(--primary);
+  left: 5px;
+  top: 6px;
+}
+.bold{
+  font-weight: 500;
 }
 .logo {
+  position: absolute;
+  left: 5px;
   width: 30px;
   height: 30px;
   object-fit: contain;
   transition: all 0.3 ease-in-out;
 }
-/* .logo:hover {
-  transition: all 0.3s ease-in-out;
-  transform: translateY(-2px);
-} */
 
 .nav-links .menu-links {
   position: relative;
@@ -177,7 +157,6 @@ button {
   align-items: center;
   justify-content: center;
   padding: 30px;
-  /* background-color: var(--background-light); */
 }
 
 .hero-content-left-wrapper {
@@ -192,7 +171,6 @@ button {
 
 .hero-title {
   font-size: calc(1.8rem * 1.168);
-  /* font-family: "Public Sans", sans-serif; */
   font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 1rem;
@@ -200,7 +178,6 @@ button {
 
 .hero-description {
   font-size: calc(2.2rem * 1.168);
-  /* font-family: "Public Sans", sans-serif; */
   color: var(--text-dark);
   margin-bottom: 1.5rem;
   text-align: start;
