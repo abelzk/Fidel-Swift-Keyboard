@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
-  --primary: #fa800d;
+  --primary: #ff5419;
   --background-dark: #121212;
   --background-light: #f1f1f1;
   --text-light: #e1e1e1;
@@ -18,7 +19,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Public Sans", sans-serif;
   font-weight: 300;
   background-color: #fff;
   color: var(--text-dark);
@@ -56,11 +57,11 @@ button {
 
 .navbar-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
 }
-
+/* 
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -80,13 +81,14 @@ button {
   width: 40px;
   height: 40px;
   object-fit: contain;
-}
+} */
 
 .nav-links-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 400px;
+  width: auto;
+  min-width: 350px;
   height: 45px;
   background-color: var(--background-light);
   /* border: 1px solid var(--border-light); */
@@ -97,35 +99,54 @@ button {
   display: flex;
   gap: 2rem;
   list-style: none;
-  width: 80%;
+  width: 100%;
   justify-content: center;
   align-items: center;
   font-size: 14px;
   font-weight: 400;
   color: var(--text-black);
 }
+.logo-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+}
+.logo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  transition: all 0.3 ease-in-out;
+}
+/* .logo:hover {
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-2px);
+} */
 
-.nav-links a {
+.nav-links .menu-links {
   position: relative;
   padding: 4px 0;
 }
 
-.nav-links a::after {
+.nav-links .menu-links::after {
   content: "";
   position: absolute;
   bottom: 0;
   right: 0;
   width: 0;
   height: 1.5px;
-  background: var(--text-dark);
+  background: var(--primary);
   transition: width 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links .menu-links:hover {
   color: var(--text-dark);
 }
 
-.nav-links a:hover::after {
+.nav-links .menu-links:hover::after {
   width: 100%;
   left: 0;
   right: auto;
@@ -171,13 +192,15 @@ button {
 
 .hero-title {
   font-size: calc(1.8rem * 1.168);
+  /* font-family: "Public Sans", sans-serif; */
   font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 1rem;
 }
 
 .hero-description {
-  font-size: calc(2.5rem * 1.168);
+  font-size: calc(2.2rem * 1.168);
+  /* font-family: "Public Sans", sans-serif; */
   color: var(--text-dark);
   margin-bottom: 1.5rem;
   text-align: start;
@@ -185,7 +208,8 @@ button {
 .hero-tagline{
   text-align: start;
   font-size: 14px;
-  width: 80%;
+  width: 90%;
+
 }
 .hero-content-right {
   width: 50%;
@@ -201,7 +225,7 @@ button {
 
 .typewriter-container {
   font-family: monospace;
-  font-size: calc(2.5rem/ 1.688);
+  font-size: calc(2.8rem/ 1.688);
   color: var(--primary);
   display: inline-block;
   position: relative;
@@ -221,7 +245,7 @@ button {
   right: -15px;
   top: 0;
   animation: blink 0.7s steps(1) infinite;
-  /* font-weight: bold; */
+  font-weight: bold;
   color: var(--text-dark);
 }
 
@@ -229,68 +253,18 @@ button {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
-/* From Uiverse.io by Spacious74 */ 
-.button {
-  cursor: pointer;
-  font-size: 1.4rem;
-  border-radius: 16px;
-  border: none;
-  padding: 2px;
-  background: radial-gradient(circle 80px at 80% -10%, #ffffff, #181b1b);
-  position: relative;
-  margin-top: 28px;
-}
-.button::after {
-  content: "";
-  position: absolute;
-  width: 65%;
-  height: 60%;
-  border-radius: 120px;
-  top: 0;
-  right: 0;
-  box-shadow: 0 0 20px #ffffff38;
-  z-index: -1;
-}
-
-.blob1 {
-  position: absolute;
-  width: 70px;
-  height: 100%;
-  border-radius: 16px;
-  bottom: 0;
-  left: 0;
-  background: radial-gradient(
-    circle 60px at 0% 100%,
-    #3fe9ff,
-    #0000ff80,
-    transparent
-  );
-  box-shadow: -10px 10px 30px #0051ff2d;
-}
-
-.inner {
-  padding: 14px 25px;
-  border-radius: 14px;
+.btn-primary {
+  background: radial-gradient(circle 80px at 80% -10%, #fa800d, var(--primary));
   color: #fff;
-  font-weight: 300;
-  font-size: 1rem;
-  z-index: 3;
-  position: relative;
-  background: radial-gradient(circle 80px at 80% -50%, #777777, #0f1111);
+  margin-top: 28px;
+  width: 220px;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 14px;
+  transition: all 0.3s ease;
 }
-.inner::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  border-radius: 14px;
-  background: radial-gradient(
-    circle 60px at 0% 100%,
-    #00e1ff1a,
-    #0000ff11,
-    transparent
-  );
-  position: absolute;
+.btn-primary:hover {
+  transition: all 0.3s ease;
+  background: radial-gradient(circle 80px at 80% -10%, #ff5419, var(--primary));
+  box-shadow: 0 0 20px #ff5419;
 }
-
