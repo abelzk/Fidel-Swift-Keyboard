@@ -1,12 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap');
-
-/*===============================
-=            Root               =
-===============================*/
 :root {
   --primary: #fa800d;
   --background-dark: #121212;
-  --background-light: #e9e9e9;
+  --background-light: #f1f1f1;
   --text-light: #e1e1e1;
   --text-dark: #303030;
   --text-black: #000;
@@ -15,10 +11,6 @@
   --border-dark: #222;
   --transparent: transparent;
 }
-
-/*===============================
-=        Base Reset             =
-===============================*/
 * {
   margin: 0;
   padding: 0;
@@ -49,9 +41,6 @@ button {
   background: transparent;
 }
 
-/*===============================
-=           Navbar              =
-===============================*/
 .navbar {
   background: var(--transparent);
   color: var(--text-black);
@@ -93,9 +82,6 @@ button {
   object-fit: contain;
 }
 
-/*===============================
-=         Navigation Links      =
-===============================*/
 .nav-links-wrapper {
   display: flex;
   align-items: center;
@@ -103,7 +89,7 @@ button {
   width: 400px;
   height: 45px;
   background-color: var(--background-light);
-  border: 1px solid var(--border-light);
+  /* border: 1px solid var(--border-light); */
   border-radius: 30px;
 }
 
@@ -124,14 +110,13 @@ button {
   padding: 4px 0;
 }
 
-/* Link underline animation */
 .nav-links a::after {
   content: "";
   position: absolute;
   bottom: 0;
   right: 0;
   width: 0;
-  height: 1px;
+  height: 1.5px;
   background: var(--text-dark);
   transition: width 0.3s ease;
 }
@@ -158,9 +143,14 @@ button {
   width: 100%;
   height: calc(100vh - 85px);
 }
+.hero-buttons{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
 
 .hero-content-left {
-  width: 45%;
+  width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -171,51 +161,49 @@ button {
 .hero-content-left-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   text-align: center;
   padding: 20px;
-  max-width: 500px;
+  width: 100%;
 }
 
 .hero-title {
-  font-size: 2.5rem;
+  font-size: calc(2.5rem/ 1.168);
   font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 1rem;
 }
 
 .hero-description {
-  font-size: 1.2rem;
+  font-size: 2.2rem;
   color: var(--text-dark);
   margin-bottom: 1.5rem;
+  text-align: start;
 }
 
 .hero-content-right {
-  position: relative;
-  width: 55%;
+  width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+.hero-content-right spline-viewer {
+  height: calc(100% + 150px);
 }
 
-.small-banner-absolute {
-  position: absolute;
-  width: 140px;
-  height: 40px;
-  z-index: 1000;
-  border-radius: 5px;
-  bottom: 20px;
-  right: 20px;
-  background-color: #fff;
-}
 .typewriter-container {
   /* font-family: monospace; */
   font-size: 2.5rem;
-  color: #333;
+  color: var(--primary);
   display: inline-block;
   position: relative;
+}
+.title-static {
+  position: relative;
+  left: 200px;
 }
 
 #typewriter {
@@ -229,11 +217,75 @@ button {
   top: 0;
   animation: blink 0.7s steps(1) infinite;
   font-weight: bold;
-  color: orange;
+  color: var(--text-dark);
 }
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
+}
+/* From Uiverse.io by Spacious74 */ 
+.button {
+  cursor: pointer;
+  font-size: 1.4rem;
+  border-radius: 16px;
+  border: none;
+  padding: 2px;
+  background: radial-gradient(circle 80px at 80% -10%, #ffffff, #181b1b);
+  position: relative;
+  margin-top: 20px;
+}
+.button::after {
+  content: "";
+  position: absolute;
+  width: 65%;
+  height: 60%;
+  border-radius: 120px;
+  top: 0;
+  right: 0;
+  box-shadow: 0 0 20px #ffffff38;
+  z-index: -1;
+}
+
+.blob1 {
+  position: absolute;
+  width: 70px;
+  height: 100%;
+  border-radius: 16px;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(
+    circle 60px at 0% 100%,
+    #3fe9ff,
+    #0000ff80,
+    transparent
+  );
+  box-shadow: -10px 10px 30px #0051ff2d;
+}
+
+.inner {
+  padding: 14px 25px;
+  border-radius: 14px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1rem;
+  z-index: 3;
+  position: relative;
+  background: radial-gradient(circle 80px at 80% -50%, #777777, #0f1111);
+}
+.inner::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 14px;
+  background: radial-gradient(
+    circle 60px at 0% 100%,
+    #00e1ff1a,
+    #0000ff11,
+    transparent
+  );
+  position: absolute;
 }
 
