@@ -13,7 +13,7 @@ Fidel Swift is a modern, Unicode-compatible Amharic keyboard engine designed for
 - **Optimized Performance**: Designed for minimal CPU usage and efficient operation.
 
 ## Screenshots
-_Screenshots demonstrating Fidel Swift in action will be added here._
+...
 
 ## Installation Instructions
 Detailed installation instructions can be found on our official website: [fidelswift.vercel.app](https://fidelswift.vercel.app)
@@ -36,31 +36,13 @@ To contribute to Fidel Swift or run it locally for development, follow these ste
 - Git
 
 ### Getting Started
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/fidel-swift.git
-   cd fidel-swift
-   ```
-2. **Create and activate a virtual environment (recommended):**
-   ```bash
-   python -m venv venv
-   # On Windows
-   venv\Scripts\activate
-   # On macOS/Linux
-   source venv/bin/activate
-   ```
-3. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-   _(Note: A `requirements.txt` file will need to be created listing Flet and any other necessary packages.)_
+1. **Download & install the setup:**
+   _( Visit https://fidelswift.vercel.app )_
+   
+2. **Running the software:**
 
-### Running Locally
-Execute the main application script:
-```bash
-python main.py
-```
-_(Assuming `main.py` is the entry point of the application.)_
+### Typing for the first time
+
 
 ### Project Structure
 _(A brief overview of the project's directory structure will be added here, e.g., main application logic, UI components, utility modules.)_
@@ -79,8 +61,7 @@ Please follow standard coding practices and ensure your code is well-commented. 
 This project is licensed under the **MIT License**. You can find the full license text in the [LICENSE](LICENSE) file.
 
 ## Contact / Credits
-- For support, suggestions, or bug reports, please use the [GitHub Issues](https://github.com/your-username/fidel-swift/issues) page.
-- For other inquiries, you can reach out at `your-email@example.com` (placeholder).
+- For support, suggestions, or bug reports, please use the [GitHub Issues](https://github.com/abelzk/fidel-swift-keyboard/issues) page.
+- For other inquiries, you can reach out at `abelzeki24@gmail.como`.
 
 Special thanks to all contributors and inspirations that help Fidel Swift grow.
-_(A more detailed list of credits will be maintained here.)_
