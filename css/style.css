@@ -66,10 +66,11 @@ button {
   align-items: center;
   justify-content: center;
   width: auto;
-  min-width: 400px;
+  min-width: 450px;
   height: 45px;
-  background-color: var(--background-light);
-  border-radius: 30px;
+  background-color: var(--transparent);
+  border-radius: 14px;
+  border: 1.3px solid var(--border-dark)
 }
 
 .nav-links {
@@ -84,24 +85,30 @@ button {
   font-weight: 400;
   color: var(--text-black);
 }
+.devider{
+  color: #e1e1e1;
+}
+.wrapper-main{
+  display: flex;
+  align-items: center;
+  width: 27%;
+}
 .logo-wrapper{
-  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   background-color: transparent;
-  left: 5px;
-  top: 6px;
+  /* left: 5px;
+  top: 9px; */
 }
 .bold{
-  font-weight: 500;
+  font-size: 16px;
 }
 .logo {
-  position: absolute;
+  /* position: absolute; */
   left: 5px;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
   transition: all 0.3 ease-in-out;
 }
@@ -177,10 +184,11 @@ button {
 }
 
 .hero-description {
-  font-size: calc(2.2rem * 1.168);
+  font-size: calc(2.5rem * 1.168);
   color: var(--text-dark);
   margin-bottom: 1.5rem;
   text-align: start;
+  font-weight: 400;
 }
 .hero-tagline{
   text-align: start;

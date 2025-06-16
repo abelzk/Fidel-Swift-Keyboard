@@ -12,14 +12,25 @@
     <link rel="stylesheet" href="css/style.css">
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.7/build/spline-viewer.js"></script>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPQDB9RSBY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZPQDB9RSBY');
+</script>
 <body>
 <nav class="navbar">
-
     <div class="navbar-wrapper">
         <!-- <div class="navbar-brand"><a href="#" class="logo"><img src="logo/logo.png" alt="Fidel Swift Logo"></a></div> -->
         <div class="nav-links-wrapper">
             <ul class="nav-links">
-                <li><a class="logo-wrapper" href="#home"><img class="logo" src="logo/logo.png" alt="Fidel Swift Logo"></a><span class="bold">Fidel Swift</span></li>
+                <!-- <div class="wrapper-main"> -->
+                  <li class="wrapper-main"><a class="logo-wrapper" href="#home"><img class="logo" src="logo/logo.png" alt="Fidel Swift Logo"></a><a href="#" class="bold">Fidel Swift</a></li>
+                <!-- </div> -->
+                <li class="devider">|</li>
                 <li><a class="menu-links" href="#home">Home</a></li>
                 <li><a class="menu-links" href="#">How it works</a></li>
                 <li><a class="menu-links" href="#faqs">FAQs</a></li>
