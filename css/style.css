@@ -31,12 +31,12 @@
 html {
   scroll-behavior: smooth;
 }
-body.dark{
+html.dark{
   --background-color: hsl(240 10% 3.90%);
   --text-dark: #fff;
   --border-dark: #fff;
 }
-body.dark .sm {
+html.dark .sm {
   filter: invert(1) /* tweaks white/black icons */
 }
 
@@ -52,9 +52,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* transition: background 0.3s, color 0.3s; */
 }
-
-
-
 a {
   text-decoration: none;
     color: inherit;   
@@ -285,6 +282,7 @@ button {
   width: 100%;
   height: auto;
   display: flex;
+  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
   gap: 2rem;
@@ -294,10 +292,8 @@ button {
 .navigation-wrapper{
   width: 30%;
   height: 100vh;
-  background-color: #fa800d;
 }
 .content-wrapper{
   width: 70%;
   height: 100vh;
-  background-color: #fa800d;
 }
