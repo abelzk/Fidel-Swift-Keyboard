@@ -6,38 +6,54 @@
 :root {
   --primary: #ff5419;
   --background-dark: #121212;
+  --background-color: #fff;
   --background-light: #f1f1f1;
   --text-light: #e1e1e1;
   --text-dark: #303030;
   --text-black: #000;
-  --border: #333;
+  --border-lightgray: #e1e1e1;
+  --border: 0 0% 92.20%;
   --border-light: #444;
   --border-dark: #222;
   --transparent: transparent;
-  --clean: #fff
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scroll-snap-type: proximity;
+    border-color: hsl(var(--border));
+    scrollbar-color: var(--scrollbar-thumb) transparent;
 }
 
 html {
   scroll-behavior: smooth;
+}
+body.dark{
+  --background-color: hsl(240 10% 3.90%);
+  --text-dark: #fff;
+  --border-dark: #fff;
+}
+body.dark .sm {
+  filter: invert(1) /* tweaks white/black icons */
 }
 
 body {
   /* font-family: "Public Sans", sans-serif; */
   font-family: Space Grotesk, Space Grotesk Fallback;
   font-weight: 300;
-  background-color: #fff;
+  background-color: var(--background-color);
   color: var(--text-dark);
   opacity: 0.9;
   overscroll-behavior: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* transition: background 0.3s, color 0.3s; */
 }
+
+
 
 a {
   text-decoration: none;
@@ -54,6 +70,10 @@ a {
   height: 1.1rem;
   width: 1.1rem;
 }
+.pd-left-1{
+  margin-right: 0.7rem;
+}
+
 .current-page{
   font-weight: 650;
   color: var(--text-dark);
@@ -67,8 +87,8 @@ button {
 
 .navbar {
   height: 4rem;
-  background-color: var(--clean);
-  border-bottom: 1px solid hsl(0, 2%, 90%);
+  background-color: var(--background-color);
+  border-bottom: 1px solid hsla(0, 0%, 50%, 0.285);
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -116,7 +136,7 @@ button {
 }
 
 .divider {
-  color: #e1e1e1;
+  color: var(--border-lightgray);
 }
 
 .bold {
@@ -124,7 +144,6 @@ button {
   font-optical-sizing: auto;
   font-size: 16px;
   font-weight: 600;
-  /* letter-spacing: 1px; */
 }
 
 .hero-content {
@@ -261,4 +280,24 @@ button {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.doc-wrapper{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3%;
+  padding-inline: 2rem;
+}
+.navigation-wrapper{
+  width: 30%;
+  height: 100vh;
+  background-color: #fa800d;
+}
+.content-wrapper{
+  width: 70%;
+  height: 100vh;
+  background-color: #fa800d;
 }

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Fidel Script">
   <meta name="description"
@@ -22,34 +23,65 @@
   <meta name="twitter:image:width" content="1152" />
   <meta name="twitter:image:height" content="648" />
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <title>Introduction</title>
+  <script rel="preload" as="script" src="scripts/theme.js"></script>
   <link rel="stylesheet" href="css/style.css">
+  <title>Introduction</title>
 </head>
+
 <body>
-    <nav>
+ <nav>
     <div class="navbar">
       <div class="navbar-container">
         <div class="navbar-brand">
-          <a class="navbar-brand" href="/index.html">
-              <img class="logo-brand" src="images/devicon.svg" alt="Fidel Swift logo" srcset="">
-              <h2 class="bold">FidelSwift</h2>
+         <a class="navbar-brand" href="/index.html">
+            <img class="logo-brand" src="images/devicon.svg" alt="Fidel Swift logo" srcset="">
+            <h2 class="bold">FidelSwift</h2>
           </a>
 
           <div class="navbar-links ">
             <ul class="links-md nv-flex">
-              <li><a class="current-page" href="/documentation.html">Documentation</a></li>
+              <li><a class="" href="/documentation.html">Documentation</a></li>
               <li><a href="#">Releases</a></li>
               <li><a href="#">FAQs</a></li>
             </ul>
           </div>
         </div>
         <div class="navbar-socials">
-          <a target="_blank" href="https://github.com/abelzk/Fidel-Swift-Keyboard"><img class="sm"
-              src="images/github.svg" alt="GitHub Logo" srcset=""></a>
+          <button class="btn-socials">
+            <a target="_blank" href="https://github.com/abelzk/Fidel-Swift-Keyboard"><img class="sm pd-left-1"
+                src="images/github.svg" alt="GitHub Logo" srcset=""></a>
+          </button>
+          <button
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 w-9"
+                            type="button" id="toggle-theme" aria-haspopup="menu" aria-expanded="false"
+                            data-state="closed">
+                          <img class="sm pd-left-1" src="images/toggle.svg" alt="">
+                          </button>
         </div>
       </div>
     </div>
     </div>
   </nav>
+  <main>
+    <div class="doc-wrapper">
+      <aside class="navigation-wrapper">
+        <div class="navigation-container">
+          <div class="navigation-lists">
+            <div class="nav-list-col"><a href="#">Introduction</a></div>
+            <div class="nav-list-col"><a href="#">Installation</a></div>
+            <div class="nav-list-col"><a href="#">Quick Start Guide</a></div>
+            <div class="nav-list-col"><a href="#">Settings & Customization</a></div>
+            <div class="nav-list-col"><a href="#">Advanced Features</a></div>
+            <div class="nav-list-col"><a href="#">Troubleshooting</a></div>
+            <div class="nav-list-col"><a href="#">FAQs</a></div>
+            <div class="nav-list-col"><a href="#">License</a></div>
+          </div>
+        </div>
+      </aside>
+      <div class="content-wrapper">
+
+      </div>
+    </div>
+  </main>
 </body>
 </html>

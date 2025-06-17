@@ -24,6 +24,7 @@
   <meta name="twitter:image:height" content="648" />
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <title>Fidel Swift</title>
+  <script rel="preload" as="script" src="scripts/theme.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.7/build/spline-viewer.js"></script>
 </head>
@@ -42,8 +43,10 @@
     <div class="navbar">
       <div class="navbar-container">
         <div class="navbar-brand">
-          <img class="logo-brand" src="images/devicon.svg" alt="Fidel Swift logo" srcset="">
-          <h2 class="bold">FidelSwift</h2>
+         <a class="navbar-brand" href="/index.html">
+            <img class="logo-brand" src="images/devicon.svg" alt="Fidel Swift logo" srcset="">
+            <h2 class="bold">FidelSwift</h2>
+          </a>
 
           <div class="navbar-links ">
             <ul class="links-md nv-flex">
@@ -54,8 +57,16 @@
           </div>
         </div>
         <div class="navbar-socials">
-          <a target="_blank" href="https://github.com/abelzk/Fidel-Swift-Keyboard"><img class="sm"
-              src="images/github.svg" alt="GitHub Logo" srcset=""></a>
+          <button class="btn-socials">
+            <a target="_blank" href="https://github.com/abelzk/Fidel-Swift-Keyboard"><img class="sm pd-left-1"
+                src="images/github.svg" alt="GitHub Logo" srcset=""></a>
+          </button>
+          <button
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 w-9"
+                            type="button" id="toggle-theme" aria-haspopup="menu" aria-expanded="false"
+                            data-state="closed">
+                          <img class="sm pd-left-1" src="images/toggle.svg" alt="">
+                          </button>
         </div>
       </div>
     </div>
