@@ -148,6 +148,10 @@ button {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  top: 0;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
 }
 
 .navbar-container {
