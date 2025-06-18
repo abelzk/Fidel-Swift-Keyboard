@@ -1,13 +1,17 @@
 function navToggle() {
-  const menuToggle = document.getElementById("menuToggle");
   const navLinks = document.getElementById("navbar-links");
+  const overlay = document.getElementById("navbar-overlay");
 
-  if (!navLinks) {
-    console.error("Element with ID 'navbar-links' not found.");
-    return;
-  }
+  const isClosed = navLinks.getAttribute("data-state") === "closed";
+  const newState = isClosed ? "open" : "closed";
 
-  const navState = navLinks.getAttribute("data-state");
-
-  navLinks.setAttribute("data-state", navState === "closed" ? "open" : "closed");
+  navLinks.setAttribute("data-state", newState);
+  overlay.setAttribute("data-state", newState);
 }
+document.getElementById("navbar-overlay").addEventListener("click", () => {
+  const navLinks = document.getElementById("navbar-links");
+  const overlay = document.getElementById("navbar-overlay");
+
+  navLinks.setAttribute("data-state", "closed");
+  overlay.setAttribute("data-state", "closed");
+});
