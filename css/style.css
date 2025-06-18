@@ -111,6 +111,9 @@ a {
 .justify-center{
   justify-content: center;
 }
+.align-flex-end{
+  align-items: flex-end
+}
 .align-center{
   align-items: center;
 }
@@ -400,9 +403,11 @@ button {
   visibility: visible;
   transition-delay: 0s;
   animation: toggleIn 0.3s forwards ease-in-out;
+
 }
 
 .navbar-overlay[data-state="open"] {
+  margin-top: 4rem;
   opacity: 1;
   visibility: visible;
 }
@@ -432,6 +437,7 @@ button {
   animation: toggleOut 0.3s forwards ease-in-out;
 }
   .navbar-links {
+    margin-top: 4rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -461,11 +467,10 @@ button {
   transition: opacity 0.3s ease-in-out;
 }
   .nv-flex {
-    
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 100px;
-    padding-left: 2rem;
+    padding-top: 10px;
+    padding-left: 1rem;
 }
   .logo-brand{
     width: 24px;
@@ -476,7 +481,7 @@ button {
   }
   .btn-menu{
     display: block;
-    z-index: 1100;
+    /* z-index: 1100; */
   }
   .hero-content-right{
     display: none;
