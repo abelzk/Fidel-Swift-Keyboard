@@ -43,8 +43,8 @@
       <div class="navbar-container">
         <div class="navbar-brand">
           <div class="brand-wrapper flex gap-0">
-            <button class="btn-menu" data-state="closed" aria-haspopup="dialog" aria-controls="">
-              <img class="sm" src="images/menu.svg" alt="menu icon" width="28" srcset="">
+            <button onclick="navToggle()" class="btn-menu" id="menuToggle" aria-haspopup="dialog" aria-controls="">
+              <img class="sm" src="images/menu.svg" alt="menu icon" srcset="">
             </button>
             <a class="flex align-center justify-flex-start" href="/">
               <img class="logo-brand" src="images/devicon.svg" alt="Fidel Swift logo" srcset="">
@@ -52,7 +52,7 @@
             </a>
           </div>
 
-          <div class="navbar-links">
+          <div class="navbar-links" id="navbar-links" data-state="closed">
             <ul class="links-md nv-flex">
               <li><a class="" href="/documentation.html">Documentation</a></li>
               <li><a href="#">Releases</a></li>
@@ -106,6 +106,7 @@
 
 </body>
 <script src="app.js"></script>
+<script src="scripts/navToggle.js"></script>
 <script>
   const phrases = ["Powerful", "Lightweight", "Effortless"];
   const typewriterEl = document.getElementById("typewriter");

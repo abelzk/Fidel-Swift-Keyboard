@@ -120,7 +120,9 @@ a {
 .flex-col{
   flex-direction: column;
 }
-
+.position-absolute{
+  position: absolute;
+}
 
 .gap-0{
   gap: 0.7rem;
@@ -166,6 +168,7 @@ button {
 }
 
 .navbar {
+  position: relative;
   height: 4rem;
   background-color: var(--background-color);
   border-bottom: 1px solid hsla(0, 0%, 50%, 0.285);
@@ -371,11 +374,6 @@ button {
 .doc-wrapper{
   width: 100%;
   height: auto;
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-  /* justify-content: center;
-  align-items: center;
-  gap: 2rem; */
   margin-top: 3%;
 }
 .navigation-wrapper{
@@ -390,11 +388,7 @@ button {
 .btn-collapsable{
   width: 100%;
   color: var(--text-dark);
-  /* background-color: green; */
 }
-/* .height-toggle{
-  transition: height 0.3s ease-in-out;
-} */
 .height-toggle[data-state="expanded"]{
   height: 100%;
 }
@@ -402,16 +396,32 @@ button {
   height: 0;
   overflow: hidden;
 }
+.navbar-links[data-state="closed"]{
+  display: none;
+}
+.navbar-links[data-state="open"]{
+  display: flex;
+  flex-direction: column;
+  z-index: 1050;
+  height: 100vh;
+  width: 80%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  background-color: var(--background-color);
+
+}
 @media (max-width: 530px) {
   .navbar-links{
     display: none;
   }
-  .links-md{
-    display: none;
-  }
-  /* .brand-wrapper{
-    display: none;
-  } */
+  .nv-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 100px;
+    padding-left: 2rem;
+}
   .logo-brand{
     width: 24px;
     height: 24px;
@@ -421,6 +431,7 @@ button {
   }
   .btn-menu{
     display: block;
+    z-index: 1100;
   }
   .hero-content-right{
     display: none;
