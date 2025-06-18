@@ -397,16 +397,37 @@ button {
   overflow: hidden;
 }
  .navbar-links[data-state="open"] {
-  transform: translateX(0);
-  opacity: 1;
   visibility: visible;
+  transition-delay: 0s;
+  animation: toggleIn 0.3s forwards ease-in-out;
 }
- .navbar-links[data-state="closed"] {
-  display: none;
+.navbar-links[data-state="closed"] {
+  animation: toggleOut 0.3s forwards ease-in-out;
 }
+
 .navbar-overlay[data-state="open"] {
   opacity: 1;
   visibility: visible;
+}
+@keyframes toggleIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes toggleOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
 }
 
 @media (max-width: 530px) {
@@ -422,10 +443,10 @@ button {
   flex-direction: column;
   padding: 1rem;
   z-index: 1050;
-  transform: translateX(0);
   opacity: 0;
+  transform: translateX(-100%);
   visibility: hidden;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: visibility 0s linear 0.2s;
 }
 .navbar-overlay {
   position: fixed;
@@ -435,10 +456,9 @@ button {
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1049;
-
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
   .nv-flex {
     
