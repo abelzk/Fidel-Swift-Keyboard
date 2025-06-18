@@ -17,6 +17,7 @@
   --border-dark: #222;
   --transparent: transparent;
   --scrollbar-thumb: #9b9b9b;
+  --hero-color: #000;
 }
 
 * {
@@ -38,7 +39,8 @@ html.dark body{
   --background-color: hsl(240 10% 3.90%);
   --text-dark: #fff;
   --border-dark: #fff;
-  --text-light: #aeaeae
+  --text-light: #aeaeae;
+  --hero-color: #fff
 }
 html.dark .sm, html.dark .sm-1 {
   filter: invert(1) 
@@ -254,7 +256,8 @@ button {
 .hero-mobile{
   display: none;
   border-radius: 25px;
-  background-color: var(--primary);
+  background-color: var(--hero-color);
+  padding: 10px;
 }
 .hero-mobile img{
   width: 180px;
