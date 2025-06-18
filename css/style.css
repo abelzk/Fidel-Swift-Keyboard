@@ -199,7 +199,6 @@ button {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 145px;
   gap: 2px;
 }
 
