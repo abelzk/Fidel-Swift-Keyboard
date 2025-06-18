@@ -419,4 +419,7 @@ button {
   .bold{
     font-size: 14px;
   }
+  .btn-menu{
+    display: block;
+  }
 }
