@@ -251,6 +251,12 @@ button {
   align-items: flex-start;
   flex-direction: column;
 }
+.hero-mobile{
+  display: none;
+}
+.hero-mobile img{
+  width: 250px;
+}
 
 .hero-content-left {
   width: 50%;
@@ -500,5 +506,17 @@ button {
   .hero-content-left{
     width: 100%;
     text-align: center;
+    align-items: flex-start;
+    padding: 0;
+    padding-inline: 15px;
   }
+  .hero-content-left-wrapper{
+    padding: 0;
+  }
+  .hero-title{
+    margin-bottom: 0;
+  }
+  .hero-mobile{
+  display: flex;
+}
 }
