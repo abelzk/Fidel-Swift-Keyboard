@@ -508,15 +508,26 @@ button {
     text-align: center;
     align-items: flex-start;
     padding: 0;
-    padding-inline: 15px;
+    padding-inline: 25px;
   }
   .hero-content-left-wrapper{
     padding: 0;
+    align-items: center
   }
   .hero-title{
     margin-bottom: 0;
   }
   .hero-mobile{
   display: flex;
+  margin-top: 1rem;
+}
+.hero-buttons{
+  align-items: center !important;
+}
+.hero-tagline{
+  text-align: center;
+}
+.hero-description{
+  text-align: center;
 }
 }
