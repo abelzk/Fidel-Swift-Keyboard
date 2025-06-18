@@ -253,9 +253,11 @@ button {
 }
 .hero-mobile{
   display: none;
+  border-radius: 25px;
+  background-color: var(--primary);
 }
 .hero-mobile img{
-  width: 250px;
+  width: 180px;
 }
 
 .hero-content-left {
@@ -278,7 +280,8 @@ button {
 }
 
 .hero-title {
-  font-size: calc(1.8rem * 1.168);
+  /* font-size: calc(1.8rem * 1.168); */
+  font-size: clamp(2.1rem, 4vw, 2rem);
   font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 1rem;
@@ -286,7 +289,7 @@ button {
 
 .hero-description {
   /* font-size: calc(2.8rem * 1.168); */
-  font-size: clamp(1.5rem, 4vw, calc(2.8rem * 1.168));
+  font-size: clamp(2rem, 4vw, calc(2.8rem * 1.168));
   color: var(--text-dark);
   margin-bottom: 1.5rem;
   text-align: start;
@@ -314,7 +317,8 @@ button {
 
 .typewriter-container {
   font-family: monospace;
-  font-size: calc(2.8rem / 1.688);
+  /* font-size: calc(2.8rem / 1.688); */
+  font-size: clamp(1rem, 4vw, calc(1.5rem * 1.168));
   color: var(--primary);
   display: inline-block;
   position: relative;
