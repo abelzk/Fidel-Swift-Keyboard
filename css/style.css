@@ -304,7 +304,7 @@ button {
 .hero-tagline {
   text-align: start;
   /* font-size: 14px; */
-  font-size: clamp(.9rem, 4vw, 14px);
+  font-size: clamp(1rem, 4vw, 14px);
   width: 90%;
 }
 
