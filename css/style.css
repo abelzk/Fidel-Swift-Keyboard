@@ -401,9 +401,6 @@ button {
   transition-delay: 0s;
   animation: toggleIn 0.3s forwards ease-in-out;
 }
-.navbar-links[data-state="closed"] {
-  animation: toggleOut 0.3s forwards ease-in-out;
-}
 
 .navbar-overlay[data-state="open"] {
   opacity: 1;
@@ -431,6 +428,9 @@ button {
 }
 
 @media (max-width: 530px) {
+  .navbar-links[data-state="closed"] {
+  animation: toggleOut 0.3s forwards ease-in-out;
+}
   .navbar-links {
   position: absolute;
   top: 0;
