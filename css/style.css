@@ -255,9 +255,8 @@ button {
 }
 .hero-mobile{
   display: none;
-  border-radius: 25px;
-  background-color: var(--hero-color);
-  padding: 10px;
+  height: 400px;
+  padding: 20px;
 }
 .hero-mobile img{
   width: 180px;
@@ -519,7 +518,7 @@ button {
   }
   .hero-content-left-wrapper{
     padding: 0;
-    align-items: center
+    align-items: flex-start
   }
   .hero-title{
     margin-bottom: 0;
@@ -529,12 +528,12 @@ button {
   margin-top: 1rem;
 }
 .hero-buttons{
-  align-items: center !important;
+  align-items: flex-start !important;
 }
 .hero-tagline{
-  text-align: center;
+  text-align: flex-start;
 }
 .hero-description{
-  text-align: center;
+  text-align: flex-start;
 }
 }
