@@ -300,7 +300,8 @@ button {
 
 .hero-tagline {
   text-align: start;
-  font-size: 14px;
+  /* font-size: 14px; */
+  font-size: clamp(.7rem, 4vw, 14px);
   width: 90%;
 }
 
@@ -535,5 +536,8 @@ button {
 }
 .hero-description{
   text-align: flex-start;
+}
+.pd-top-4 {
+  padding-top: 5rem;
 }
 }
