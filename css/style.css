@@ -422,4 +422,11 @@ button {
   .btn-menu{
     display: block;
   }
+  .hero-content-right{
+    display: none;
+  }
+  .hero-content-left{
+    width: 100%;
+    text-align: center;
+  }
 }
