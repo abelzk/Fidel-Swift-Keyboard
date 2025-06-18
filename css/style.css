@@ -382,11 +382,13 @@ button {
 .navigation-wrapper{
   width: 25%;
   height: 100vh;
+  order: 1;
   /* background-color: #ff5419; */
 }
 .content-wrapper{
   width: 70%;
   height: 100vh;
+  order: 2;
 }
 .btn-collapsable{
   width: 100%;
@@ -471,6 +473,16 @@ button {
     align-items: flex-start;
     padding-top: 10px;
     padding-left: 1rem;
+}
+.navigation-wrapper{
+  position: absolute;
+  z-index: 1050;
+  left: 0;
+  /* top: 40%; */
+  width: 98%;
+  padding-left: calc(.5rem + 1em) ;
+  padding-top: 2rem;
+  overflow-y: auto;
 }
   .logo-brand{
     width: 24px;
