@@ -80,9 +80,25 @@ a {
   width: 1rem;
   height:1rem;
 }
-.pd-left-1{
+.mr-left-1{
   margin-right: 0.7rem;
 }
+.pd-top-2{
+  padding-top: 2rem;
+}
+.pd-top-3{
+  padding-top: 3rem;
+}
+.pd-top-4{
+  padding-top: 4rem;
+}
+.pd-inline-1{
+  padding-inline: 1rem;
+}
+.height-auto{
+  height: auto
+}
+
 .cursor-pointer{
   cursor: pointer;
 }
@@ -92,9 +108,20 @@ a {
 .justify-between{
   justify-content: space-between;
 }
+.justify-center{
+  justify-content: center;
+}
+.align-center{
+  align-items: center;
+}
+.justify-flex-start{
+  justify-content: flex-start;
+}
 .flex-col{
   flex-direction: column;
 }
+
+
 .gap-0{
   gap: 0.7rem;
 }
@@ -106,9 +133,6 @@ a {
 }
 .w-full{
   width: 100%;
-}
-.align-center{
-  align-items: center;
 }
 .font-size-3{
   font-size: .87rem;
@@ -162,7 +186,9 @@ button {
   gap: 25px;
   align-items: center;
 }
-
+.btn-menu{
+  display: none;
+}
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -248,7 +274,8 @@ button {
 }
 
 .hero-description {
-  font-size: calc(2.8rem * 1.168);
+  /* font-size: calc(2.8rem * 1.168); */
+  font-size: clamp(1.5rem, 4vw, calc(2.8rem * 1.168));
   color: var(--text-dark);
   margin-bottom: 1.5rem;
   text-align: start;
@@ -344,13 +371,12 @@ button {
 .doc-wrapper{
   width: 100%;
   height: auto;
-  display: flex;
+  /* display: flex; */
   /* flex-wrap: wrap; */
-  justify-content: center;
+  /* justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 2rem; */
   margin-top: 3%;
-  padding-inline: 2rem;
 }
 .navigation-wrapper{
   width: 25%;
@@ -375,4 +401,22 @@ button {
 .height-toggle[data-state="collapsed"]{
   height: 0;
   overflow: hidden;
+}
+@media (max-width: 530px) {
+  .navbar-links{
+    display: none;
+  }
+  .links-md{
+    display: none;
+  }
+  /* .brand-wrapper{
+    display: none;
+  } */
+  .logo-brand{
+    width: 24px;
+    height: 24px;
+  }
+  .bold{
+    font-size: 14px;
+  }
 }

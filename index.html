@@ -39,18 +39,22 @@
 </script>
 
 <body>
-  <nav>
-    <div class="navbar">
+  <nav class="navbar">
       <div class="navbar-container">
         <div class="navbar-brand">
-         <a class="navbar-brand" href="/index.html">
-            <img class="logo-brand" src="images/devicon.svg" alt="Fidel Swift logo" srcset="">
-            <h2 class="bold">FidelSwift</h2>
-          </a>
+          <div class="brand-wrapper flex gap-0">
+            <button class="btn-menu" data-state="closed" aria-haspopup="dialog" aria-controls="">
+              <img class="sm" src="images/menu.svg" alt="menu icon" width="28" srcset="">
+            </button>
+            <a class="flex align-center justify-flex-start" href="/">
+              <img class="logo-brand" src="images/devicon.svg" alt="Fidel Swift logo" srcset="">
+              <h2 class="bold">FidelSwift</h2>
+            </a>
+          </div>
 
-          <div class="navbar-links ">
+          <div class="navbar-links">
             <ul class="links-md nv-flex">
-              <li><a class="" href="documentation.html">Documentation</a></li>
+              <li><a class="" href="/documentation.html">Documentation</a></li>
               <li><a href="#">Releases</a></li>
               <li><a href="#">FAQs</a></li>
             </ul>
@@ -58,22 +62,21 @@
         </div>
         <div class="navbar-socials">
           <button class="btn-socials">
-            <a target="_blank" href="https://github.com/abelzk/Fidel-Swift-Keyboard"><img class="sm pd-left-1"
+            <a target="_blank" href="https://github.com/abelzk/Fidel-Swift-Keyboard"><img class="sm mr-left-1"
                 src="images/github.svg" alt="GitHub Logo" srcset=""></a>
           </button>
           <button
-                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 w-9"
-                            type="button" id="toggle-theme" aria-haspopup="menu" aria-expanded="false"
-                            data-state="closed">
-                          <img class="sm pd-left-1" id="theme-icon" src="images/toggle.svg" alt="">
-                          </button>
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 w-9"
+            type="button" id="toggle-theme" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+            <img class="sm pd-left-1" id="theme-icon" src="images/toggle.svg" alt="">
+          </button>
         </div>
       </div>
-    </div>
+
     </div>
   </nav>
 <div id="content"></div>
-  <main>
+  <main class="hero pd-top-4">
     <div class="hero">
       <div class="hero-content">
         <div class="hero-content-left">
