@@ -326,11 +326,12 @@ b {
 .bg-main {
   background-color: var(--background-color);
 }
-
 .z-1000 {
-  z-index: 1000;
+  z-index: 0;
 }
-
+.z-1050{
+  z-index: 1150;
+}
 .font-size-3 {
   font-size: .87rem;
   line-height: 1.25rem;
@@ -730,4 +731,16 @@ button {
   .pd-top-4 {
     padding-top: 5rem;
   }
+  .navbar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1049;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+}
 }
