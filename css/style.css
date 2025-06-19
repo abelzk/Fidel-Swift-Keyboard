@@ -20,6 +20,7 @@
   --hero-color: #000;
   --border-main: hsla(0, 0%, 50%, 0.285);
   --overlay: rgba(0, 0, 0, 0.5);
+  /* --animation-duration: 10s; */
 }
 
 * {
@@ -47,7 +48,7 @@ html.dark body {
 }
 
 html.dark .sm,
-html.dark .sm-1 {
+html.dark .sm-1 html.dark .sm-2 {
   filter: invert(1)
 }
 
@@ -97,6 +98,9 @@ b {
 }
 .mr-btm-0 {
   margin-bottom: 0.7rem;
+}
+.mr-btm-1{
+  margin-bottom: 1rem;
 }
 
 .mr-left-1 {
@@ -330,7 +334,9 @@ b {
 .h-5 {
   height: 5rem;
 }
-
+.overflow-hidden{
+  overflow: hidden;
+}
 .bg-main {
   background-color: var(--background-color);
 }
@@ -549,6 +555,47 @@ button {
   transition: all 0.3s ease-in-out;
   border: 2px solid var(--border-dark);
 }
+.int-icon{
+  flex-shrink: 0;
+  width: 32px;
+  object-fit: contain;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.scroller{
+  padding: 1rem;
+  max-width: 600px;
+}
+
+.scroller-inner{
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.scroller[data-animated ="true"]{
+  overflow: hidden;
+  /* border: 1px solid lime; */
+  flex-wrap: nowrap;
+  mask: linear-gradient(90deg, transparent, var(--background-color) 35%, var(--background-color) 80%, transparent);
+  -webkit-mask: linear-gradient(90deg, transparent, var(--background-color) 30%, var(--background-color) 80%, transparent);
+}
+.scroller[data-animated ="true"] .scroller-inner{
+  flex-wrap: nowrap;
+  animation: scroll 20s linear infinite;
+  width: max-content;
+}
+
+@keyframes scroll {
+  to{
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
+
+
+  
 
 .fade-in {
   opacity: 0;
