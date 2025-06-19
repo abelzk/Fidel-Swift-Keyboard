@@ -37,9 +37,9 @@
 </head>
 
 <body>
-  <nav class="navbar">
-      <div class="navbar-container">
-        <div class="navbar-brand">
+  <nav class="border-b w-full flex align-center flex-start position-fixed top-0 h-4 bg-main z-1000">
+      <div class="navbar-container mr-inline-2 flex flex-between gap-25p w-full align-center">
+        <div class="flex align-center flex-start gap-2p">
           <div class="brand-wrapper flex gap-0 align-flex-end">
             <button onclick="navToggle()" class="btn-menu" id="menuToggle" aria-haspopup="dialog" aria-controls="">
               <img class="sm" id="menuIcon" src="images/menu.svg" alt="menu icon" srcset="">
@@ -72,13 +72,13 @@
         </div>
       </div>
 
-      <div class="navbar-overlay" id="navbar-overlay" data-state="closed"></div>
+      <div class="position-fixed top-0 left-0 h-100vh w-100vw z-1000 bg-overlay visibility-hidden opacity-0" id="navbar-overlay" data-state="closed"></div>
     </div>
   </nav>
   <main class="pd-top-4">
     <div class="doc-wrapper pd-inline-1 flex justify-center height-auto gap-2" id="doc-wrapper">
       <aside class="navigation-wrapper" id="navigation-wrapper">
-        <div class="navigation-container px-0">
+        <div class="navigation-container pd-inline">
           <div class="nav-list-col">
             <div class="nav-header flex w-full mr-btm-0">
               <button onclick="toggleHeight()" class="w-full" >
