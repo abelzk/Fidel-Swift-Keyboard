@@ -1,50 +1,60 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const scrollerWrapper = document.querySelector('.scroller');
-  const original = document.querySelector('.scroller-inner');
+const scrollers = document.querySelectorAll('.scroller');
 
-  // Respect prefers-reduced-motion
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  scrollers.forEach(async (scroller) => {
+    const inner = scroller.querySelector('.scroller-inner');
+    if (scroller.dataset.animated === 'true') return;
 
-  if (scrollerWrapper && original) {
-    // Add data-animate attributes
-    scrollerWrapper.setAttribute('data-animate', '');
-    original.setAttribute('data-animate', '');
+    // Wait for all images to load
+    const images = inner.querySelectorAll('.wrap img');
+    await Promise.all([...images].map(img =>
+      img.complete ? Promise.resolve() : new Promise(resolve => img.onload = img.onerror = resolve)
+    ));
 
-    // 🔀 Randomize the order of children inside .scroller-inner
-    const children = Array.from(original.children);
-    const shuffled = children
-      .map(value => ({ value, sort: Math.random() }))
-      .sort((a, b) => a.sort - b.sort)
-      .map(({ value }) => value);
+    // Store original .wrap children
+    const originalWraps = [...inner.querySelectorAll('.wrap')];
 
-    // Clear original content and append shuffled elements
-    original.innerHTML = '';
-    shuffled.forEach(child => original.appendChild(child));
-
-    // Clone the shuffled .scroller-inner
-    const clone = original.cloneNode(true);
-    clone.classList.add('secondary');
-    clone.setAttribute('data-animate', '');
-    clone.setAttribute('aria-hidden', 'true');
-    scrollerWrapper.appendChild(clone);
-
-    // Scroll-based animation
-    let lastScrollY = window.scrollY;
-
-    window.addEventListener('scroll', () => {
-      const scrollTop = window.scrollY;
-
-      // Responsive scroll factor based on screen width
-      const isMobile = window.innerWidth <= 530;
-      const scrollFactor = isMobile ? 1 : 0.8;
-
-      const translateX = -scrollTop * scrollFactor;
-
-      // Apply transform to both original and cloned
-      original.style.transform = `translateX(${translateX}px)`;
-      clone.style.transform = `translateX(${translateX}px)`;
-
-      lastScrollY = scrollTop;
+    // Clone and append
+    const clone = document.createDocumentFragment();
+    originalWraps.forEach(el => {
+      const dup = el.cloneNode(true);
+      dup.setAttribute('aria-hidden', 'true');
+      clone.appendChild(dup);
     });
-  }
-});
+    inner.appendChild(clone);
+
+    // ✅ Measure total width of the first set
+    let originalWidth = originalWraps.reduce((total, el) => {
+      const style = getComputedStyle(el);
+      const width = el.offsetWidth;
+      const marginRight = parseFloat(style.marginRight || 0);
+      return total + width + marginRight;
+    }, 0);
+
+    // ✅ Subtract the final right margin to remove the gap
+    if (originalWraps.length > 1) {
+      const lastEl = originalWraps[originalWraps.length - 1];
+      const lastMargin = parseFloat(getComputedStyle(lastEl).marginRight || 0);
+      originalWidth -= lastMargin;
+    }
+
+    // Set total width for both sets
+    inner.style.width = `${originalWidth * 2}px`;
+    inner.style.flexWrap = 'nowrap';
+
+    // Animate exactly to the width of the original set
+    inner.animate(
+      [
+        { transform: 'translateX(0)' },
+        { transform: `translateX(-${originalWidth}px)` }
+      ],
+      {
+        duration: originalWidth * 20, // Adjust speed here
+        iterations: Infinity,
+        easing: 'linear'
+      }
+    );
+
+    scroller.dataset.animated = 'true';
+  });
+}
