@@ -99,6 +99,9 @@ b {
 .mr-btm-1{
   margin-bottom: 1rem;
 }
+.mr-btm-4{
+  margin-bottom: 4rem;
+}
 
 .mr-left-1 {
   margin-right: 0.7rem;
@@ -428,7 +431,7 @@ button {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: calc(100vh - 85px);
+  /* height: calc(100vh - 85px); */
 }
 
 .hero-buttons {
