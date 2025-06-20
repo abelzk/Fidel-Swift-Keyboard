@@ -564,7 +564,7 @@ button {
 }
 .scroller{
   padding: 1rem;
-  max-width: 725px;
+  max-width: 57%;
   overflow: hidden;
 }
 
@@ -692,9 +692,15 @@ button {
   }
 }
 @media (max-width: 768px){
+
+  .scroller{
+    width: 100% !important;
+  }
   .scroller[data-animated ="true"] .scroller-inner{
+    mask: linear-gradient(90deg, transparent, var(--background-color) 1%, var(--background-color) 99%, transparent);
+  -webkit-mask: linear-gradient(90deg, transparent, var(--background-color) 1%, var(--background-color) 99%, transparent);
   animation: none;
-  width: 80%;
+  
   transform: translate(-100%);
 }
 .scroller[data-animated ="true"] .secondary{
