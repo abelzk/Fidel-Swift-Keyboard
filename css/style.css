@@ -718,20 +718,29 @@ button {
 
   .scroller{
     max-width: 100% !important;
+    flex-direction: column;
   }
   .scroller[data-animated ="true"] .scroller-inner{
-    mask: linear-gradient(90deg, transparent, var(--background-color) 1%, var(--background-color) 99%, transparent);
-  -webkit-mask: linear-gradient(90deg, transparent, var(--background-color) 1%, var(--background-color) 99%, transparent);
-  animation: none;
+    /* mask: linear-gradient(90deg, transparent, var(--background-color) 1%, var(--background-color) 99%, transparent);
+  -webkit-mask: linear-gradient(90deg, transparent, var(--background-color) 1%, var(--background-color) 99%, transparent); */
+  animation: scroller 20s linear infinite;
   
-  transform: translate(-100%);
+  /* transform: translate(-100%); */
 }
 .scroller[data-animated ="true"] .secondary{
-  
-  animation: none;
+ animation: scroller 20s linear infinite;
+  animation-delay: 10s;
 }
-}
+@keyframes scroller {
+  0%{
+    left: 100%;
+  }
+  100%{
+    left: -100%;
+  }
 
+}
+}
 @media (max-width: 530px) {
   .navbar-links[data-state="closed"] {
     animation: toggleOut 0.3s forwards ease-in-out;
