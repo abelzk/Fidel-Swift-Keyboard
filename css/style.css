@@ -75,9 +75,13 @@ a {
 
 b {
   font-weight: 500;
-
 }
-
+p{
+  font-size: clamp(0.3rem, 4vw, calc(0.7rem * 1.168));
+}
+h2{
+  font-size: clamp(1.6rem, 4vw, calc(2rem * 1.168));
+}
 .nv-flex {
   display: flex;
   align-items: center;
@@ -140,6 +144,9 @@ b {
 
 .cursor-pointer {
   cursor: pointer;
+}
+.text-center{
+  text-align: center;
 }
 
 .flex {
@@ -337,6 +344,9 @@ b {
 .h-5 {
   height: 5rem;
 }
+.h-10{
+  height: 10rem;
+}
 .overflow-hidden{
   overflow: hidden;
 }
@@ -431,7 +441,7 @@ button {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: auto;
+  /* height: auto; */
   height: calc(100vh - 85px);
 }
 
@@ -809,6 +819,9 @@ button {
   .hero-buttons {
     align-items: flex-start !important;
   }
+  /* .btn-primary-x{
+    width: 100%;
+  } */
 
   .hero-tagline {
     text-align: flex-start;
