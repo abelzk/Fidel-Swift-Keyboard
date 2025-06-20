@@ -564,7 +564,7 @@ button {
 }
 .scroller{
   padding: 1rem;
-  max-width: 725px !important;
+  max-width: 725px;
   overflow: hidden;
 }
 
@@ -694,6 +694,7 @@ button {
 @media (max-width: 768px){
   .scroller[data-animated ="true"] .scroller-inner{
   animation: none;
+  width: 80%;
   transform: translate(-100%);
 }
 .scroller[data-animated ="true"] .secondary{
