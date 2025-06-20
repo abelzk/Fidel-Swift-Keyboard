@@ -144,17 +144,51 @@
 //     scroller.dataset.animated = 'true';
 //   });
 // }
-const scroller = document.querySelector('.scroller-inner');
-let lastScrollY = window.scrollY;
+// const scroller = document.querySelector('.scroller-inner');
+// let lastScrollY = window.scrollY;
 
-window.addEventListener('scroll', () => {
-  const scrollTop = window.scrollY;
+// window.addEventListener('scroll', () => {
+//   const scrollTop = window.scrollY;
 
-  // Control how fast the icons scroll compared to the page
-  const scrollFactor = 0.5;
+//   // Control how fast the icons scroll compared to the page
+//   const scrollFactor = 0.5;
 
-  const translateX = -scrollTop * scrollFactor;
-  scroller.style.transform = `translateX(${translateX}px)`;
+//   const translateX = -scrollTop * scrollFactor;
+//   scroller.style.transform = `translateX(${translateX}px)`;
 
-  lastScrollY = scrollTop;
+//   lastScrollY = scrollTop;
+// });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollerWrapper = document.querySelector('.scroller');
+  const original = document.querySelector('.scroller-inner');
+
+  // Respect prefers-reduced-motion
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  if (scrollerWrapper && original) {
+    // Add data-animate attributes
+    scrollerWrapper.setAttribute('data-animate', '');
+    original.setAttribute('data-animate', '');
+
+    // Clone original .scroller-inner
+    const clone = original.cloneNode(true);
+    clone.classList.add('secondary');
+    scrollerWrapper.appendChild(clone);
+
+    // Scroll-based animation
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const scrollFactor = 0.5;
+      const translateX = -scrollTop * scrollFactor;
+
+      // Apply transform to both original and cloned scroller
+      original.style.transform = `translateX(${translateX}px)`;
+      clone.style.transform = `translateX(${translateX}px)`;
+
+      lastScrollY = scrollTop;
+    });
+  }
 });

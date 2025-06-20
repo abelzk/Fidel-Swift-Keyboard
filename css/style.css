@@ -623,8 +623,11 @@ button {
 
 .scroller{
   padding: 1rem;
-  width: 100%;
+  width: 80%;
   overflow: hidden;
+  mask: linear-gradient(90deg, transparent, var(--background-color) 35%, var(--background-color) 80%, transparent);
+  -webkit-mask: linear-gradient(90deg, transparent, var(--background-color) 30%, var(--background-color) 80%, transparent);
+
 }
 
 .scroller-inner{
@@ -636,37 +639,8 @@ button {
   width: max-content;
   position: absolute;
   white-space: nowrap;
-
-}
-
-.scroller[data-animated ="true"]{
-  flex-wrap: nowrap;
-  overflow: hidden;
-  mask: linear-gradient(90deg, transparent, var(--background-color) 35%, var(--background-color) 80%, transparent);
-  -webkit-mask: linear-gradient(90deg, transparent, var(--background-color) 30%, var(--background-color) 80%, transparent);
-}
-.scroller[data-animated ="true"] .scroller-inner{
-  flex-wrap: nowrap;
-  animation: scroller 40s linear infinite;
-  width: max-content;
-}
-.scroller[data-animated ="true"] .secondary{
-  animation: scroller 40s linear infinite;
-  animation-delay: 20s;
-}
-@keyframes scroller {
-  0%{
-    left: 100%;
-  }
-  100%{
-    left: -100%;
-  }
-  
-}
-@keyframes scroll {
-  to{
-    transform: translateX(calc(-100% - 0.5rem));
-  }
+  transform: translate(-50%);
+  left: -100%;
 }
 
 .fade-in {
@@ -751,41 +725,10 @@ button {
     transform: translateX(-100%);
   }
 }
-@media (max-width: 725px){
-  /* .mobile-hidden{
-    display: none;
-  } */
-
-  .scroller{
-    max-width: 100% !important;
-    flex-direction: column;
-  }
-  .scroller[data-animated ="true"] .scroller-inner{
-    /* mask: linear-gradient(90deg, transparent, var(--background-color) 1%, var(--background-color) 99%, transparent);
-  -webkit-mask: linear-gradient(90deg, transparent, var(--background-color) 1%, var(--background-color) 99%, transparent); */
-  animation: scroller 30s linear infinite;
-  
-  /* transform: translate(-100%); */
-}
-.scroller[data-animated ="true"] .secondary{
- animation: scroller 30s linear infinite;
-  animation-delay: 15s;
-}
-@keyframes scroller {
-  0%{
-    left: 100%;
-  }
-  100%{
-    left: calc(-100% + 1rem);
-  }
-
-}
-}
 @media (max-width: 530px) {
   .navbar-links[data-state="closed"] {
     animation: toggleOut 0.3s forwards ease-in-out;
   }
-
   .navbar-links {
     margin-top: 4rem;
     position: absolute;
@@ -851,7 +794,7 @@ button {
     height: auto !important;
     align-items: flex-start;
     padding-bottom: 60px;
-    border-bottom: 1px solid #5f5f5f4d;
+    border-bottom: 1px solid #75757553;
     border-radius: 0 0 50px 50px;
     /* min-height: calc(400px - 1.5rem); */
   }
@@ -917,5 +860,9 @@ button {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease-in-out;
+}
+.wrap{
+  font-size: 0;
+  width: 32px;
 }
 }
