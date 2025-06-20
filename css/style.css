@@ -801,7 +801,7 @@ button {
   .hero-content{
     height: auto !important;
     align-items: flex-start;
-    min-height: calc(400px - 1.5rem);
+    /* min-height: calc(400px - 1.5rem); */
   }
 
   .hero-content-right {
