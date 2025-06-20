@@ -65,7 +65,7 @@
               <li><a class="" href="/">Home</a></li>
               <li><a class="" href="/documentation.html">Documentation</a></li>
               <li><a href="#">Releases</a></li>
-              <li><a href="#">FAQs</a></li>
+              <li><a id="screen-width" href="#">FAQs</a></li>
             </ul>
           </div>
         </div>
@@ -120,19 +120,19 @@
             <div class="icon-track scroller-inner" aria-hidden="true">
               <img class="int-icon sm-2" src="images/brands/adobe-acrobat-reader-100.png" alt="Adobe Acrobat Reader logo for PDF viewing and editing">
               <img class="int-icon" src="images/brands/adobe-illustrator.png" alt="Adobe Illustrator logo for vector graphic design">
-              <img class="int-icon" src="images/brands/adobe-photoshop.png" alt="Adobe Photoshop logo for photo editing and digital art">
+              <img class="int-icon mobile-hidden" src="images/brands/adobe-photoshop.png" alt="Adobe Photoshop logo for photo editing and digital art">
               <img class="int-icon" src="images/brands/canva.png" alt="Canva logo for online design and templates">
               <img class="int-icon" src="images/brands/evernote.png" alt="Evernote logo for note-taking and productivity">
               <img class="int-icon" src="images/brands/figma.png" alt="Figma logo for collaborative interface design">
-              <!-- <img class="int-icon" src="images/brands/foxit.png" alt="Foxit PDF reader logo for lightweight document editing"> -->
-              <!-- <img class="int-icon" src="images/brands/gmail.png" alt="Gmail logo for Google email services">
-              <img class="int-icon" src="images/brands/google-forms.png" alt="Google Forms logo for surveys and data collection">
+              <img class="int-icon mobile-hidden" src="images/brands/foxit.png" alt="Foxit PDF reader logo for lightweight document editing">
+              <img class="int-icon" src="images/brands/gmail.png" alt="Gmail logo for Google email services">
+              <img class="int-icon mobile-hidden" src="images/brands/google-forms.png" alt="Google Forms logo for surveys and data collection">
               <img class="int-icon" src="images/brands/ms-office.png" alt="Microsoft Office logo for Word, Excel, and PowerPoint tools">
-              <img class="int-icon" src="images/brands/ms365.png" alt="Microsoft 365 logo for cloud-based productivity suite">
-              <img class="int-icon sm-2" src="images/brands/notion.png" alt="Notion logo for all-in-one workspace organization"> -->
-              <img class="int-icon" src="images/brands/onenote.png" alt="Microsoft OneNote logo for digital note-taking">
+              <img class="int-icon mobile-hidden" src="images/brands/ms365.png" alt="Microsoft 365 logo for cloud-based productivity suite">
+              <img class="int-icon sm-2" src="images/brands/notion.png" alt="Notion logo for all-in-one workspace organization">
+              <img class="int-icon mobile-hidden" src="images/brands/onenote.png" alt="Microsoft OneNote logo for digital note-taking">
               <img class="int-icon" src="images/brands/telegram.png" alt="Telegram logo for secure cloud messaging app">
-              <img class="int-icon" src="images/brands/zoho-books.png" alt="Zoho Books logo for accounting and financial management">
+              <img class="int-icon mobile-hidden" src="images/brands/zoho-books.png" alt="Zoho Books logo for accounting and financial management">
             </div>
         
           </div>
@@ -152,6 +152,13 @@
 </body>
 <script src="scripts/navToggle.js"></script>
 <script src="scripts/scroller.js"></script>
+ <script>
+    // Get screen width
+    const widthz = window.innerWidth;
+
+    // Display it in the paragraph
+    document.getElementById("screen-width").textContent = `Screen width: ${widthz}px`;
+  </script>
 <script>
   const phrases = [ "[Powerful]", "[Lightweight]", "[Effortless]"];
   const typewriterEl = document.getElementById("typewriter");

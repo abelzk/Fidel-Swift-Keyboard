@@ -715,6 +715,9 @@ button {
   }
 }
 @media (max-width: 725px){
+  .mobile-hidden{
+    display: none;
+  }
 
   .scroller{
     max-width: 100% !important;
@@ -723,20 +726,20 @@ button {
   .scroller[data-animated ="true"] .scroller-inner{
     /* mask: linear-gradient(90deg, transparent, var(--background-color) 1%, var(--background-color) 99%, transparent);
   -webkit-mask: linear-gradient(90deg, transparent, var(--background-color) 1%, var(--background-color) 99%, transparent); */
-  animation: scroller 20s linear infinite;
+  animation: scroller 30s linear infinite;
   
   /* transform: translate(-100%); */
 }
 .scroller[data-animated ="true"] .secondary{
- animation: scroller 20s linear infinite;
-  animation-delay: 10s;
+ animation: scroller 30s linear infinite;
+  animation-delay: 15s;
 }
 @keyframes scroller {
   0%{
     left: 100%;
   }
   100%{
-    left: -100%;
+    left: calc(-100% - 1rem);
   }
 
 }
