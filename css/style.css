@@ -564,7 +564,7 @@ button {
 }
 .scroller{
   padding: 1rem;
-  max-width: 57%;
+  max-width: 725px;
   overflow: hidden;
 }
 
@@ -691,10 +691,10 @@ button {
     transform: translateX(-100%);
   }
 }
-@media (max-width: 768px){
+@media (max-width: 725px){
 
   .scroller{
-    width: 100% !important;
+    max-width: 100% !important;
   }
   .scroller[data-animated ="true"] .scroller-inner{
     mask: linear-gradient(90deg, transparent, var(--background-color) 1%, var(--background-color) 99%, transparent);
