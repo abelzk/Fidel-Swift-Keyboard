@@ -431,7 +431,8 @@ button {
   align-items: center;
   justify-content: center;
   width: 100%;
-  /* height: calc(100vh - 85px); */
+  height: auto;
+  height: calc(100vh - 85px);
 }
 
 .hero-buttons {
