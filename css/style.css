@@ -792,6 +792,10 @@ button {
     display: block;
     /* z-index: 1100; */
   }
+  .hero-content{
+    height: auto !important;
+    min-height: 500px;
+  }
 
   .hero-content-right {
     display: none;
