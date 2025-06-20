@@ -564,7 +564,8 @@ button {
 }
 .scroller{
   padding: 1rem;
-  max-width: 57%;
+  max-width: 725px !important;
+  overflow: auto;
 }
 
 .scroller-inner{
@@ -581,6 +582,7 @@ button {
 .scroller[data-animated ="true"]{
   overflow: hidden;
   flex-wrap: nowrap;
+  width: 725px;
   mask: linear-gradient(90deg, transparent, var(--background-color) 35%, var(--background-color) 80%, transparent);
   -webkit-mask: linear-gradient(90deg, transparent, var(--background-color) 30%, var(--background-color) 80%, transparent);
 }
@@ -631,6 +633,7 @@ button {
   width: 25%;
   height: 100vh;
   order: 1;
+  /* background-color: #ff5419; */
 }
 
 .content-wrapper {

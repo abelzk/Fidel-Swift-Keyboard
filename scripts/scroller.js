@@ -1,3 +1,11 @@
+// Get the viewport width and height
+const width = window.innerWidth;
+const height = window.innerHeight;
+
+// Print to console
+console.log(`Viewport Width: ${width}px`);
+console.log(`Viewport Height: ${height}px`);
+
 document.addEventListener('DOMContentLoaded', () => {
   // Respect prefers-reduced-motion
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
