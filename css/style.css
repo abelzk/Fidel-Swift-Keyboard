@@ -861,6 +861,9 @@ button {
   visibility: hidden;
   transition: opacity 0.3s ease-in-out;
 }
+.scroller{
+  padding: .5rem;
+}
 .wrap{
   width: 150px;
   margin-right: 5px;
