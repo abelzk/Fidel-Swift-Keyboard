@@ -865,7 +865,8 @@ button {
   padding: .5rem;
 }
 .wrap{
-  width: 150px;
+  font-size: 0;
+  width: 32px;
   margin-right: 5px;
 }
 }

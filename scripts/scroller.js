@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Responsive scroll factor based on screen width
       const isMobile = window.innerWidth <= 530;
-      const scrollFactor = isMobile ? 1.8 : 0.8;
+      const scrollFactor = isMobile ? 1 : 0.8;
 
       const translateX = -scrollTop * scrollFactor;
 
