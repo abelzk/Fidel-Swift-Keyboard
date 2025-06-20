@@ -80,7 +80,7 @@ p{
   font-size: clamp(0.3rem, 4vw, calc(0.7rem * 1.168));
 }
 h2{
-  font-size: clamp(1.6rem, 4vw, calc(2rem * 1.168));
+  font-size: clamp(2rem, 2.5vw, 2.3rem)
 }
 .nv-flex {
   display: flex;
@@ -148,7 +148,9 @@ h2{
 .text-center{
   text-align: center;
 }
-
+.color-gray{
+  color: var(--text-light);
+}
 .flex {
   display: flex;
 }
@@ -488,7 +490,8 @@ button {
 }
 
 .hero-description {
-  font-size: clamp(2rem, 4vw, calc(2.8rem * 1.168));
+  font-size: clamp(2rem, 3vw, 3.27rem);
+
   color: var(--text-dark);
   margin-bottom: 1.5rem;
   text-align: start;
