@@ -834,6 +834,9 @@ button {
   .hero-content{
     height: auto !important;
     align-items: flex-start;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border-light);
+    border-radius: 0 0 50px 50px;
     /* min-height: calc(400px - 1.5rem); */
   }
 
