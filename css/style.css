@@ -640,7 +640,7 @@ button {
   position: absolute;
   white-space: nowrap;
   transform: translate(-50%);
-  left: -100%;
+  left: -50%;
 }
 
 .fade-in {

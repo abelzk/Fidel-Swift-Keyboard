@@ -174,14 +174,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Clone original .scroller-inner
     const clone = original.cloneNode(true);
     clone.classList.add('secondary');
-    scrollerWrapper.appendChild(clone);
+    // scrollerWrapper.appendChild(clone);
 
     // Scroll-based animation
     let lastScrollY = window.scrollY;
 
     window.addEventListener('scroll', () => {
       const scrollTop = window.scrollY;
-      const scrollFactor = 1;
+      const scrollFactor = .8;
       const translateX = -scrollTop * scrollFactor;
 
       // Apply transform to both original and cloned scroller
