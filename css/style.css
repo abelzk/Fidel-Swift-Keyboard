@@ -44,7 +44,7 @@ html.dark body {
   --text-dark: #fff;
   --border-dark: #fff;
   --text-light: #aeaeae;
-  --hero-color: #fff
+  --hero-color: #fff;
 }
 
 html.dark .sm,
@@ -62,7 +62,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+main {
+  min-height: calc(100vh - 4rem); /* 4rem = height of footer */
+   padding-bottom: 4rem;
+}
 ::-webkit-scrollbar-thumb:hover {
   background-color: #555;
 }
@@ -339,6 +342,9 @@ h2{
 .h-100vh{
   height: 100vh;
 }
+.h-full{
+  height: 100%;
+}
 .h-auto{
   height: auto;
 }
@@ -363,6 +369,9 @@ h2{
 }
 .h-10{
   height: 10rem;
+}
+.h-main{
+  min-height: calc(100vh - 4rem);
 }
 .overflow-hidden{
   overflow: hidden;
