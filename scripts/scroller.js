@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', () => {
       const scrollTop = window.scrollY;
-      const scrollFactor = 0.5;
+      const scrollFactor = 1;
       const translateX = -scrollTop * scrollFactor;
 
       // Apply transform to both original and cloned scroller

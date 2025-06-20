@@ -862,7 +862,7 @@ button {
   transition: opacity 0.3s ease-in-out;
 }
 .wrap{
-  font-size: 0;
-  width: 32px;
+  width: 150px;
+  margin-right: 5px;
 }
 }
