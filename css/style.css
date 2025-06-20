@@ -601,26 +601,42 @@ button {
 .int-icon{
   flex-shrink: 0;
   width: 32px;
+  filter: grayscale(100%);
   object-fit: contain;
   display: block;
   margin: 0;
   padding: 0;
+  margin-right: 0.5rem;
+  object-fit: contain;
+  transition: filter 0.3s ease;
 }
+.int-icon:hover {
+  filter: grayscale(0%);
+}
+.wrap{
+  width: 160px;
+  margin-right: 1rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
 .scroller{
   padding: 1rem;
-  max-width: 725px;
+  width: 100%;
   overflow: hidden;
 }
 
 .scroller-inner{
+  transition: transform 0.1s linear;
   padding-block: 1rem;
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
-  width: 100%;
+  width: max-content;
   position: absolute;
   white-space: nowrap;
-  left: 100%;
+
 }
 
 .scroller[data-animated ="true"]{
@@ -631,12 +647,12 @@ button {
 }
 .scroller[data-animated ="true"] .scroller-inner{
   flex-wrap: nowrap;
-  animation: scroller 30s linear infinite;
+  animation: scroller 40s linear infinite;
   width: max-content;
 }
 .scroller[data-animated ="true"] .secondary{
-  animation: scroller 30s linear infinite;
-  animation-delay: 15s;
+  animation: scroller 40s linear infinite;
+  animation-delay: 20s;
 }
 @keyframes scroller {
   0%{
@@ -736,9 +752,9 @@ button {
   }
 }
 @media (max-width: 725px){
-  .mobile-hidden{
+  /* .mobile-hidden{
     display: none;
-  }
+  } */
 
   .scroller{
     max-width: 100% !important;
@@ -835,7 +851,7 @@ button {
     height: auto !important;
     align-items: flex-start;
     padding-bottom: 60px;
-    border-bottom: 1px solid var(--border-light);
+    border-bottom: 1px solid #5f5f5f4d;
     border-radius: 0 0 50px 50px;
     /* min-height: calc(400px - 1.5rem); */
   }
