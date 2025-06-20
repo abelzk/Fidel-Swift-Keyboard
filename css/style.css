@@ -48,12 +48,11 @@ html.dark body {
 }
 
 html.dark .sm,
-html.dark .sm-1 html.dark .sm-2 {
+html.dark .sm-1 , html.dark .sm-2 {
   filter: invert(1)
 }
 
 body {
-  /* font-family: "Public Sans", sans-serif; */
   font-family: Space Grotesk, Space Grotesk Fallback;
   font-weight: 300;
   background-color: var(--background-color);
@@ -64,8 +63,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-/* Scrollbar Thumb on hover */
 ::-webkit-scrollbar-thumb:hover {
   background-color: #555;
 }
@@ -144,6 +141,9 @@ b {
 
 .flex {
   display: flex;
+}
+.flex-space-around{
+  justify-content: space-around;
 }
 
 .justify-between {
@@ -502,7 +502,6 @@ button {
 
 .typewriter-container {
   font-family: monospace;
-  /* font-size: calc(2.8rem / 1.688); */
   font-size: clamp(1rem, 4vw, calc(1.5rem * 1.168));
   color: var(--primary);
   display: inline-block;
@@ -565,37 +564,49 @@ button {
 }
 .scroller{
   padding: 1rem;
-  max-width: 600px;
+  max-width: 57%;
 }
 
 .scroller-inner{
   padding-block: 1rem;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-evenly;
   gap: 1rem;
+  width: 100%;
+  position: absolute;
+  white-space: nowrap;
+  left: 100%;
 }
 
 .scroller[data-animated ="true"]{
   overflow: hidden;
-  /* border: 1px solid lime; */
   flex-wrap: nowrap;
   mask: linear-gradient(90deg, transparent, var(--background-color) 35%, var(--background-color) 80%, transparent);
   -webkit-mask: linear-gradient(90deg, transparent, var(--background-color) 30%, var(--background-color) 80%, transparent);
 }
 .scroller[data-animated ="true"] .scroller-inner{
   flex-wrap: nowrap;
-  animation: scroll 20s linear infinite;
+  animation: scroller 30s linear infinite;
   width: max-content;
 }
-
+.scroller[data-animated ="true"] .secondary{
+  animation: scroller 30s linear infinite;
+  animation-delay: 15s;
+}
+@keyframes scroller {
+  0%{
+    left: 100%;
+  }
+  100%{
+    left: -100%;
+  }
+  
+}
 @keyframes scroll {
   to{
-    transform: translateX(calc(-50% - 0.5rem));
+    transform: translateX(calc(-100% - 0.5rem));
   }
 }
-
-
-  
 
 .fade-in {
   opacity: 0;
@@ -620,7 +631,6 @@ button {
   width: 25%;
   height: 100vh;
   order: 1;
-  /* background-color: #ff5419; */
 }
 
 .content-wrapper {
