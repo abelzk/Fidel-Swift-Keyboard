@@ -479,7 +479,9 @@ h2 {
 .bg-main {
   background-color: var(--background-color);
 }
-
+.bg-lime{
+  background-color: lime;
+}
 .z-1000 {
   z-index: 0;
 }
@@ -777,12 +779,94 @@ button {
   height: 300px;
   background: rgba(255, 84, 25, 0.1);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(12.1px);
   -webkit-backdrop-filter: blur(12.1px);
   border: 1px solid rgba(255, 84, 25, 0.44);
+  transition: all .3s ease-in-out;
 }
+.cards:hover{
+  transition: all .3s ease-in-out;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.ux-1{
+  padding: 20px;
 
+}
+.window-mac{
+  width: 100%;
+  border-radius: 10px;
+}
+.w-menu{
+  display: none;
+  height: 12%;
+  min-height: 30px;
+  /* border:.5px solid red; */  padding: 5px;
+}
+.w-screen{
+  height: 88%;
+  /* background-color: transparent; */
+  border-radius: 0 0 10px 10px;
+  /* backdrop-filter: blur(12.1px);
+  -webkit-backdrop-filter: blur(12.1px); */
+  background: transparent;
+
+
+}
+.bt-minimize, .bt-maximize, .bt-close{
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background-color: #4c4c4c50;
+  backdrop-filter: blur(12.1px);
+  -webkit-backdrop-filter: blur(12.1px);
+  font-size: 10px;
+}
+.brand-logo img{
+    width: 90px;
+  height: 90px;
+  background: rgba(86, 80, 78, 0.1);
+  border-radius: 5px;
+  backdrop-filter: blur(12.1px);
+  -webkit-backdrop-filter: blur(12.1px);
+  border: 1px solid rgba(124, 124, 124, 0.44);
+}
+.txt-small{
+  font-size: 12px;
+}
+.txt-file{
+  font-size: 15px;
+}
+.progressbar-cont{
+  display: none;
+  height: 50px;
+  width: 100%;
+  /* border: 1px dashed red; */
+}
+.pgbar-main{
+  height: 8px;
+  width: 100%;
+  background-color: #8888888c;
+  border-radius: 10px;
+  border: 1px solid hsl(var(--border));
+  overflow: hidden;
+  margin-bottom: 2px;
+}
+.pgbar-value{
+  width: 0%;
+  height: 100%;
+  background-color: var(--background-color);
+  filter: invert(1);
+  transition: .3s all ease-in-out;
+}
+.btn-install{
+  height: 50px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+}
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
