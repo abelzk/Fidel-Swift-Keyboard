@@ -22,7 +22,9 @@
   --hero-color: #000;
   --border-main: hsla(0, 0%, 50%, 0.285);
   --overlay: rgba(0, 0, 0, 0.5);
-  /* --animation-duration: 10s; */
+  --background-card: #000;
+  --text-inverted: #fff;
+  --text-gray-inverted: #8b8b8b;
 }
 
 * {
@@ -51,12 +53,16 @@ html.dark body {
   --border-dark: #fff;
   --text-light: #aeaeae;
   --hero-color: #fff;
+    --background-card: #fff;
+    --text-inverted: #000;
+    /* 255, 84, 25, 0.1; */
+
 }
 
 html.dark .sm,
 html.dark .sm-1,
 html.dark .sm-2,
-html .sm-small {
+html .sm-small, html .mac-pointer {
   filter: invert(1)
 }
 
@@ -122,6 +128,9 @@ h2 {
 .inverted {
   background-color: var(--background-inverted);
 }
+/* .txt-inverted{
+  filter: invert(1);
+} */
 
 .mr-btm-05 {
   margin-bottom: 0.5;
@@ -777,11 +786,11 @@ button {
   min-width: 300px;
   width: 30%;
   height: 300px;
-  background: rgba(255, 84, 25, 0.1);
+  background: var(--background-card);
   border-radius: 16px;
-  backdrop-filter: blur(12.1px);
+  /* backdrop-filter: blur(12.1px);
   -webkit-backdrop-filter: blur(12.1px);
-  border: 1px solid rgba(255, 84, 25, 0.44);
+  border: 1px solid rgba(255, 84, 25, 0.44); */
   transition: all .3s ease-in-out;
 }
 .cards:hover{
@@ -822,10 +831,11 @@ button {
   font-size: 10px;
 }
 .brand-logo img{
-    width: 90px;
-  height: 90px;
-  background: rgba(86, 80, 78, 0.1);
+    width: 70px;
+  height: 70px;
   border-radius: 5px;
+  background-color: var(--background-color);
+  /* background: rgba(255, 84, 25, 0.1); */
   backdrop-filter: blur(12.1px);
   -webkit-backdrop-filter: blur(12.1px);
   border: 1px solid rgba(124, 124, 124, 0.44);
@@ -834,10 +844,17 @@ button {
   font-size: 12px;
 }
 .txt-file{
+  color: var(--text-inverted);
   font-size: 15px;
 }
+.txt-status{
+  color: var(--text-inverted);
+}
+.txt-size{
+  color: var(--text-gray-inverted);
+}
 .progressbar-cont{
-  display: none;
+  /* display: none; */
   height: 50px;
   width: 100%;
   /* border: 1px dashed red; */
@@ -852,10 +869,9 @@ button {
   margin-bottom: 2px;
 }
 .pgbar-value{
-  width: 0%;
+  width: 4%;
   height: 100%;
   background-color: var(--background-color);
-  filter: invert(1);
   transition: .3s all ease-in-out;
 }
 .btn-install{
