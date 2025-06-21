@@ -35,8 +35,11 @@
 
 }
 
-html {
+html, body {
   scroll-behavior: smooth;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 html.dark body {
@@ -57,17 +60,21 @@ body {
   font-weight: 300;
   background-color: var(--background-color);
   color: var(--text-dark);
-  opacity: 0.9;
   overscroll-behavior: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+   display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
-main {
-  min-height: calc(100vh - 4rem); /* 4rem = height of footer */
-   padding-bottom: 7rem;
-}
+/* nav, main, footer {
+  outline: 1px dashed red;
+} */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
+  background-color: #55555581;
+}
+footer{
+  min-height: 2rem;
 }
 
 a {
@@ -77,10 +84,11 @@ a {
 }
 
 b {
-  font-weight: 500;
+      font-weight: 500;
+    font-size: 16px;
 }
 p{
-  font-size: clamp(0.3rem, 4vw, calc(0.7rem * 1.168));
+      font-size: clamp(1rem, 4vw, calc(0.7rem * 1.168));
 }
 h2{
   font-size: clamp(1.2rem, 2.5vw, 2.3rem)
@@ -121,6 +129,9 @@ h2{
 .mr-btm-4{
   margin-bottom: 4rem;
 }
+.mr-top-4{
+  margin-top: 4rem;
+}
 
 .mr-left-1 {
   margin-right: 0.7rem;
@@ -145,6 +156,22 @@ h2{
 }
 .pd-top-5 {
   padding-top: 5rem;
+}
+
+.pd-btm-2 {
+  padding-bottom: 2rem;
+}
+
+.pd-btm-3 {
+  padding-bottom: 3rem;
+}
+
+.pd-btm-4 {
+  padding-bottom: 4rem;
+}
+
+.pd-btm-5 {
+  padding-bottom: 5rem;
 }
 
 .pd-inline-1 {
@@ -382,6 +409,9 @@ h2{
 .overflow-hidden{
   overflow: hidden;
 }
+.overflow-auto{
+  overflow: auto
+}
 .bg-main {
   background-color: var(--background-color);
 }
@@ -466,15 +496,19 @@ button {
   font-size: 16px;
   font-weight: 600;
 }
-
+.hero{
+  min-height: 100vh;
+  height: 50%;
+}
 .hero-content {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 100%;
   /* height: auto; */
-  height: calc(100vh - 85px);
+  /* height: calc(100vh - 85px); */
+  height: calc(80vh - 0px);
 }
 
 .hero-buttons {
@@ -494,10 +528,10 @@ button {
 }
 
 .hero-content-left {
-  width: 50%;
+  width: 60%;
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   padding: 30px;
 }
@@ -520,12 +554,12 @@ button {
 }
 
 .hero-description {
-  font-size: clamp(2rem, 4vw, 3.27rem);
+  font-size: clamp(2rem, 6vw, 3.8rem);
 
   color: var(--text-dark);
   margin-bottom: 1.5rem;
   text-align: start;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 .hero-tagline {
@@ -535,7 +569,7 @@ button {
 }
 
 .hero-content-right {
-  width: 50%;
+  width: 40%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -549,10 +583,11 @@ button {
 
 .typewriter-container {
   font-family: monospace;
-  font-size: clamp(1rem, 4vw, calc(1.5rem * 1.168));
-  color: var(--primary);
-  display: inline-block;
-  position: relative;
+    font-size: clamp(1rem, 4vw, calc(0.1rem));
+    color: var(--primary);
+    display: inline-block;
+    position: relative;
+    font-weight: 100;
 }
 
 .title-static {
@@ -571,7 +606,7 @@ button {
   top: 0;
   animation: blink 0.7s steps(1) infinite;
   font-weight: bold;
-  color: var(--text-dark);
+  color: var(--primary);
 }
 
 @keyframes blink {
@@ -611,6 +646,7 @@ button {
   padding: 0;
   margin-right: 0.5rem;
   object-fit: contain;
+  cursor: pointer;
   transition: filter 0.3s ease;
 }
 .int-icon:hover {
@@ -644,6 +680,11 @@ button {
   white-space: nowrap;
   transform: translate(-50%);
   left: -50%;
+}
+.cards{
+  width: 30%;
+  height: 400px;
+  background-color: var(--primary);
 }
 
 .fade-in {
@@ -796,6 +837,7 @@ button {
   .hero-content{
     height: auto !important;
     align-items: flex-start;
+    
     padding-bottom: 60px;
     border-bottom: 1px solid #75757553;
     border-radius: 0 0 50px 50px;
@@ -810,6 +852,7 @@ button {
     width: 100%;
     text-align: center;
     align-items: flex-start;
+    
     padding: 0;
     padding-inline: 25px;
   }
