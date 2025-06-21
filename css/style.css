@@ -439,11 +439,16 @@ h2{
   font-weight: 400;
 }
 .txt-author{
+   display: inline-block;
+  border-bottom: 1.5px solid var(--text-light); /* underline */
+  font-weight: 400;
+  padding-bottom: 1px;
   transition: .3s all ease-in-out;
 }
 .txt-author:hover{
   transition: .3s all ease-in-out;
   color: var(--primary);
+  border-bottom: 1.5px solid var(--primary);
 }
 .pd-inline{
   padding-inline: .5rem;
