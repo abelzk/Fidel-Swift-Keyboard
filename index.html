@@ -142,14 +142,14 @@
             <h2 class="text-center mr-btm-0">How <span>Fidel Swift</span> Works</h2>
             <p class="text-center mr-btm-2 color-gray">Get started in just a few steps — install once, type anywhere, and let Fidel Swift handle the rest.</p>
             <div class="w-full flex flex-center flex-wrap gap-2">
-              <div class="cards">
+              <div class="cards c1">
                 <div class="ux-1 flex w-full h-full flex-center">
                   <div class="window-mac w-full">
                     <div class="w-menu flex flex-end gap-0 align-center">
                       <!-- <div class="bt-close flex flex-center">X</div> -->
                     </div>
                     <div class="w-screen flex gap-1 flex-col position-relative">
-                      <div class="mouse position-absolute top-0 right-0"><img class="" src="images/handpointing.svg" alt=""></div>
+                      <div class="mouse position-absolute top-0 right-0"><img class=".mac-pointer" src="images/handpointing.svg" alt=""></div>
                       <div class="brand-logo flex gap-1"><img src="images/devicon.svg" alt="">
                         <div class="flex flex-col gap-small justify-center">
                         <p class="txt-file">Fidel Swift Setup.exe</p>
@@ -157,9 +157,9 @@
                       </div>
                     </div>
                     <div class="progressbar-cont flex flex-col gap-small">
-                      <div class="txt-status ">Installing...</div>
+                      <div class="txt-status" id="txt-status">Installing...</div>
                       <div class="pgbar-main">
-                       <div class="pgbar-value">
+                       <div class="pgbar-value" id="progress-bar">
 
                        </div>
 
@@ -189,6 +189,38 @@
 </body>
 <script src="scripts/navToggle.js"></script>
 <script src="scripts/scroller2.js"></script>
+<script>
+  const progressBar = document.getElementById('progress-bar');
+const statusText = document.getElementById('txt-status');
+
+const observer = new MutationObserver(() => {
+  const style = getComputedStyle(progressBar);
+  const barWidth = parseFloat(style.width);
+  const parentWidth = parseFloat(getComputedStyle(progressBar.parentElement).width);
+  const percent = (barWidth / parentWidth) * 100;
+
+  if (percent === 100) {
+    statusText.textContent = "Installation completed";
+  } else if (percent === 0) {
+    statusText.textContent = "Installing...";
+  }
+});
+
+observer.observe(progressBar, {
+  attributes: true,
+  attributeFilter: ["style"]
+});
+
+// Optional: run once on load
+window.addEventListener("load", () => {
+  const barWidth = parseFloat(getComputedStyle(progressBar).width);
+  const parentWidth = parseFloat(getComputedStyle(progressBar.parentElement).width);
+  if (barWidth === 0) {
+    statusText.textContent = "Installing...";
+  }
+});
+
+</script>
  <script>
     // Get screen width
     const widthz = window.innerWidth;

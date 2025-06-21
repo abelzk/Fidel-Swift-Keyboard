@@ -854,9 +854,10 @@ button {
   color: var(--text-gray-inverted);
 }
 .progressbar-cont{
-  /* display: none; */
-  height: 50px;
+  visibility: hidden;
+  height: 0;
   width: 100%;
+  transition: .3s all ease-in-out;
   /* border: 1px dashed red; */
 }
 .pgbar-main{
@@ -869,7 +870,7 @@ button {
   margin-bottom: 2px;
 }
 .pgbar-value{
-  width: 4%;
+  width: 0%;
   height: 100%;
   background-color: var(--background-color);
   transition: .3s all ease-in-out;
@@ -882,7 +883,99 @@ button {
   color: #fff;
   font-size: 15px;
   font-weight: 300;
+  transition: all .3s ease-in-out;
+
 }
+.w-screen:hover > .mouse{
+  animation: mouseClick 4s ease-in-out forwards;
+}
+.w-screen:hover .btn-install{
+    animation: buttonPress 1s ease-in-out forwards;
+  animation-delay: 1.8s;
+}
+.w-screen:hover .progressbar-cont{
+  transition: .3s all ease-in-out;
+  animation : changeHeight 1s ease-in-out forwards;
+  animation-delay:  2.2s;
+}
+.w-screen:hover .pgbar-value{
+  animation: pgBar 7s ease-in-out forwards;
+  animation-delay: 2.5s;
+}
+.txt-status::after{
+  animation: txtSwap 7s ease-in-out forwards;
+  animation-delay: 2.5s;
+}
+
+.mouse{
+  z-index: 2;
+}
+/* .mouse{
+  transform: translate(-150px, 60px);
+} */
+
+@keyframes mouseClick{
+ 0% {
+    transform: translate(0, 0) scale(1);
+  }
+  40% {
+    transform: translateY(-150px, 120px) scale(1);
+  }
+  50% {
+    transform: translate(-150px, 120px) scale(0.95);
+  }
+  60% {
+    transform: translate(-150px, 120px) scale(1);
+  }
+  100% {
+    transform: translate(-150, 120) scale(1);
+  }
+}
+@keyframes buttonPress {
+  0%, 49% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.98);
+    background-color: #fd622e;
+  }
+  100% {
+    transform: scale(1);
+    background-color: var(--primary);
+  }
+}
+@keyframes changeHeight {
+  0%{
+    height: 0;
+    overflow: hidden;
+  }
+  100%{
+    visibility: visible;
+    height: 50px;
+    overflow: auto;
+  }
+  
+}
+@keyframes pgBar {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 100%;
+  }
+  
+}
+@keyframes textSwap {
+  0%,
+  85% {
+    content: "Installing...";
+  }
+  86%,
+  100% {
+    content: "Installation completed";
+  }
+}
+
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
