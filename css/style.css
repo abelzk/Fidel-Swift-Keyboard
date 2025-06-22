@@ -92,6 +92,27 @@ body {
   flex-direction: column;
   min-height: 100%;
 }
+/* ==========================================================================
+   PRELOADER
+   ========================================================================== */
+.preloader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.8s ease;
+}
+.brand-wrapper-pre{
+  display: flex;
+  transition: all 0.8s ease-in-out;
+  position: absolute;
+  /* transform: scale(1.8); */
+}
 
 /* ==========================================================================
    SCROLLBAR STYLING
@@ -577,6 +598,7 @@ button {
 .logo-brand {
   width: 32px;
   height: 32px;
+  /* newly added section */
 }
 
 .navbar-links {

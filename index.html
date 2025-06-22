@@ -47,10 +47,21 @@
 </script>
 
 <body class="flex flex-col">
+  <div class="preloader flex flex-center" id="preloader">
+    <div id="preloaderLogo" class="brand-wrapper-pre flex gap-0 align-flex-end">
+         <button style="visibility: hidden;" onclick="navToggle()" class="btn-menu" id="menuToggle" aria-haspopup="dialog" aria-controls="">
+              <img class="sm" id="menuIcon" src="images/menu.svg" alt="menu icon" srcset="">
+            </button>
+            <a class="flex align-center justify-flex-start" href="/">
+              <img class="logo-brand" src="images/devicon.svg" alt="Fidel Swift logo" srcset="">
+              <h2 class="bold">Fidel Swift</h2>
+            </a>
+          </div>
+  </div>
   <nav class="border-b w-full flex align-center flex-start position-fixed top-0 h-4 bg-main z-1050">
       <div class="navbar-container mr-inline-2 flex flex-between gap-25p w-full align-center">
         <div class="flex align-center flex-start gap-2p">
-          <div class="brand-wrapper flex gap-0 align-flex-end">
+          <div id="navLogo" class="brand-wrapper flex gap-0 align-flex-end">
             <button onclick="navToggle()" class="btn-menu" id="menuToggle" aria-haspopup="dialog" aria-controls="">
               <img class="sm" id="menuIcon" src="images/menu.svg" alt="menu icon" srcset="">
             </button>
@@ -92,11 +103,11 @@
         <div class="hero-content-left">
           <div class="hero-content-left-wrapper">
             <div class="hero-title">
-              <h1 class="typewriter-container fade-in">
+              <h2 class="typewriter-container fade-in">
                 <span id="typewriter"></span>
 
                 <span class="cursor">|</span>
-              </h1>
+              </h2>
             </div>
             <div class="hero-buttons">
               <h1 class="hero-description fade-in">Type Amharic at the Speed of Thought.</h1>
@@ -189,6 +200,45 @@
 </body>
 <script src="scripts/navToggle.js"></script>
 <script src="scripts/scroller2.js"></script>
+<script>
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    const preLogo = document.getElementById("preloaderLogo");
+    const navLogo = document.getElementById("navLogo");
+
+    // Step 1: Ensure browser applies the starting transform
+    requestAnimationFrame(() => {
+      const startRect = preLogo.getBoundingClientRect();
+      const endRect = navLogo.getBoundingClientRect();
+
+      // Step 2: Calculate differences
+      const deltaX = endRect.left - startRect.left;
+      const deltaY = endRect.top - startRect.top;
+      const scaleX = endRect.width / startRect.width;
+      const scaleY = endRect.height / startRect.height;
+
+      // Step 3: Animate to match navbar
+      requestAnimationFrame(() => {
+        preLogo.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(${scaleX}, ${scaleY})`;
+      });
+
+      // Step 4: Fade out preloader & show navbar logo
+      setTimeout(() => {
+        preloader.style.opacity = "0";
+        navLogo.style.opacity = "1";
+      }, 900);
+
+      // Step 5: Remove preloader from DOM
+      setTimeout(() => {
+        preloader.style.display = "none";
+      }, 1300);
+    });
+  });
+</script>
+
+
+
+ 
 <script>
   const progressBar = document.getElementById('progress-bar');
 const statusText = document.getElementById('txt-status');
