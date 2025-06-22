@@ -22,9 +22,10 @@
   --hero-color: #000;
   --border-main: hsla(0, 0%, 50%, 0.285);
   --overlay: rgba(0, 0, 0, 0.5);
-  --background-card: #000;
+  --background-card: rgba(255, 84, 25, 0.1);
   --text-inverted: #fff;
   --text-gray-inverted: #8b8b8b;
+  --bg-color-slate: #F1F5F9
 }
 
 * {
@@ -53,8 +54,9 @@ html.dark body {
   --border-dark: #fff;
   --text-light: #aeaeae;
   --hero-color: #fff;
-    --background-card: #fff;
+    /* --background-card: #fff; */
     --text-inverted: #000;
+    --bg-color-slate: #292929;
     /* 255, 84, 25, 0.1; */
 
 }
@@ -77,7 +79,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  cursor: url('/images/handpointing.svg'), auto;
+  cursor: url('/images/default.svg'), auto;
 }
 
 /* nav, main, footer {
@@ -234,7 +236,7 @@ h2 {
 }
 
 .cursor-pointer {
-  cursor: pointer;
+   cursor: url('/images/handpointing.svg'), auto;
 }
 
 .text-center {
@@ -547,7 +549,7 @@ h2 {
 }
 
 button {
-  cursor: pointer;
+  cursor: url('/images/handpointing.svg'), auto;
   border: none;
   outline: none;
   background: transparent;
@@ -579,7 +581,7 @@ button {
 
 .links-md {
   gap: 1rem;
-  cursor: pointer;
+  cursor: url('/images/handpointing.svg'), auto;
 }
 
 .divider {
@@ -745,7 +747,7 @@ button {
   padding: 0;
   margin-right: 0.5rem;
   object-fit: contain;
-  cursor: pointer;
+  cursor: url('/images/handpointing.svg'), auto;
   transition: filter 0.3s ease;
 }
 
@@ -787,20 +789,30 @@ button {
   min-width: 300px;
   width: 30%;
   height: 300px;
+  /* background-color: #f3f4f7; */
   background: var(--background-card);
   border-radius: 16px;
-  /* backdrop-filter: blur(12.1px);
+  backdrop-filter: blur(12.1px);
   -webkit-backdrop-filter: blur(12.1px);
-  border: 1px solid rgba(255, 84, 25, 0.44); */
+  border: 1px solid rgba(255, 84, 25, 0.44);
+  /* border: 1px solid rgba(255, 84, 25, 0.44); */
   transition: all .3s ease-in-out;
+  padding: 20px;
 }
 .cards:hover{
-  cursor: none;
   transition: all .3s ease-in-out;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 .ux-1{
   padding: 20px;
+background: rgba(255, 255, 255, 0.99);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+  /* background-color: #f7f9fb35; */
+  /* background-color: var(--bg-color-slate); */
+  /* border-radius: 15px; */
 
 }
 .window-mac{
@@ -815,7 +827,7 @@ button {
 }
 .w-screen{
   height: 88%;
-  /* background-color: transparent; */
+  /* background-color: teal; */
   border-radius: 0 0 10px 10px;
   /* backdrop-filter: blur(12.1px);
   -webkit-backdrop-filter: blur(12.1px); */
@@ -833,10 +845,11 @@ button {
   font-size: 10px;
 }
 .brand-logo img{
-    width: 70px;
-  height: 70px;
-  border-radius: 5px;
-  background-color: var(--background-color);
+    width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #000;
+  /* background-color: var(--background-color); */
   /* background: rgba(255, 84, 25, 0.1); */
   backdrop-filter: blur(12.1px);
   -webkit-backdrop-filter: blur(12.1px);
@@ -846,11 +859,12 @@ button {
   font-size: 12px;
 }
 .txt-file{
-  color: var(--text-inverted);
+  color: #000;
   font-size: 15px;
 }
 .txt-status{
-  color: var(--text-inverted);
+  font-size: 12px;
+  color: #444;
 }
 .txt-size{
   color: var(--text-gray-inverted);
@@ -863,10 +877,10 @@ button {
   /* border: 1px dashed red; */
 }
 .pgbar-main{
-  height: 8px;
+  height: 2.5px;
   width: 100%;
   background-color: #8888888c;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   border: 1px solid hsl(var(--border));
   overflow: hidden;
   margin-bottom: 2px;
@@ -874,16 +888,16 @@ button {
 .pgbar-value{
   width: 0%;
   height: 100%;
-  background-color: var(--background-color);
+  background-color: #000;
   transition: .3s all ease-in-out;
 }
 .btn-install{
-  height: 50px;
+  height: 35px;
   width: 100%;
-  border-radius: 8px;
+  border-radius: 4px;
   background-color: var(--primary);
   color: #fff;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 300;
   transition: all .3s ease-in-out;
 
@@ -897,8 +911,8 @@ button {
 }
 .w-screen:hover .progressbar-cont{
   transition: .3s all ease-in-out;
-  animation :     changeHeight 1s ease-in-out 2.5s forwards,
-    collapseHeight 1s linear 10s forwards;
+  animation :     changeHeight .5s ease-in-out 2.5s forwards,
+    collapseHeight .5s linear 10s forwards;
 }
 .w-screen:hover .pgbar-value{
   animation: pgBar 7s ease-in-out forwards;
