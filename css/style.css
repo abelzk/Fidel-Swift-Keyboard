@@ -79,7 +79,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  cursor: url('/images/default.svg'), auto;
 }
 
 /* nav, main, footer {
@@ -236,7 +235,7 @@ h2 {
 }
 
 .cursor-pointer {
-   cursor: url('/images/handpointing.svg'), auto;
+   cursor: pointer;
 }
 
 .text-center {
@@ -549,7 +548,7 @@ h2 {
 }
 
 button {
-  cursor: url('/images/handpointing.svg'), auto;
+  cursor: pointer;
   border: none;
   outline: none;
   background: transparent;
@@ -581,7 +580,7 @@ button {
 
 .links-md {
   gap: 1rem;
-  cursor: url('/images/handpointing.svg'), auto;
+  cursor: pointer;
 }
 
 .divider {
@@ -747,7 +746,7 @@ button {
   padding: 0;
   margin-right: 0.5rem;
   object-fit: contain;
-  cursor: url('/images/handpointing.svg'), auto;
+  cursor: pointer;
   transition: filter 0.3s ease;
 }
 
@@ -807,7 +806,7 @@ button {
   padding: 20px;
 background: rgba(255, 255, 255, 0.99);
 border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+/* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
 backdrop-filter: blur(20px);
 -webkit-backdrop-filter: blur(20px);
   /* background-color: #f7f9fb35; */
@@ -847,6 +846,7 @@ backdrop-filter: blur(20px);
 .brand-logo img{
     width: 48px;
   height: 48px;
+  padding: 4px;
   border-radius: 8px;
   background-color: #000;
   /* background-color: var(--background-color); */
@@ -892,7 +892,7 @@ backdrop-filter: blur(20px);
   transition: .3s all ease-in-out;
 }
 .btn-install{
-  height: 35px;
+  height: 40px;
   width: 100%;
   border-radius: 4px;
   background-color: var(--primary);
@@ -935,16 +935,16 @@ backdrop-filter: blur(20px);
     transform: translate(0, 0) scale(1);
   }
   40% {
-    transform: translateY(-150px, 120px) scale(1);
+    transform: translateY(-130px, 90px) scale(1);
   }
   50% {
-    transform: translate(-150px, 120px) scale(0.95);
+    transform: translate(-130px, 90px) scale(0.95);
   }
   60% {
-    transform: translate(-150px, 120px) scale(1);
+    transform: translate(-130px, 90px) scale(1);
   }
   100% {
-    transform: translate(-150, 120) scale(1);
+    transform: translate(-130, 90) scale(1);
   }
 }
 @keyframes buttonPress {
@@ -967,14 +967,14 @@ backdrop-filter: blur(20px);
   }
   100%{
     visibility: visible;
-    height: 50px;
-    overflow: auto;
+    height: 25px;
+    overflow: hidden;
   }
   
 }
 @keyframes collapseHeight {
   0%{
-    height: 50px;
+    height: 25px;
   }
   100%{
     height: 0;
