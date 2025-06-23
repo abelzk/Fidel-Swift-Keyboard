@@ -113,7 +113,7 @@ body {
 .brand-wrapper-pre{
     display: flex;
   position: absolute;
-  transform: scale(2.8);
+  transform: scale(2.5);
   transition: transform 0.8s ease-in-out;
   transform-origin: center center;
   will-change: transform;
