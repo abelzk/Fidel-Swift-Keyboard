@@ -977,6 +977,15 @@ html .mac-pointer {
     transform: translateX(0);
   }
 }
+@keyframes toggleLeft {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
 @keyframes toggleOut {
   0% {
@@ -1121,7 +1130,9 @@ html .mac-pointer {
   margin-top: 4rem;
   opacity: 1;
   visibility: visible;
+  animation: toggleLeft 0.3s forwards ease-in-out;
 }
+
 
 .tx-main {
   transition: opacity 0.3s ease-in-out;
