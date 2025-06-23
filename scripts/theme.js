@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Load saved theme
   if (localStorage.getItem('theme') === 'dark') {
     root.classList.add('dark');
-    if (icon) icon.src = 'images/toggle-dark.svg';
+    if (icon) icon.src = '/images/toggle-dark.svg';
   }
 
   toggle?.addEventListener('click', () => {
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 
     if (icon) {
-      icon.src = isDark ? 'images/toggle-dark.svg' : 'images/toggle.svg';
+      icon.src = isDark ? '/images/toggle-dark.svg' : '/images/toggle.svg';
     }
   });
 });

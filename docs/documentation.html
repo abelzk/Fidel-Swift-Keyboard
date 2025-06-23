@@ -30,9 +30,9 @@
   <meta name="twitter:image:type" content="image/jpeg" />
   <meta name="twitter:image:width" content="1152" />
   <meta name="twitter:image:height" content="648" />
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <script src="scripts/theme.js"></script>
-  <link  rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+  <script src="/scripts/theme.js"></script>
+  <link  rel="stylesheet" href="/css/style.css">
   <title>Introduction</title>
 </head>
 
@@ -42,10 +42,10 @@
         <div class="flex align-center flex-start gap-2p">
           <div class="brand-wrapper flex gap-0 align-flex-end">
             <button onclick="navToggle()" class="btn-menu" id="menuToggle" aria-haspopup="dialog" aria-controls="">
-              <img class="sm" id="menuIcon" src="images/menu.svg" alt="menu icon" srcset="">
+              <img class="sm" id="menuIcon" src="/images/menu.svg" alt="menu icon" srcset="">
             </button>
             <a class="flex align-center justify-flex-start" href="/">
-              <img class="logo-brand" src="images/devicon.svg" alt="Fidel Swift logo" srcset="">
+              <img class="logo-brand" src="/images/devicon.svg" alt="Fidel Swift logo" srcset="">
               <h2 class="bold">Fidel Swift</h2>
             </a>
           </div>
@@ -53,7 +53,7 @@
           <div class="navbar-links" id="navbar-links" data-state="closed">
             <ul class="links-md nv-flex">
               <li><a class="" href="/">Home</a></li>
-              <li><a class="" href="/documentation.html">Documentation</a></li>
+              <li><a class="" href="/docs/documentation.html">Documentation</a></li>
               <li><a href="#">Releases</a></li>
               <li><a href="#">FAQs</a></li>
             </ul>
@@ -62,12 +62,12 @@
         <div class="navbar-socials">
           <button class="btn-socials">
             <a target="_blank" href="https://github.com/abelzk/Fidel-Swift-Keyboard"><img class="sm mr-left-1"
-                src="images/github.svg" alt="GitHub Logo" srcset=""></a>
+                src="/images/github.svg" alt="GitHub Logo" srcset=""></a>
           </button>
           <button
             class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 w-9"
             type="button" id="toggle-theme" aria-haspopup="menu" aria-expanded="false" data-state="closed">
-            <img class="sm pd-left-1" id="theme-icon" src="images/toggle.svg" alt="">
+            <img class="sm pd-left-1" id="theme-icon" src="/images/toggle.svg" alt="">
           </button>
         </div>
       </div>
@@ -84,7 +84,7 @@
               <button onclick="toggleHeight()" class="w-full" >
                 <div class="btn-collapsable flex justify-between align-center">
                   <span class="font-size-3 font-semibold">Getting Started</span>
-                  <span><img class="sm-1" id="toggle-icon" src="images/arrow-down.svg" alt="" srcset=""></span>
+                  <span><img class="sm-1" id="toggle-icon" src="/images/arrow-down.svg" alt="" srcset=""></span>
                 </div>
               </button>
 
@@ -115,8 +115,8 @@
     </div>
 </footer>
 </body>
-<script src="scripts/navToggle.js"></script>
-<script src="scripts/move.js"></script>
+<script src="/scripts/navToggle.js"></script>
+<script src="/scripts/move.js"></script>
 <script>
  function toggleHeight() {
     const div = document.querySelector('.height-toggle');
@@ -125,10 +125,10 @@
 
     if (currentState === 'collapsed') {
         div.setAttribute('data-state', 'expanded');
-        icon.src = 'images/arrow-down.svg'; // path to your "collapse" icon
+        icon.src = '/images/arrow-down.svg'; // path to your "collapse" icon
     } else {
         div.setAttribute('data-state', 'collapsed');
-        icon.src = 'images/arrow-right.svg'; // path to your "expand" icon
+        icon.src = '/images/arrow-right.svg'; // path to your "expand" icon
     }
 }
 
