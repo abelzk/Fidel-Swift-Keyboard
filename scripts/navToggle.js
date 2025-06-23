@@ -10,7 +10,7 @@ function navToggle() {
   overlay.setAttribute("data-state", newState);
 
   // Change the icon
-  menuIcon.src = isClosed ? "images/close.svg" : "images/menu.svg";
+  menuIcon.src = isClosed ? "/images/close.svg" : "/images/menu.svg";
   menuIcon.alt = isClosed ? "close icon" : "menu icon";
 }
 document.getElementById("navbar-overlay").addEventListener("click", () => {
@@ -22,6 +22,6 @@ document.getElementById("navbar-overlay").addEventListener("click", () => {
   navLinks.setAttribute("data-state", "closed");
   overlay.setAttribute("data-state", "closed");
 
-    menuIcon.src = isClosed ? "images/close.svg" : "images/menu.svg";
+    menuIcon.src = isClosed ? "/images/close.svg" : "/images/menu.svg";
   menuIcon.alt = isClosed ? "close icon" : "menu icon";
 });
