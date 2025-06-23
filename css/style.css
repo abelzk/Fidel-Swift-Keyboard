@@ -97,21 +97,29 @@ body {
    ========================================================================== */
 .preloader {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
-  inset: 0;
   background-color: var(--bg);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  transition: opacity 0.8s ease;
+  transition: all 0.8s ease;
+  /* backdrop-filter: blur(10px); */
+  overflow: hidden;
 }
 .brand-wrapper-pre{
-  display: flex;
-  transition: all 0.8s ease-in-out;
+  /* display: flex;
   position: absolute;
-  /* transform: scale(1.8); */
+  transition: transform 0.8s ease-in-out; */
+    display: flex;
+  position: absolute;
+  transform: scale(2.6);
+  transition: transform 0.8s ease-in-out;
+  transform-origin: center center;
+  will-change: transform;
 }
 
 /* ==========================================================================
@@ -614,6 +622,9 @@ button {
 
 .navbar-collapsable {
   display: flex;
+}
+.navbar-container{
+  position: relative;
 }
 
 .links-md {
