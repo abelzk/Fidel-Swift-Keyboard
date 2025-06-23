@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://fidelswift.com/sitemap.xml
+Sitemap: https://fidelswift.vercel.app/sitemap.xml
 
 # Disallow admin areas (if any)
 Disallow: /admin/
