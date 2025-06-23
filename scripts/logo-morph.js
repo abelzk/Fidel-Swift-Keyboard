@@ -95,7 +95,7 @@ class FidelSwiftLogoMorph {
     const translateY = navCenterY - preCenterY
 
     // Calculate final scale (from initialScale back to 1, then to nav size ratio)
-    const finalScale = 2.6 / this.config.initialScale
+    const finalScale = 2.8 / this.config.initialScale
 
     const transformation = {
       translateX,
@@ -188,7 +188,7 @@ class FidelSwiftLogoMorph {
 // Initialize when page loads
 window.addEventListener("load", () => {
   const logoMorph = new FidelSwiftLogoMorph({
-    initialScale: 2.6,
+    initialScale: 2.8,
     morphDuration: 800,
     fadeDelay: 700,
     debug: true, // Set to false in production
