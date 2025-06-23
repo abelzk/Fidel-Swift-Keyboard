@@ -203,25 +203,23 @@ h2 {
 }
 
 .txt-file {
-  color: var(--bg);
-  filter: invert(1);
+  color: var(--text);
   font-size: 13px;
 }
 
 .txt-status {
   font-size: 12px;
-  color: var(--bg);
-  filter: invert(1);
+  color: var(--text);
   font-weight: 100;
 }
 
 .txt-size {
   color: var(--text-gray-inverted);
 }
-.txt-white{
+/* .txt-white{
   color: #fff;
   font-size: 14px;
-}
+} */
 
 /* ==========================================================================
    LAYOUT UTILITIES
@@ -895,7 +893,8 @@ button {
 }
 .bg-black{
   border-radius: 10px;
-  background-color: var(--bg-dark) !important;
+  /* background-color: var(--bg-dark) !important; */
+  /* border: 0.5px solid #fff; */
 }
 .w-menu {
   display: flex;
