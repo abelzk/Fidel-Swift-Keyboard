@@ -122,6 +122,12 @@ body {
   transform-origin: center center;
   will-change: transform;
 }
+.cursor-blink{
+  color: var(--primary);
+  position: absolute;
+  animation: blink 0.7s steps(1) infinite;
+}
+
 /* ==========================================================================
    SCROLLBAR STYLING
    ========================================================================== */
@@ -807,7 +813,7 @@ button {
 
 .cursor {
   position: absolute;
-  right: -15px;
+  right: -10px;
   top: 0;
   animation: blink 0.7s steps(1) infinite;
   font-weight: bold;
@@ -1070,6 +1076,11 @@ html .mac-pointer {
     content: "Installation completed";
   }
 }
+ @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
 
 /* Animation Classes */
 .fade-in {
