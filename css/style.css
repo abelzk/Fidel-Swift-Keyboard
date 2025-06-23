@@ -111,19 +111,16 @@ body {
   overflow: hidden;
 }
 .brand-wrapper-pre{
-  /* display: flex;
-  position: absolute;
-  transition: transform 0.8s ease-in-out; */
-  /* transition: transform 0.8s ease-in-out; */
     display: flex;
   position: absolute;
-  transform: scale(2.5);
+  transform: scale(2.6);
   transition: transform 0.8s ease-in-out;
   transform-origin: center center;
   will-change: transform;
 }
 .cursor-blink{
-  color: var(--primary);
+  color: #414141;
+  font-weight: 200;
   position: absolute;
   animation: blink 0.7s steps(1) infinite;
 }
