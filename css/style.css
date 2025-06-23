@@ -203,13 +203,16 @@ h2 {
 }
 
 .txt-file {
-  color: #000;
-  font-size: 15px;
+  color: var(--bg);
+  filter: invert(1);
+  font-size: 13px;
 }
 
 .txt-status {
   font-size: 12px;
-  color: #444;
+  color: var(--bg);
+  filter: invert(1);
+  font-weight: 100;
 }
 
 .txt-size {
@@ -735,9 +738,9 @@ button {
 
 /* Cards */
 .cards {
-  min-width: 300px;
+  min-width: 350px;
   width: 30%;
-  height: 300px;
+  height: 350px;
   background: var(--bg-card);
   border-radius: 16px;
   backdrop-filter: blur(12.1px);
@@ -849,8 +852,10 @@ button {
 
 /* Window Mac Component */
 .ux-1 {
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.99);
+  padding-inline: 20px;
+  padding-block: 10px;
+  /* background: rgba(255, 255, 255, 0.99); */
+  background-color: transparent;
   border-radius: 16px;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -862,13 +867,15 @@ button {
 }
 
 .w-menu {
-  display: none;
+  display: flex;
+  /* background-color: red; */
   height: 12%;
   min-height: 30px;
   padding: 5px;
 }
 
 .w-screen {
+  padding-inline: 20px;
   height: 88%;
   border-radius: 0 0 10px 10px;
   background: transparent;
@@ -877,15 +884,22 @@ button {
 .bt-minimize,
 .bt-maximize,
 .bt-close {
-  height: 22px;
-  width: 22px;
+  height: 10px;
+  width: 10px;
   border-radius: 50%;
-  background-color: #4c4c4c50;
   backdrop-filter: blur(12.1px);
   -webkit-backdrop-filter: blur(12.1px);
-  font-size: 10px;
+}
+.bt-close{
+  background-color: #ff605c;
+}
+.bt-minimize{
+  background-color: #ffbd44;
 }
 
+.bt-maximize{
+  background-color: #00ca4e;
+}
 .brand-logo img {
   width: 48px;
   height: 48px;
@@ -909,7 +923,7 @@ button {
   height: 2.5px;
   width: 100%;
   background-color: #8888888c;
-  border: 1px solid hsl(var(--border));
+  /* border: 1px solid hsl(var(--border)); */
   overflow: hidden;
   margin-bottom: 2px;
 }
@@ -917,7 +931,8 @@ button {
 .pgbar-value {
   width: 0%;
   height: 100%;
-  background-color: #000;
+  background-color: var(--bg);
+  filter: invert(1);
   transition: 0.3s all ease-in-out;
 }
 
