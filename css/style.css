@@ -220,6 +220,7 @@ h2 {
 }
 .txt-white{
   color: #fff;
+  font-size: 14px;
 }
 
 /* ==========================================================================
@@ -839,8 +840,8 @@ button {
   color: var(--primary);
 }
 .cursorAM {
-  position: absolute;
-  right: -10px;
+  /* position: absolute;
+  right: -10px; */
   top: 0;
   animation: blink 0.7s steps(1) infinite;
   font-weight: bold;

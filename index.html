@@ -280,14 +280,17 @@
                   </div>
                 </div>
               </div>
-              <div class="cards c1 flex flex-col">
+              <div class="cards c2 flex flex-col">
                 <h3 class="mr-btm-0">Start Typing in Amharic</h3>
                 <div class="ux-1 bg-black flex w-full h-full">
                   <div class="window-mac flex flex-col gap-1">
-                    <div class="w-menu flex flex-start gap-0 align-center mr-btm-1">
-                      <div class="bt-close"></div>
-                      <div class="bt-minimize"></div>
-                      <div class="bt-maximize"></div>
+                    <div class="w-menu flex flex-between gap-0  mr-btm-1">
+                      <div class="btn-container flex gap-0">
+                        <div class="bt-close"></div>
+                        <div class="bt-minimize"></div>
+                        <div class="bt-maximize"></div>
+                      </div>
+                      <p class="color-primary">Notepad</p>
                     </div>
                     <div class="w-screen flex gap-1 flex-col position-relative pd-inline-0">
               <div class="typewriter-container">
@@ -418,6 +421,7 @@ const phrases = ["[Powerful]", "[Lightweight]", "[Effortless]"];
 
 const typewriterEl = document.getElementById("typewriter");
 const typewriterAM = document.getElementById("typewriterAM");
+const hoverTarget = document.querySelector(".c2");
 
 const TYPING_DELAY = 90;
 const DELETING_DELAY = 60;
@@ -427,6 +431,7 @@ const PAUSE_AFTER_DELETION = 600;
 let currentIndex = 0;
 let letterIndex = 0;
 let isDeleting = false;
+let isAMTyping = false;
 
 function typeText() {
   if (!typewriterEl || !typewriterAM) return;
@@ -434,14 +439,17 @@ function typeText() {
   const engText = phrases[currentIndex % phrases.length];
   const amText = amPhrases[currentIndex % amPhrases.length];
 
-  // Display current portion
+  // English typing always active
   typewriterEl.textContent = engText.substring(0, letterIndex);
-  typewriterAM.textContent = amText.substring(0, letterIndex);
 
-  // Typing or deleting logic
+  // Amharic typing only when hovered
+  if (isAMTyping) {
+    typewriterAM.textContent = amText.substring(0, letterIndex);
+  }
+
   if (!isDeleting) {
     letterIndex++;
-    if (letterIndex > Math.max(engText.length, amText.length)) {
+    if (letterIndex > Math.max(engText.length, isAMTyping ? amText.length : 0)) {
       isDeleting = true;
       return setTimeout(typeText, PAUSE_AFTER_COMPLETION);
     }
@@ -458,8 +466,20 @@ function typeText() {
   setTimeout(typeText, delay);
 }
 
-// Start typing effect
+// Start typing English immediately
 typeText();
+
+// Start Amharic typing on hover
+if (hoverTarget) {
+  hoverTarget.addEventListener("mouseenter", () => {
+    isAMTyping = true;
+  });
+  hoverTarget.addEventListener("mouseleave", () => {
+    isAMTyping = false;
+    typewriterAM.textContent = ""; // Optional: clear when not hovered
+  });
+}
+
 
 </script>
 
