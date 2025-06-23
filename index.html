@@ -258,7 +258,7 @@
                       <div class="bt-minimize"></div>
                       <div class="bt-maximize"></div>
                     </div>
-                    <div class="w-screen flex gap-1 flex-col position-relative">
+                    <div class="w-screen flex gap-1 flex-col position-relative pd-inline">
                       <div class="mouse position-absolute top-0 right-0"><img class=".mac-pointer" src="images/handpointing.svg" alt=""></div>
                       <div class="brand-logo flex gap-1"><img src="images/devicon.svg" alt="">
                         <div class="flex flex-col gap-small justify-center">
@@ -282,15 +282,18 @@
               </div>
               <div class="cards c1 flex flex-col">
                 <h3 class="mr-btm-0">Start Typing in Amharic</h3>
-                <div class="ux-1 flex w-full h-full">
+                <div class="ux-1 bg-black flex w-full h-full">
                   <div class="window-mac flex flex-col gap-1">
                     <div class="w-menu flex flex-start gap-0 align-center mr-btm-1">
                       <div class="bt-close"></div>
                       <div class="bt-minimize"></div>
                       <div class="bt-maximize"></div>
                     </div>
-                    <div class="w-screen flex gap-1 flex-col position-relative">
-            
+                    <div class="w-screen flex gap-1 flex-col position-relative pd-inline-0">
+              <div class="typewriter-container">
+                <span class="txt-white" id="typewriterAM"></span>
+                  <span class="cursorAM">|</span>
+              </div>
                     
                      
                     </div>
@@ -316,39 +319,92 @@
 <script src="scripts/navToggle.js"></script>
 <script src="scripts/scroller2.js"></script>
 <script src="scripts/logo-morph.js"></script>
-
 <script>
-  const progressBar = document.getElementById('progress-bar');
-const statusText = document.getElementById('txt-status');
+        class TypewriterEffect {
+            constructor(element, options = {}) {
+                this.element = element;
+                this.speed = options.speed || 100;
+                this.currentText = '';
+                this.currentIndex = 0;
+                this.isTyping = false;
+            }
 
-const observer = new MutationObserver(() => {
-  const style = getComputedStyle(progressBar);
-  const barWidth = parseFloat(style.width);
-  const parentWidth = parseFloat(getComputedStyle(progressBar.parentElement).width);
-  const percent = (barWidth / parentWidth) * 100;
+            async type(text) {
+                if (this.isTyping) return;
+                
+                this.isTyping = true;
+                this.currentText = text;
+                this.currentIndex = 0;
+                this.element.textContent = '';
 
-  if (percent === 100) {
-    statusText.textContent = "Installation completed";
-  } else if (percent === 0) {
-    statusText.textContent = "Installing...";
-  }
-});
+                return new Promise((resolve) => {
+                    const typeNextChar = () => {
+                        if (this.currentIndex < this.currentText.length) {
+                            this.element.textContent += this.currentText[this.currentIndex];
+                            this.currentIndex++;
+                            setTimeout(typeNextChar, this.speed);
+                        } else {
+                            this.isTyping = false;
+                            resolve();
+                        }
+                    };
+                    typeNextChar();
+                });
+            }
 
-observer.observe(progressBar, {
-  attributes: true,
-  attributeFilter: ["style"]
-});
+            clear() {
+                this.element.textContent = '';
+                this.currentIndex = 0;
+                this.isTyping = false;
+            }
 
-// Optional: run once on load
-window.addEventListener("load", () => {
-  const barWidth = parseFloat(getComputedStyle(progressBar).width);
-  const parentWidth = parseFloat(getComputedStyle(progressBar.parentElement).width);
-  if (barWidth === 0) {
-    statusText.textContent = "Installing...";
-  }
-});
+            setSpeed(speed) {
+                this.speed = speed;
+            }
+        }
 
-</script>
+        // Initialize typewriter
+        const typewriterElement = document.getElementById('typewriter-text');
+        const typewriter = new TypewriterEffect(typewriterElement);
+
+        // Speed control
+        const speedSlider = document.getElementById('speed-slider');
+        const speedValue = document.getElementById('speed-value');
+
+        speedSlider.addEventListener('input', (e) => {
+            const speed = e.target.value;
+            typewriter.setSpeed(parseInt(speed));
+            speedValue.textContent = speed + 'ms';
+        });
+
+        // Functions for controls
+        function startTypewriter() {
+            const textInput = document.getElementById('text-input');
+            const text = textInput.value.trim();
+            
+            if (text) {
+                typewriter.type(text);
+            }
+        }
+
+        function clearText() {
+            typewriter.clear();
+        }
+
+        // Auto-start with default text
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                startTypewriter();
+            }, 1000);
+        });
+
+        // Allow Enter key to start typing
+        document.getElementById('text-input').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                startTypewriter();
+            }
+        });
+    </script>
  <script>
     // Get screen width
     const widthz = window.innerWidth;
@@ -357,38 +413,54 @@ window.addEventListener("load", () => {
     document.getElementById("screen-width").textContent = `Screen width: ${widthz}px`;
   </script>
 <script>
-  const phrases = [ "[Powerful]", "[Lightweight]", "[Effortless]"];
-  const typewriterEl = document.getElementById("typewriter");
-  const TYPING_DELAY = 90;
-  const DELETING_DELAY = 60;
-  const PAUSE_AFTER_COMPLETION = 1200;
-  const PAUSE_AFTER_DELETION = 600;
-  let currentPhraseIndex = 0;
-  let letterIndex = 0;
-  let isDeleting = false;
-  function typeText() {
-    const currentPhrase = phrases[currentPhraseIndex];
-    typewriterEl.textContent = currentPhrase.substring(0, letterIndex);
-    if (!isDeleting) {
-      letterIndex++;
-      if (letterIndex > currentPhrase.length) {
-        isDeleting = true;
-        return setTimeout(typeText, PAUSE_AFTER_COMPLETION);
-      }
-    } else {
-      letterIndex--;
-      if (letterIndex < 0) {
-        isDeleting = false;
-        currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-        letterIndex = 0;
-        return setTimeout(typeText, PAUSE_AFTER_DELETION);
-      }
-    }
+ const amPhrases = ["ፊደል ስዊፍት የአማርያኛ ኪቦርድ መተግበርያ"];
+const phrases = ["[Powerful]", "[Lightweight]", "[Effortless]"];
 
-    const delay = isDeleting ? DELETING_DELAY : TYPING_DELAY;
-    setTimeout(typeText, delay);
+const typewriterEl = document.getElementById("typewriter");
+const typewriterAM = document.getElementById("typewriterAM");
+
+const TYPING_DELAY = 90;
+const DELETING_DELAY = 60;
+const PAUSE_AFTER_COMPLETION = 1200;
+const PAUSE_AFTER_DELETION = 600;
+
+let currentIndex = 0;
+let letterIndex = 0;
+let isDeleting = false;
+
+function typeText() {
+  if (!typewriterEl || !typewriterAM) return;
+
+  const engText = phrases[currentIndex % phrases.length];
+  const amText = amPhrases[currentIndex % amPhrases.length];
+
+  // Display current portion
+  typewriterEl.textContent = engText.substring(0, letterIndex);
+  typewriterAM.textContent = amText.substring(0, letterIndex);
+
+  // Typing or deleting logic
+  if (!isDeleting) {
+    letterIndex++;
+    if (letterIndex > Math.max(engText.length, amText.length)) {
+      isDeleting = true;
+      return setTimeout(typeText, PAUSE_AFTER_COMPLETION);
+    }
+  } else {
+    letterIndex--;
+    if (letterIndex < 0) {
+      isDeleting = false;
+      currentIndex++;
+      return setTimeout(typeText, PAUSE_AFTER_DELETION);
+    }
   }
-  typeText();
+
+  const delay = isDeleting ? DELETING_DELAY : TYPING_DELAY;
+  setTimeout(typeText, delay);
+}
+
+// Start typing effect
+typeText();
+
 </script>
 
 </html>

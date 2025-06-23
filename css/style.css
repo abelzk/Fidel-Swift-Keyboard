@@ -218,6 +218,9 @@ h2 {
 .txt-size {
   color: var(--text-gray-inverted);
 }
+.txt-white{
+  color: #fff;
+}
 
 /* ==========================================================================
    LAYOUT UTILITIES
@@ -425,6 +428,9 @@ h2 {
 
 .pd-block-2 {
   padding-block: 2rem;
+}
+.pd-inline-0{
+  padding-inline: 0.25rem;
 }
 
 .pd-inline {
@@ -810,8 +816,29 @@ button {
   display: inline-block;
   white-space: nowrap;
 }
+.typewriterAM {
+ display: inline-block;
+  white-space: nowrap;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
 
 .cursor {
+  position: absolute;
+  right: -10px;
+  top: 0;
+  animation: blink 0.7s steps(1) infinite;
+  font-weight: bold;
+  color: var(--primary);
+}
+.cursorAM {
   position: absolute;
   right: -10px;
   top: 0;
@@ -865,7 +892,10 @@ button {
   width: 100%;
   border-radius: 10px;
 }
-
+.bg-black{
+  border-radius: 10px;
+  background-color: var(--bg-dark) !important;
+}
 .w-menu {
   display: flex;
   /* background-color: red; */
@@ -875,7 +905,7 @@ button {
 }
 
 .w-screen {
-  padding-inline: 20px;
+  /* padding-inline: 20px; */
   height: 88%;
   border-radius: 0 0 10px 10px;
   background: transparent;
