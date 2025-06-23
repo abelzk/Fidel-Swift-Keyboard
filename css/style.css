@@ -623,9 +623,6 @@ button {
 .navbar-collapsable {
   display: flex;
 }
-.navbar-container{
-  position: relative;
-}
 
 .links-md {
   gap: 1rem;
