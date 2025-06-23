@@ -797,7 +797,7 @@ button {
   font-size: clamp(1rem, 4vw, calc(0.1rem));
   color: var(--primary);
   display: inline-block;
-  position: absolute;
+  position: relative;
   font-weight: 100;
 }
 
