@@ -447,6 +447,12 @@ h2 {
 .pd-small {
   padding: 0.25rem;
 }
+.pd-normal{
+  padding: .5rem;
+}
+.pd-1{
+  padding: 1rem;
+}
 
 /* Gap */
 .gap-small {
@@ -899,8 +905,8 @@ button {
 .w-menu {
   display: flex;
   /* background-color: red; */
-  height: 12%;
-  min-height: 30px;
+  /* height: 12%;
+  min-height: 30px; */
   padding: 5px;
 }
 
@@ -1161,6 +1167,106 @@ html .mac-pointer {
   animation-delay: 2.5s;
 }
 
+/* ==========================================================================
+   SVG STYLE
+   ========================================================================== */
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #f15a2c;
+      }
+
+      .cls-2, .cls-4, .cls-5, .cls-6, .cls-7 {
+        fill-rule: evenodd;
+      }
+
+      .cls-8 {
+        stroke: #f15d27;
+        stroke-width: .85px;
+      }
+
+      .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-9 {
+        stroke: #f15f26;
+        stroke-width: .7px;
+      }
+
+      .cls-4 {
+        isolation: isolate;
+        opacity: 1;
+      }
+
+      .cls-4, .cls-6 {
+        fill: #b21f24;
+      }
+
+      .cls-5 {
+        fill: #010101;
+      }
+
+      .cls-10 {
+        stroke: #f15a29;
+      }
+
+      .cls-14 {
+        fill: #4070b7;
+      }
+
+      .cls-15 {
+        fill: #249346;
+      }
+
+      .cls-16 {
+        fill: #fac11b;
+      }
+
+      .cls-17 {
+        fill: #e43d2f;
+      }
+
+      .cls-11 {
+        stroke: #f26522;
+        stroke-width: .25px;
+      }
+
+      .cls-7 {
+        fill: #b41f24;
+      }
+
+      .cls-12 {
+        stroke: #f26124;
+        stroke-width: .55px;
+      }
+
+      .cls-13 {
+        stroke: #f26323;
+        stroke-width: .4px;
+      }
+
+      .cls-18 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-19 {
+        fill: #f15927;
+      }
+      #Layer_1{
+        width: 200px;
+        height: 200px;
+      }
+      #notion{
+        fill: var(--text);
+      }
+      #background{
+        fill: var(--text);
+
+      }
 /* ==========================================================================
    STATE MANAGEMENT
    ========================================================================== */
