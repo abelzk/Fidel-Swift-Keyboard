@@ -156,7 +156,7 @@ h2 {
 }
 h3{
   font-weight: 400;
-  font-size: clamp(1.0rem, 1.8vw, 1.8rem);
+  font-size: clamp(1.3rem, 1.8vw, 1.8rem);
 }
 
 .bold {
