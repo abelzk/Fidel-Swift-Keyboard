@@ -109,6 +109,7 @@ body {
   transition: all 0.8s ease;
   /* backdrop-filter: blur(10px); */
   overflow: hidden;
+  
 }
 .brand-wrapper-pre{
     display: flex;
@@ -152,6 +153,10 @@ p {
 
 h2 {
   font-size: clamp(1.2rem, 2.5vw, 2.3rem);
+}
+h3{
+  font-weight: 400;
+  font-size: clamp(1.0rem, 1.8vw, 1.8rem);
 }
 
 .bold {
@@ -765,6 +770,9 @@ button {
   transition: all 0.3s ease-in-out;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
+.c-h-small{
+  height: 250px !important;
+}
 
 /* Icons */
 .sm-small {
@@ -781,10 +789,11 @@ button {
   height: 1rem;
 }
 .sm-icon{
-  width: 3rem;
-  height: 3rem;
+  width: 1.5rem;
+  height: 1.5rem;
   /* background-color: #00ca4e; */
   border-radius: 10px;
+  
 }
 
 .int-icon {
