@@ -1,7 +1,7 @@
 {
   "name": "Fidel Swift - Amharic Keyboard",
   "short_name": "Fidel Swift",
-  "description": "AI-powered Amharic keyboard for Windows with real-time phonetic typing",
+  "description": "Lightweight Amharic keyboard for Windows with real-time phonetic typing",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
