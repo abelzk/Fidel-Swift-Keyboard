@@ -1,18 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap
 Sitemap: https://fidelswift.vercel.app/sitemap.xml
-
-# Disallow admin areas (if any)
-Disallow: /admin/
-Disallow: /private/
-
-# Allow important resources
-Allow: /css/
-Allow: /js/
-Allow: /images/
-Allow: /scripts/
-
-# Crawl delay (optional)
-Crawl-delay: 1
