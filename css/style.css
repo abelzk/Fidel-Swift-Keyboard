@@ -48,7 +48,7 @@
 /* Dark mode overrides */
 html.dark body {
   --bg: hsl(240 10% 3.90%);
-  --text: #fff;
+  --text: #d8d8d8;
   --border-dark: #fff;
   --text-light: #aeaeae;
   --hero-color: #fff;
@@ -261,13 +261,19 @@ b {
   font-weight: 500;
   font-size: 16px;
 }
+strong{
+  font-weight: 500;
+}
 
 p {
+  line-height: 1.75rem;
+  font-weight: 400;
+  /* text-wrap: pre; */
   font-size: clamp(1rem, 4vw, calc(0.7rem * 1.168));
 }
 
 h2 {
-  font-size: clamp(1.2rem, 2.5vw, 2.3rem);
+  font-size: clamp(1.2rem, 2.2vw, 2.3rem);
 }
 h3{
   font-weight: 400;
@@ -502,6 +508,9 @@ h3{
 
 .mr-btm-4 {
   margin-bottom: 4rem;
+}
+.mr-top-2{
+  margin-top: calc(2rem - 4px);
 }
 
 .mr-top-4 {
@@ -1158,6 +1167,31 @@ button {
   transition: .2s all ease-in-out;
   color: var(--text);
 }
+table{
+   border-collapse: collapse;
+  border-spacing: 0;
+}
+th{
+  padding-left: 10px;
+  text-align: start;
+  border-bottom: .5px solid var(--border-main);
+}
+td{
+  border-bottom: .5px solid var(--border-main);
+  padding-left: 10px;
+  font-size: clamp(.7rem, 4vw, calc(0.7rem * 1.168));
+
+}
+tr{
+  gap: 0;
+  height: 3rem;
+}
+tr:hover{
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s;
+  background-color: #9b9b9b14;
+}
+
 
 /* ==========================================================================
    DARK MODE FILTERS
