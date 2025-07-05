@@ -36,7 +36,6 @@
   <title>Introduction</title>
 </head>
 <body>
-  <!-- From Uiverse.io by david-mohseni --> 
 <div class="preloader-def" id="preloader-def">
   <div class="loader">
       <div class="bar1"></div>
@@ -91,8 +90,8 @@
       <div class="navbar-overlay" id="navbar-overlay" data-state="closed"></div>
     </div>
   </nav>
-  <main class="pd-top-4">
-    <div class="doc-wrapper pd-inline-1 flex justify-center height-auto gap-2" id="doc-wrapper">
+  <main class="main pd-top-4 mr-inline-2">
+    <div class="doc-wrapper py-10 w-full flex flex-between height-auto gap-2" id="doc-wrapper">
       <aside class="navigation-wrapper" id="navigation-wrapper">
         <div class="navigation-container pd-inline">
           <div class="nav-list-col">
@@ -107,8 +106,8 @@
             </div>
           </div>
           <div class="navigation-lists flex flex-col gap-0 height-toggle" data-state="expanded">
-            <div class="nav-list-col font-size-3 font-semibold menu-selected"><a href="#">Introduction</a></div>
-            <div class="nav-list-col font-size-3 font-semibold "><a href="#">Installation</a></div>
+            <div class="nav-list-col font-size-3 font-semibold "><a href="#" class="menu-selected">Installation</a></div>
+            <div class="nav-list-col font-size-3 font-semibold "><a href="#">Introduction</a></div>
             <div class="nav-list-col font-size-3 font-semibold "><a href="#">Quick Start Guide</a></div>
             <div class="nav-list-col font-size-3 font-semibold "><a href="#">Settings & Customization</a></div>
             <div class="nav-list-col font-size-3 font-semibold "><a href="#">Advanced Features</a></div>
@@ -119,6 +118,18 @@
         </div>
       </aside>
       <div class="content-wrapper">
+        <nav aria-label="breadcrumb ">
+          <ul class="flex align-center flex-wrap gap-small-md break-words text-sm color-gray pd-btm-1">
+            <li class="breadcrumb-item">Docs</li>
+            <li class="flex flex-center"><img class="sm-1 op-5" src="/images/arrow-right.svg" alt=""></li>
+            <li class="breadcrumb-item">Getting Started</li>
+            <li class="flex flex-center"><img class="sm-1 op-5" src="/images/arrow-right.svg" alt=""></li>
+            <li class="current-sm">Introduction</li>
+          </ul>
+        </nav>
+        <h1 class="pd-btm-1">Introduction</h1>
+        <p class="text-muted-foreground pd-btm-1">This section provides an overview of Fidel Swift.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem cumque iure cupiditate laborum, quas consequuntur aut minus laboriosam eveniet! Mollitia eaque harum sunt ipsum inventore, neque doloremque eius magnam nam. Nobis, unde libero veritatis dolores iste ipsam corporis repellendus facilis deleniti vero saepe! Maxime velit quisquam autem recusandae, error dignissimos iste harum iusto delectus, adipisci ea repellat ex sint facilis animi consequatur quae dolore aspernatur magnam aliquid. Veritatis corrupti iure, nihil, impedit sunt odio cumque magnam quia aut non porro modi dolorum! Cumque nostrum sapiente ad possimus laboriosam deserunt reprehenderit, voluptatum asperiores illo, repudiandae minima eos pariatur iusto praesentium? Eaque ex necessitatibus est consequatur aspernatur nihil incidunt tempora suscipit voluptates reprehenderit qui temporibus voluptas tempore aut rem culpa, quam quia praesentium quod inventore iure cupiditate repudiandae! Quo quas numquam commodi, nulla impedit cumque ad, ut unde ducimus porro eum iusto aperiam, obcaecati laudantium eos dignissimos. Ullam, eligendi nihil? Officia quidem ullam similique iusto ut voluptates ipsam dicta hic aut, deleniti eius quam commodi sed. Veritatis, ad. Qui neque officia optio necessitatibus aliquam eaque, repellendus ratione soluta architecto officiis illo quae quasi mollitia a temporibus vitae perspiciatis magnam repellat? Harum eaque voluptatem est sit saepe illo omnis accusantium voluptates reiciendis?</p>
       </div>
     </div>
   </main>
@@ -127,9 +138,11 @@
       <p class="font-small">© 2025 Fidel Swift. All Rights Reserved</p>
     </div>
     <div class="order-1">
-      <p class="font-small">Built by <a href="https://github.com/abelzk"><span class="txt-author">Abel Zecharias</span></a></p>
+      <p class="font-small flex gap-small">Built by <a href="https://github.com/abelzk"><span
+            class="flex gap-small"><span class="txt-author">Abel Zecharias</span><img class="sm-small"
+              src="/images/20-arrow-up-right.svg" alt=""></span></a></p>
     </div>
-</footer>
+  </footer>
 </body>
 <script src="/scripts/navToggle.js"></script>
 <script src="/scripts/move.js"></script>

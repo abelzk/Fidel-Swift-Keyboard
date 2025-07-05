@@ -23,7 +23,7 @@
   --text-inverted: #fff;
   --text-gray-inverted: #8b8b8b;
   --hero-color: #000;
-  
+  --muted-foreground: 0 0% 55.60%;  
   /* Borders */
   --border: 0 0% 92.20%;
   --border-main: hsla(0, 0%, 50%, 0.285);
@@ -54,6 +54,9 @@ html.dark body {
   --hero-color: #fff;
   --text-inverted: #000;
   --bg-slate: #292929;
+}
+ul{
+  list-style: none;
 }
 
 /* ==========================================================================
@@ -89,6 +92,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  scroll-behavior: smooth;
 }
 /* ==========================================================================
    PRELOADER DEFAULT
@@ -292,8 +296,8 @@ h3{
 }
 
 /* Text Colors */
-.color-gray {
-  color: var(--text-light);
+.color-gray, .text-muted-foreground {
+  color: hsl(var(--muted-foreground));
 }
 
 .color-primary {
@@ -331,6 +335,22 @@ h3{
 
 .txt-size {
   color: var(--text-gray-inverted);
+}
+.text-sm {
+    font-size: .9rem;
+    line-height: 1.25rem;
+    /* color: var(--text-light); */
+}
+.current-sm{
+  font-weight: 400;
+  color: var(--text);
+}
+.op-5{
+  opacity: .5;
+}
+
+.break-words {
+    overflow-wrap: break-word;
 }
 /* .txt-white{
   color: #fff;
@@ -516,6 +536,9 @@ h3{
 .pd-top-5 {
   padding-top: 5rem;
 }
+.pd-btm-1 {
+    padding-bottom: 1.25rem;
+}
 
 .pd-btm-2 {
   padding-bottom: 2rem;
@@ -569,10 +592,17 @@ h3{
 .pd-1{
   padding: 1rem;
 }
+.py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
 
 /* Gap */
 .gap-small {
   gap: 0.25rem;
+}
+.gap-small-md{
+  gap: 0.45rem;
 }
 
 .gap-0 {
@@ -772,7 +802,19 @@ button {
 }
 
 .menu-selected {
+  font-weight: 500;
   color: var(--text);
+  position: relative;
+}
+.menu-selected::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 2px;
+  height: 100%;
+  border-radius: 20px;
+  background-color: var(--primary);
 }
 
 .divider {
@@ -1098,13 +1140,6 @@ button {
   transition: 0.3s all ease-in-out;
 }
 
-/* Documentation Layout */
-.doc-wrapper {
-  width: 100%;
-  height: auto;
-  margin-top: 3%;
-}
-
 .navigation-wrapper {
   width: 25%;
   height: 100vh;
@@ -1115,6 +1150,13 @@ button {
   width: 70%;
   height: 100vh;
   order: 2;
+}
+.breadcrumb-item{
+  transition: .2s all ease-in-out;
+}
+.breadcrumb-item:hover{
+  transition: .2s all ease-in-out;
+  color: var(--text);
 }
 
 /* ==========================================================================
@@ -1556,5 +1598,11 @@ html .mac-pointer {
     font-size: 0;
     width: 32px;
     margin-right: 5px;
+  }
+  .content-wrapper{
+    width: 100%;
+  }
+  .main{
+    margin-inline: .75rem !important;
   }
 }
