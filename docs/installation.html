@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function () {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+<meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Fidel Script">
+  <meta name="description"
+    content="Fidel Swift is a dynamic Amharic keyboard engine that provides a powerful typing experience.">
+  <meta name="keywords" content="Fidel Swift, Amharic Keyboard, dynamic keyboard, Fidel Script">
+  <meta property="og:title" content="Fidel Swift Amharic Keyboard" />
+  <meta property="og:description"
+    content="Fidel Swift is a dynamic Amharic keyboard engine that provides a powerful typing experience." />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1152" />
+  <meta property="og:image:height" content="648" />
+  <meta property="og:image" content="images/opengraph-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fidel Swift Amharic Keyboard" />
+  <meta name="twitter:description"
+    content="Fidel Swift is a dynamic Amharic keyboard engine that provides a powerful and AI-driven typing experience.." />
+  <meta name="twitter:image:type" content="image/jpeg" />
+  <meta name="twitter:image:width" content="1152" />
+  <meta name="twitter:image:height" content="648" />
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+  <script src="/scripts/theme.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Installation</title>
+</head>
+
+<body>
+  <div class="preloader-def" id="preloader-def">
+    <div class="loader">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+      <div class="bar4"></div>
+      <div class="bar5"></div>
+      <div class="bar6"></div>
+      <div class="bar7"></div>
+      <div class="bar8"></div>
+      <div class="bar9"></div>
+      <div class="bar10"></div>
+      <div class="bar11"></div>
+      <div class="bar12"></div>
+    </div>
+  </div>
+  <nav class="border-b w-full flex align-center flex-start position-fixed top-0 h-4 bg-main z-1000">
+    <div class="navbar-container mr-inline-2 flex flex-between gap-25p w-full align-center">
+      <div class="flex align-center flex-start gap-2p">
+        <div class="brand-wrapper flex gap-0 align-flex-end">
+          <button onclick="navToggle()" class="btn-menu" id="menuToggle" aria-haspopup="dialog" aria-expanded="true" aria-controls="navigation-wrapper">
+            <img class="sm" id="menuIcon" src="/images/menu.svg" alt="menu icon">
+          </button>
+          <a class="flex align-center justify-flex-start" href="/">
+            <img class="logo-brand" src="/images/devicon.svg" alt="Fidel Swift logo">
+            <h2 class="bold">Fidel Swift</h2>
+          </a>
+        </div>
+
+        <div class="navbar-links" id="navbar-links" data-state="closed">
+          <ul class="links-md nv-flex">
+            <li><a class="" href="/">Home</a></li>
+            <li><a class="" href="/docs/documentation.html">Documentation</a></li>
+            <li><a href="#">Releases</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-socials flex align-center gap-1">
+        <button class="btn-socials">
+          <a target="_blank" href="https://github.com/abelzk/Fidel-Swift-Keyboard"><img class="sm mr-left-1"
+              src="/images/github.svg" alt="GitHub Logo"></a>
+        </button>
+        <button
+          class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 w-9"
+          type="button" id="toggle-theme" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+          <img class="sm pd-left-1" id="theme-icon" src="/images/toggle.svg" alt="">
+        </button>
+      </div>
+    </div>
+
+    <div class="navbar-overlay" id="navbar-overlay" data-state="closed"></div>
+    </div>
+  </nav>
+  <main class="main pd-top-4 mr-inline-2 pd-btm-1 animate-on-scroll">
+  <div class="doc-wrapper pd-top-2 pd-btm-1 w-full flex flex-between gap-2 mr-btm-1" id="doc-wrapper">
+    <aside class="navigation-wrapper" id="navigation-wrapper" role="navigation">
+      <div class="navigation-container">
+        <div class="nav-list-col">
+          <div class="nav-header flex w-full mr-btm-0">
+            <button type="button" onclick="toggleHeight()" class="w-full">
+              <div class="btn-collapsable flex justify-between align-center">
+                <span class="font-size-3 font-semibold">Getting Started</span>
+                <span>
+                  <img class="sm-1" id="toggle-icon" src="/images/arrow-down.svg" alt="Toggle Icon">
+                </span>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div class="navigation-lists flex flex-col gap-0 height-toggle" data-state="expanded">
+          <div class="nav-list-col font-size-3 font-semibold"><a  href="#">Introduction</a></div>
+          <div class="nav-list-col font-size-3 font-semibold menu-selected"><a href="#">Installation</a></div>
+          <div class="nav-list-col font-size-3 font-semibold"><a href="#">Quick Start Guide</a></div>
+          <div class="nav-list-col font-size-3 font-semibold"><a href="#">Settings & Customization</a></div>
+          <div class="nav-list-col font-size-3 font-semibold"><a href="#">Advanced Features</a></div>
+          <div class="nav-list-col font-size-3 font-semibold"><a href="#">Troubleshooting</a></div>
+          <div class="nav-list-col font-size-3 font-semibold"><a href="#">FAQs</a></div>
+          <div class="nav-list-col font-size-3 font-semibold"><a href="#">License</a></div>
+        </div>
+      </div>
+    </aside>
+    <div class="content-wrapper wrapper-docs h-auto ">
+      <nav aria-label="breadcrumb">
+        <ul class="flex align-center flex-wrap gap-small-md break-words text-sm color-gray pd-btm-1">
+          <li class="breadcrumb-item">Docs</li>
+          <li class="flex flex-center">
+            <img class="sm-1 op-5" src="/images/arrow-right.svg" alt="Arrow Right">
+          </li>
+          <li class="breadcrumb-item">Getting Started</li>
+          <li class="flex flex-center">
+            <img class="sm-1 op-5" src="/images/arrow-right.svg" alt="Arrow Right">
+          </li>
+          <li class="current-sm">Introduction</li>
+        </ul>
+      </nav>
+      <h1 class="pd-btm-1">Introduction</h1>
+      <p class="text-muted-foreground pd-btm-1">This section provides an overview of Fidel Swift.</p>
+      <p class="pd-btm-1">
+        <strong>Fidel Swift</strong> is a lightweight, intuitive typing assistant designed for typing Amharic
+        characters using Latin script (phonetic input). It runs silently in the background and converts keystrokes
+        into accurate Amharic syllables in real-time.
+      </p>
+      <p class="pd-btm-1">
+        Designed to run discreetly in the background, Fidel Swift automatically works across all Windows applications
+        — from word processors and browsers to messaging platforms — giving you a seamless Amharic typing experience
+        anywhere on your system.
+      </p>
+      <h2 class="pd-btm-1">Why It Was Created</h2>
+      <p class="pd-btm-0">
+        While several Amharic typing tools exist, most suffer from key limitations:
+      </p>
+      <ul class="mr-left-3">
+        <li class="li-disc pd-btm-0">
+          <strong>Font dependencies</strong>, making typed text unreadable on systems without special fonts installed.
+        </li>
+        <li class="li-disc pd-btm-0">
+          <strong>Inconsistent phonetic mapping</strong>, resulting in incorrect syllables or slow typing speed.
+        </li>
+        <li class="li-disc pd-btm-1">
+          <strong>Heavy UI or cluttered interfaces</strong>, overwhelming users who just want to type.
+        </li>
+      </ul>
+      <h2 class="pd-btm-1">Key Features</h2>
+      <table class="w-full mr-top-1 mr-btm-2">
+        <thead>
+          <tr class="border-b">
+            <th>Feature</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Phonetic Amharic Typing</td>
+            <td>Type Amharic using Latin letters.</td>
+          </tr>
+          <tr>
+            <td>Configurable Mappings and Shortcuts</td>
+            <td>Customize keys and toggle shortcuts easily.</td>
+          </tr>
+          <tr>
+            <td>Lightweight and Runs in System Tray</td>
+            <td>Minimal, background-friendly system tray app.</td>
+          </tr>
+          <tr>
+            <td>Custom UI for Real-Time Control</td>
+            <td>Simple interface for live setting changes.</td>
+          </tr>
+          <tr>
+            <td>Real-time Conversion Engine</td>
+            <td>Instantly converts syllables as you type.</td>
+          </tr>
+           <tr>
+            <td>Universal App Compatibility</td>
+            <td>Works on all Windows apps without setup.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 class="pd-btm-1 h3-l">Use Cases</h3>
+      <article>
+        <h4 class="pd-btm-1">🧑‍🎓 Students</h4>
+        <p class="pd-btm-1">Type essays, notes, and assignments in Amharic using MS Word, Google Docs, or any note-taking app.</p>
+      </article>
+      <article>
+        <h4 class="pd-btm-1">💼 Professionals</h4>
+        <p class="pd-btm-1">Write reports, emails, and government documents directly in Amharic without changing system keyboards.</p>
+      </article>
+      <article>
+        <h4 class="pd-btm-1">📰 Content Creators & Journalists</h4>
+        <p class="pd-btm-1">Quickly draft posts, blogs, and social media content in Amharic with phonetic typing ease.</p>
+      </article>
+      <article>
+        <h4 class="pd-btm-1">🌍 Diaspora & Language Learners</h4>
+        <p class="pd-btm-2">Stay connected with Amharic communication even if you don’t have an Amharic keyboard or layout memorized.</p>
+      </article>
+      <div class="pagination-wrapper w-full mr-1 pd-top-2 flex flex-end gap-1">
+        <a class="btn-previous border-t cursor-pointer flex flex-col flex-start pd-left-2 pd-1 h-5" href="/docs/documentation.html">
+          <span class="text-sm text-muted-foreground flex align-center gap-0"><img class="sm-inv" src="/images/arrow-right.svg" alt=""> Previous</span>
+          <span class="font-semibold">Introduction</span>
+        </a>
+       <a class="btn-next border-t cursor-pointer flex flex-col align-flex-end pd-right-2 pd-1 h-5" href="/docs/installation.html">
+          <span class="text-sm text-muted-foreground flex align-center gap-0"> Next<img class="sm-inv-1" src="/images/arrow-right.svg" alt=""> </span>
+          <span class="font-semibold">Quick Start Guide</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</main>
+
+  <footer class="w-full h-5 pd-block-1 border-t flex flex-between align-content pd-inline-2 flex-wrap gap-small ">
+    <div class="order-2">
+      <p class="font-small">© 2025 Fidel Swift. All Rights Reserved</p>
+    </div>
+    <div class="order-1">
+      <p class="font-small flex gap-small">Built by <a href="https://github.com/abelzk"><span
+            class="flex gap-small"><span class="txt-author">Abel Zecharias</span><img class="sm-small"
+              src="/images/20-arrow-up-right.svg" alt=""></span></a></p>
+    </div>
+  </footer>
+</body>
+<script src="/scripts/navToggle.js"></script>
+<script src="/scripts/move.js"></script>
+<script src="/scripts/preloader-def.js"></script>
+<script>
+  function toggleHeight() {
+    const div = document.querySelector('.height-toggle');
+    const icon = document.getElementById('toggle-icon');
+    const currentState = div.getAttribute('data-state');
+
+    if (currentState === 'collapsed') {
+      div.setAttribute('data-state', 'expanded');
+      icon.src = '/images/arrow-down.svg';
+    } else {
+      div.setAttribute('data-state', 'collapsed');
+      icon.src = '/images/arrow-right.svg';
+    }
+  }
+
+
+</script>
+
+</html>
