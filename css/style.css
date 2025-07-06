@@ -1275,7 +1275,7 @@ td{
   border-bottom: .5px solid var(--border-main);
   padding-left: 10px;
   font-weight: 400;
-  font-size: clamp(.7rem, 4vw, calc(0.7rem * 1.168));
+  font-size: clamp(.7rem, 4vw, calc(0.75rem * 1.168));
 
 }
 tr{
