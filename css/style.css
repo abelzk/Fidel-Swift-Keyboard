@@ -63,15 +63,18 @@ ul{
    GLOBAL RESET & BASE STYLES
    ========================================================================== */
 /* ---------- Global Reset & Normalisation ---------- */
-*{
-  -webkit-tap-highlight-color: transparent;
-}
 *,
 *::before,
 *::after {
+  -webkit-tap-highlight-color: transparent;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+    scrollbar-width: thin;
+  scroll-snap-type: proximity;
+  border-color: hsl(var(--border));
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+  -webkit-tap-highlight-color: transparent;
 
   /* Thin, custom‑coloured scrollbars (FF & Chromium)   */
   scrollbar-width: thin;                               /* Firefox */
@@ -79,13 +82,12 @@ ul{
 }
 
 /* Chromium scrollbar track/thumb */
-::-webkit-scrollbar        { width: 8px; height: 8px; }
+::-webkit-scrollbar        { width: 1px; height: 8px; }
 ::-webkit-scrollbar-thumb  { background: var(--scrollbar-thumb); border-radius: 4px; }
 ::-webkit-scrollbar-track  { background: transparent; }
 
 html,
 body {
-  height: 100%;
   scroll-behavior: smooth;
 }
 
@@ -294,6 +296,10 @@ h2 {
 h3{
   font-weight: 400;
   font-size: clamp(1.3rem, 1.8vw, 1.8rem);
+}
+.h3-l{
+  font-weight: 500;
+  font-size: clamp(1.3rem, 2.1vw, 2.4rem)
 }
 
 .bold {
@@ -1193,12 +1199,13 @@ button {
 .navigation-wrapper {
   width: 25%;
   height: 100vh;
+  /* height: auto; */
   order: 1;
 }
 
 .content-wrapper {
   width: 70%;
-  height: 100vh;
+  min-height: 100vh;
   order: 2;
 }
 .breadcrumb-item{
