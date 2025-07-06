@@ -527,7 +527,13 @@ h3{
 }
 
 .mr-left-1 {
-  margin-right: 0.7rem;
+  margin-left: 0.7rem;
+}
+.mr-left-2 {
+  margin-left: 1.25rem;
+}
+.mr-left-3{
+  margin-left: 2rem;
 }
 
 .mr-left-20p {
@@ -535,7 +541,8 @@ h3{
 }
 
 .mr-inline-2 {
-  margin-inline: 2rem;
+  /* margin-inline: 2rem; */
+  margin-inline: min(1.2rem, 2rem);
 }
 
 /* Padding */
@@ -554,8 +561,11 @@ h3{
 .pd-top-5 {
   padding-top: 5rem;
 }
+.pd-btm-0{
+  padding-bottom: .625rem;
+}
 .pd-btm-1 {
-    padding-bottom: 1.25rem;
+    padding-bottom: min(1rem, 1.25rem)
 }
 
 .pd-btm-2 {
@@ -722,6 +732,12 @@ h3{
 
 .border-t {
   border-top: 1px solid var(--border-main);
+}
+.li-disc{
+  list-style-type: disc;
+}
+.li-disc::marker{
+  color: hsl(var(--muted-foreground));
 }
 
 /* ==========================================================================
@@ -1529,7 +1545,7 @@ html .mac-pointer {
     width: 80%;
     background-color: var(--bg);
     flex-direction: column;
-    padding: 1rem;
+    padding: 1rem 1rem 1rem 0.5rem;
     z-index: 1050;
     opacity: 0;
     transform: translateX(-100%);
@@ -1563,7 +1579,7 @@ html .mac-pointer {
     z-index: 1050;
     left: 0;
     width: 98%;
-    padding-left: calc(0.5rem + 1em);
+    padding-left: 1rem;
     padding-top: 2rem;
     overflow-y: auto;
   }
@@ -1646,7 +1662,7 @@ html .mac-pointer {
   .wrapper-docs{
     width: 100% !important;
   }
-  .main{
+  /* .main{
     margin-inline: .75rem !important;
-  }
+  } */
 }
