@@ -62,38 +62,50 @@ ul{
 /* ==========================================================================
    GLOBAL RESET & BASE STYLES
    ========================================================================== */
-* {
+/* ---------- Global Reset & Normalisation ---------- */
+*{
+  -webkit-tap-highlight-color: transparent;
+}
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scrollbar-width: thin;
-  scroll-snap-type: proximity;
-  border-color: hsl(var(--border));
-  scrollbar-color: var(--scrollbar-thumb) transparent;
-  -webkit-tap-highlight-color: transparent;
+
+  /* Thin, custom‑coloured scrollbars (FF & Chromium)   */
+  scrollbar-width: thin;                               /* Firefox */
+  scrollbar-color: var(--scrollbar-thumb) transparent;  /* Firefox */
 }
+
+/* Chromium scrollbar track/thumb */
+::-webkit-scrollbar        { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb  { background: var(--scrollbar-thumb); border-radius: 4px; }
+::-webkit-scrollbar-track  { background: transparent; }
 
 html,
 body {
-  scroll-behavior: smooth;
   height: 100%;
-  margin: 0;
-  padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Space Grotesk', 'Space Grotesk Fallback', sans-serif;
+  font-family: "Space Grotesk", "Space Grotesk Fallback", sans-serif;
   font-weight: 300;
   background-color: var(--bg);
   color: var(--text);
-  overscroll-behavior: none;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased; 
   -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  scroll-behavior: smooth;
+  margin: 0;
 }
+
+html {
+  /* Example: vertical proximity snapping */
+  scroll-snap-type: y proximity;
+  
+}
+
+
 /* ==========================================================================
    PRELOADER DEFAULT
    ========================================================================== */
@@ -1663,6 +1675,6 @@ html .mac-pointer {
     width: 100% !important;
   }
   /* .main{
-    margin-inline: .75rem !important;
+    height: 90vh;
   } */
 }
