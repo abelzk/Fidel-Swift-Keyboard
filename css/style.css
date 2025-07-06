@@ -97,12 +97,16 @@ body {
   -webkit-font-smoothing: antialiased; 
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
+
 }
 
 html {
   /* Example: vertical proximity snapping */
   scroll-snap-type: y proximity;
   
+}
+footer{
+  position: static;
 }
 
 
@@ -1585,6 +1589,10 @@ html .mac-pointer {
     padding-top: 10px;
     padding-left: 1rem;
   }
+    .navigation-wrapper,
+  .content-wrapper {
+    height: auto;
+  }
 
   .navigation-wrapper {
     position: absolute;
@@ -1674,7 +1682,4 @@ html .mac-pointer {
   .wrapper-docs{
     width: 100% !important;
   }
-  /* .main{
-    height: 90vh;
-  } */
 }
