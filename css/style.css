@@ -280,7 +280,7 @@ b {
   font-size: 16px;
 }
 strong{
-color: #fff;
+color: var(--text);
   font-weight: 500;
 }
 
@@ -564,8 +564,8 @@ h3{
 }
 
 .mr-inline-2 {
-  /* margin-inline: 2rem; */
-  margin-inline: min(1.2rem, 2rem);
+  margin-inline: 2rem;
+  /* margin-inline: min(1.2rem, 2rem); */
 }
 
 /* Padding */
@@ -866,14 +866,17 @@ button {
 .menu-selected::before{
   content: '';
   position: absolute;
-  top: 0;
-  left: -10px;
-  width: 2px;
-  height: 100%;
+  top: 40%;
+  left: -8px;
+  width: 3.5px;
+  height: 3.5px;
   border-radius: 20px;
   background-color: var(--primary);
 }
-
+.selected{
+  color: var(--primary);
+  font-weight: 500;
+}
 .divider {
   color: var(--border-light);
 }
@@ -1196,11 +1199,17 @@ button {
   filter: invert(1);
   transition: 0.3s all ease-in-out;
 }
+.doc-wrapper{
 
+  overflow: visible;
+}
 .navigation-wrapper {
-  width: 25%;
-  height: 100vh;
-  /* height: auto; */
+  position: sticky;
+  top: 6rem;
+   flex: 0 0 25%;
+   align-self: flex-start;
+  /* width: 25%; */
+  /* min-height: 100vh; */
   order: 1;
 }
 
@@ -1597,6 +1606,9 @@ html .mac-pointer {
     padding-top: 10px;
     padding-left: 1rem;
   }
+  .navigation-wrapper{
+    position: static !important;
+  }
     .navigation-wrapper,
   .content-wrapper {
     height: auto;
@@ -1690,4 +1702,8 @@ html .mac-pointer {
   .wrapper-docs{
     width: 100% !important;
   }
+  .mr-inline-2 {
+  /* margin-inline: 2rem; */
+  margin-inline: min(1.2rem, 2rem);
+}
 }
