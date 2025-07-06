@@ -319,7 +319,9 @@ h3{
 .font-semibold {
   font-weight: 400;
 }
-
+.font-bold{
+  font-weight: 500;
+}
 .font-small {
   font-size: small;
 }
@@ -643,6 +645,18 @@ h3{
 .pd-1{
   padding: 1rem;
 }
+.pd-2{
+  padding: 2rem;
+}
+.pd-3{
+  padding: 3rem;
+}
+.pd-right-2{
+  padding-right: 2rem
+}
+.pd-left-2{
+  padding-left: 2rem;
+}
 .py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
@@ -700,6 +714,10 @@ h3{
 .h-3 { height: 3rem; }
 .h-4 { height: 4rem; }
 .h-5 { height: 5rem; }
+.h-6 { height: 6rem; }
+.h-7 { height: 7rem; }
+.h-8 { height: 8rem; }
+.h-9 { height: 9rem; }
 .h-10 { height: 10rem; }
 .h-full { height: 100%; }
 .h-100vh { height: 100vh; }
@@ -821,6 +839,17 @@ button {
   font-weight: 300;
   transition: all 0.3s ease-in-out;
 }
+.btn-previous, .btn-next{
+  width: 50%;
+  border-radius: 10px;
+  border: .5px solid var(--border-main);
+  transition: all .1s ease-in-out;
+}
+.btn-previous:hover, .btn-next:hover{
+  transition: all .1s ease-in-out;
+  background-color: #9b9b9b14;
+}
+
 
 /* Navigation */
 .logo-brand {
@@ -1005,10 +1034,18 @@ button {
   width: 1.5rem;
   height: 1.5rem;
   /* background-color: #00ca4e; */
-  border-radius: 10px;
-  
+  border-radius: 10px; 
 }
-
+.sm-inv-1{
+  width: 16px;
+}
+.sm-inv{
+  width: 16px;
+  transform: scale(-1);
+}
+.sm-inv, .sm-inv-1{
+  opacity: .7;
+}
 .int-icon {
   flex-shrink: 0;
   width: 32px;
@@ -1258,7 +1295,7 @@ tr:hover{
 html.dark .sm,
 html.dark .sm-1,
 html.dark .sm-2,
-html .sm-small,
+html .sm-small,html.dark .sm-inv, html.dark .sm-inv-1,
 html .mac-pointer {
   filter: invert(1);
 }
