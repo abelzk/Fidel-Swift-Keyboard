@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function () {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+<!-- Essential Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <!-- SEO Meta Tags -->
+  <title>Fidel Swift - Settings</title>
+  <meta name="description" content="Fidel Swift is a powerful, lightweight Amharic keyboard engine that enables seamless phonetic typing in Amharic script. Perfect for students, professionals, and content creators who need efficient Amharic text input across all Windows applications." />
+  <meta name="keywords" content="Fidel Swift, Amharic keyboard, Amharic typing, Amharic keyboard online ,Windows, phonetic keyboard, Ethiopian keyboard, Amharic input method, Geez script, Ethiopian software, Amharic text editor, multilingual typing, Free" />
+  <meta name="author" content="Abel Zecharias - Fidel Script Development Team" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow" />
+  <link rel="canonical" href="https://fidelswift.vercel.app/" />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Fidel Swift" />
+  <meta property="og:title" content="Fidel Swift - Settings" />
+  <meta property="og:description" content="Revolutionary Amharic keyboard engine with phonetic typing, real-time conversion, and universal Windows app compatibility. Type Amharic effortlessly using Latin characters." />
+  <meta property="og:url" content="https://fidelswift.vercel.app/" />
+  <meta property="og:image" content="https://fidelswift.vercel.app/images/opengraph-image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Fidel Swift Amharic Keyboard Interface - Phonetic typing solution for Amharic script" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="am_ET" />
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@FidelSwift" />
+  <meta name="twitter:creator" content="@AbelZecharias" />
+  <meta name="twitter:title" content="Fidel Swift - Settings" />
+  <meta name="twitter:description" content="Revolutionary Amharic keyboard engine with phonetic typing, real-time conversion, and universal Windows app compatibility." />
+  <meta name="twitter:image" content="https://fidelswift.vercel.app/images/opengraph-image.png" />
+  <meta name="twitter:image:alt" content="Fidel Swift Amharic Keyboard Interface" />
+  
+  <!-- Additional SEO Meta Tags -->
+  <meta name="application-name" content="Fidel Swift" />
+  <meta name="theme-color" content="#2563eb" />
+  <meta name="msapplication-TileColor" content="#2563eb" />
+  <meta name="apple-mobile-web-app-title" content="Fidel Swift" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  
+  <!-- Favicon and Icons -->
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-ios.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico" />
+  <link rel="manifest" href="/manifest.json" />
+  
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="/css/style.css" as="style" />
+  <script src="/scripts/theme.js"></script>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/css/style.css" />
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Fidel Swift",
+    "description": "Advanced Amharic keyboard engine that enables seamless phonetic typing in Amharic script across all Windows applications",
+    "applicationCategory": "ProductivityApplication",
+    "operatingSystem": "Windows",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Abel Zecharias",
+      "url": "https://github.com/abelzk"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Fidel Script Development Team"
+    },
+    "downloadUrl": "https://github.com/abelzk/Fidel-Swift-Keyboard",
+    "screenshot": "https://fidelswift.vercel.app/images/opengraph-image.png",
+    "softwareVersion": "1.0",
+    "datePublished": "2025-01-01",
+    "inLanguage": ["en", "am"],
+    "keywords": "Fidel Swift, Amharic keyboard, Amharic typing, Amharic keyboard online ,Windows, phonetic keyboard, Ethiopian keyboard, Amharic input method, Geez script, Ethiopian software, Amharic text editor, multilingual typing, Free"
+  }
+  </script>
+  
+  <!-- Additional Structured Data for Documentation -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Fidel Swift Documentation - Complete Guide to Amharic Phonetic Typing",
+    "description": "Comprehensive documentation for Fidel Swift Amharic keyboard engine, including installation, configuration, and advanced features",
+    "author": {
+      "@type": "Person",
+      "name": "Abel Zecharias"
+    },
+    "datePublished": "2025-01-01",
+    "dateModified": "2025-01-07",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Fidel Script Development Team"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://fidelswift.vercel.app/"
+    },
+    "articleSection": "Software Documentation",
+    "inLanguage": "en"
+  }
+  </script>
+</head>
+
+<body>
+  <div class="preloader-def" id="preloader-def">
+    <div class="loader">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+      <div class="bar4"></div>
+      <div class="bar5"></div>
+      <div class="bar6"></div>
+      <div class="bar7"></div>
+      <div class="bar8"></div>
+      <div class="bar9"></div>
+      <div class="bar10"></div>
+      <div class="bar11"></div>
+      <div class="bar12"></div>
+    </div>
+  </div>
+  <nav class="border-b w-full flex align-center flex-start position-fixed top-0 h-4 bg-main z-1000">
+    <div class="navbar-container mr-inline-2 flex flex-between gap-25p w-full align-center">
+      <div class="flex align-center flex-start gap-2p">
+        <div class="brand-wrapper flex gap-0 align-flex-end">
+          <button onclick="navToggle()" class="btn-menu" id="menuToggle" aria-haspopup="dialog" aria-expanded="true" aria-controls="navigation-wrapper">
+            <img class="sm" id="menuIcon" src="/images/menu.svg" alt="menu icon">
+          </button>
+          <a class="flex align-center justify-flex-start" href="/">
+            <img class="logo-brand" src="/images/devicon.svg" alt="Fidel Swift logo">
+            <h2 class="bold">Fidel Swift</h2>
+          </a>
+        </div>
+
+        <div class="navbar-links" id="navbar-links" data-state="closed">
+          <ul class="links-md nv-flex">
+            <li><a class="" href="/">Home</a></li>
+            <li><a class="" href="/docs/documentation.html">Documentation</a></li>
+            <li><a href="#">Releases</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-socials flex align-center gap-1">
+        <button class="btn-socials">
+          <a target="_blank" href="https://github.com/abelzk/Fidel-Swift-Keyboard"><img class="sm mr-left-1"
+              src="/images/github.svg" alt="GitHub Logo"></a>
+        </button>
+        <button
+          class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 w-9"
+          type="button" id="toggle-theme" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+          <img class="sm pd-left-1" id="theme-icon" src="/images/toggle.svg" alt="">
+        </button>
+      </div>
+    </div>
+
+    <div class="navbar-overlay" id="navbar-overlay" data-state="closed"></div>
+    </div>
+  </nav>
+  <main class="main pd-top-4 mr-inline-2 pd-btm-1 animate-on-scroll">
+  <div class="doc-wrapper pd-top-2 pd-btm-1 w-full flex flex-between gap-2 mr-btm-1" id="doc-wrapper">
+    <aside class="navigation-wrapper" id="navigation-wrapper" role="navigation">
+      <div class="navigation-container">
+        <div class="nav-list-col">
+          <div class="nav-header flex w-full mr-btm-0">
+            <button type="button" onclick="toggleHeight()" class="w-full">
+              <div class="btn-collapsable flex justify-between align-center">
+                <span class="font-size-3 font-semibold">Getting Started</span>
+                <span>
+                  <img class="sm-1" id="toggle-icon" src="/images/arrow-down.svg" alt="Toggle Icon">
+                </span>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div class="navigation-lists flex flex-col gap-0 height-toggle" data-state="expanded">
+          <div class="nav-list-col font-size-3 font-semibold"><a  href="/docs/documentation.html">Introduction</a></div>
+          <div class="nav-list-col font-size-3 font-semibold"><a href="/docs/installation.html">Installation</a></div>
+          <div class="nav-list-col font-size-3 font-semibold"><a href="/docs/quick-start-guide.html">Quick Start Guide</a></div>
+          <div class="nav-list-col font-size-3 font-semibold menu-selected"><a href="/docs/settings.html">Settings & Customization</a></div>
+          <div class="nav-list-col font-size-3 font-semibold"><a href="#">Advanced Features</a></div>
+          <div class="nav-list-col font-size-3 font-semibold"><a href="#">Troubleshooting</a></div>
+          <div class="nav-list-col font-size-3 font-semibold"><a href="#">FAQs</a></div>
+          <div class="nav-list-col font-size-3 font-semibold"><a href="#">License</a></div>
+        </div>
+      </div>
+    </aside>
+    <div class="content-wrapper wrapper-docs h-auto ">
+      <nav aria-label="breadcrumb">
+        <ul class="flex align-center flex-wrap gap-small-md break-words text-sm color-gray pd-btm-1">
+          <li class="breadcrumb-item">Docs</li>
+          <li class="flex flex-center">
+            <img class="sm-1 op-5" src="/images/arrow-right.svg" alt="Arrow Right">
+          </li>
+          <li class="breadcrumb-item">Getting Started</li>
+          <li class="flex flex-center">
+            <img class="sm-1 op-5" src="/images/arrow-right.svg" alt="Arrow Right">
+          </li>
+          <li class="current-sm">Quick Start Guide</li>
+        </ul>
+      </nav>
+      <h1 class="pd-btm-1">Settings & Customization</h1>
+      <p class="pd-btm-1">
+       Fidel Swift Amharic Keyboard is designed to be simple yet flexible. Through its settings panel, users can customize behavior, control startup, and tweak typing preferences—all without touching complex system settings or modifying the Windows keyboard layout.
+
+This section will walk you through every available customization feature and how to use it.
+      </p>
+      <h2 class="pd-btm-1">Accessing the Settings Panel</h2>
+      <p class="pd-btm-0">
+      To access the settings:
+      </p>
+      <ol class="mr-left-3">
+        <li class="li-disk mr-btm-0">Right-click the Fidel Swift tray icon (in the system tray, near your clock).</li>
+        <li class="li-disk mr-btm-0">Click on “Open Settings” from the menu.</li>
+    </ol>
+    <p class="pd-btm-1">A settings window will appear with toggle switches, file information, and version information.</p>
+    <img src="/images/screenshots/Fidel Swift Settings Window.png" alt="Fidel swift system tray icon" class="scrn-shot mr-btm-0">
+      <h3 class="pd-btm-1 h3-l">Available Settings & Their Functions</h3>
+        <p class="pd-btm-1">Each option in the settings panel can be toggled in real-time. Changes take effect immediately—no need to restart the app.</p>
+        <table class="w-full mr-top-1 mr-btm-2">
+        <thead>
+          <tr class="border-b">
+            <th>Setting</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Amharic Mode</td>
+            <td>Turns phonetic typing on/off. When disabled, Fidel Swift behaves like a regular keyboard.</td>
+          </tr>
+          <tr>
+            <td>Windows Startup</td>
+            <td>Automatically launches Fidel Swift every time Windows boots.</td>
+          </tr>
+          <tr>
+            <td>Hide From Taskbar</td>
+            <td>Hides the app window from appearing in the taskbar when minimized.</td>
+          </tr>
+          <tr>
+            <td>Current Mapping File</td>
+            <td>Displays the path or name of the encrypted phonetic config file in use.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h4 class="pd-btm-1 h4-l">Amharic Mode Toggle</h4>
+      <li class="li-disc pd-btm-0"><strong>What it does:</strong> Enables or disables phonetic typing system-wide.</li>
+      <li class="li-disc pd-btm-0"><strong>Use case</strong>: Quickly switch to English mode without closing the app.</li>
+      <li class="li-disc pd-btm-0"><strong>How to toggle:</strong></li>
+      <ul class="mr-left-3 pd-btm-1">
+          <li class="li-disc pd-btm-0">From settings panel</li>
+          <li class="li-disc pd-btm-0">Using the default hotkey: <strong>Alt + A</strong></li>
+      </ul>
+      <div class="note-container w-full h-6 border-main border-rdx-1 mr-btm-2 flex flex-col flex-start justify-center pd-1">
+        <span class="pd-btm-0"><strong>💡 Note:</strong></span>
+        <span>
+         When disabled, the app still runs in the background but stops converting text.
+        </span>
+      </div>
+      <h5 class="h5-l pd-btm-1">Run at Windows Startup</h5>
+      <li class="li-disc pd-btm-0"><strong>What it does:</strong> Ensures Fidel Swift launches automatically when your system starts.</li>
+      <li class="li-disc pd-btm-0"><strong>Why it's useful:</strong>: You won’t have to remember to launch it manually.</li>
+      <li class="li-disc pd-btm-0"><strong>How to enable:</strong></li>
+      <ul class="mr-left-3 pd-btm-1">
+          <li class="li-disc pd-btm-0">Toggle <strong>“Windows Startup”</strong> from the settings panel.</li>
+          <li class="li-disc pd-btm-0">A shortcut is created in your Windows startup folder.</li>
+        </ul>
+        <div class="note-container w-full h-6 border-main border-rdx-1 mr-btm-2 flex flex-col flex-start justify-center pd-1">
+          <span class="pd-btm-0"><strong>💡 Tip:</strong></span>
+          <span>
+          You can confirm startup status in Task Manager → Startup tab.
+          </span>
+        </div>
+        <h6 class="h6-l pd-btm-1">Hide from Taskbar</h6>
+        <li class="li-disc pd-btm-0"><strong>What it does:</strong>Removes the app from the Windows taskbar while keeping it running in the tray.</li>
+      <li class="li-disc pd-btm-0"><strong>Use case:</strong>: Maintain a clean workspace or reduce distractions.</li>
+      <li class="li-disc pd-btm-0"><strong>How to enable:</strong></li>
+      <ul class="mr-left-3 pd-btm-1">
+          <li class="li-disc pd-btm-0">Enable the <strong>“Hide from Taskbar”</strong> toggle in Settings.</li>
+        </ul>
+      <h6 class="pd-btm-1 h4-l">Default Mapping Behavior</h6>
+      <p class="pd-btm-1">By default, Fidel Swift uses a highly-optimized phonetic mapping system for Amharic:</p>
+      <table class="w-full mr-top-1 mr-btm-2">
+        <thead>
+          <tr class="border-b">
+            <th>Latin Input</th>
+            <th>Output</th>
+            <th>Latin Input</th>
+            <th>Output</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>h</td>
+            <td>ሀ</td>
+             <td>l</td>
+            <td>ለ</td>
+          </tr>
+          <tr>
+           <td>m</td>
+            <td>መ</td>
+            <td>H</td>
+            <td>ሐ</td>
+          </tr>
+          <tr>
+            <td>S</td>
+            <td>ሠ</td>
+              <td>r</td>
+            <td>ረ</td>
+          </tr>
+             <tr>
+            <td>na</td>
+            <td>ና</td>
+              <td>d]</td>
+            <td>ዷ</td>
+          </tr>
+             <tr>
+            <td>g]</td>
+            <td>ጏ</td>
+              <td>xy</td>
+            <td>ኤ</td>
+          </tr>
+          
+        </tbody>
+      </table>
+        <div class="note-container w-full h-6 border-main border-rdx-1 mr-btm-2 flex flex-col flex-start justify-center pd-1">
+        <span class="pd-btm-0"><strong>💡 Note:</strong></span>
+        <span>
+        Most mappings are case-insensitive, and syllables are formed dynamically based on consonant-vowel pairing logic.
+        </span>
+      </div>
+      <h5 class="h5-l pd-btm-1">Real-Time Changes</h5>
+      <p class="pd-btm-0">
+        All setting toggles are applied immediately—you do not need to restart Fidel Swift.
+      </p>
+      <p class="pd-btm-0">
+       If you edit the encrypted mapping config file and replace it while the app is running:
+      </p>
+
+      <ul class="mr-left-3 pd-btm-1">
+        <li class="li-disc pd-btm-0">The app will automatically reload the file</li>
+        <li class="li-disc pd-btm-0">No restart is necessary</li>
+      </ul>
+      <p class="pd-btm-0">
+        This makes tweaking and testing mappings easy and efficient.
+      </p>
+      <h6 class="h6-l pd-btm-1">Hotkey Customization (Future Feature)</h6>
+      <p class="pd-btm-0">
+       Fidel Swift currently uses a default toggle shortcut:
+<strong>Alt + A</strong> → Toggle Amharic Mode
+      </p>
+      <p class="pd-btm-0"><strong>Planned support:</strong></p>
+           <li class="li-disc pd-btm-1">User-defined hotkeys for:</li>
+      <ul class="mr-left-3 pd-btm-1">
+        <li class="li-disc pd-btm-0">Mode switching</li>
+        <li class="li-disc pd-btm-0">Restarting the typing engine</li>
+        <li class="li-disc pd-btm-0">Reloading custom mappings</li>
+      </ul>
+  
+      <div class="pagination-wrapper w-full mr-1 pd-top-2 flex flex-end gap-1">
+        <a class="btn-previous border-t cursor-pointer flex flex-col flex-start pd-left-2 pd-1 h-5" href="/docs/quick-start-guide.html">
+          <span class="text-sm text-muted-foreground flex align-center gap-0"><img class="sm-inv" src="/images/arrow-right.svg" alt=""> Previous</span>
+          <span class="font-semibold">Quick Start Guide</span>
+        </a>
+       <a class="btn-next border-t cursor-pointer flex flex-col align-flex-end pd-right-2 pd-1 h-5" href="/docs/advanced-feature.html">
+          <span class="text-sm text-muted-foreground flex align-center gap-0"> Next<img class="sm-inv-1" src="/images/arrow-right.svg" alt=""> </span>
+          <span class="font-semibold">Advanced Feature</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</main>
+
+  <footer class="w-full h-5 pd-block-1 border-t flex flex-between align-content pd-inline-2 flex-wrap gap-small ">
+    <div class="order-2">
+      <p class="font-small">© 2025 Fidel Swift. All Rights Reserved</p>
+    </div>
+    <div class="order-1">
+      <p class="font-small flex gap-small">Built by <a href="https://github.com/abelzk"><span
+            class="flex gap-small"><span class="txt-author">Abel Zecharias</span><img class="sm-small"
+              src="/images/20-arrow-up-right.svg" alt=""></span></a></p>
+    </div>
+  </footer>
+</body>
+<script src="/scripts/navToggle.js"></script>
+<script src="/scripts/move.js"></script>
+<script src="/scripts/preloader-def.js"></script>
+<script>
+  function toggleHeight() {
+    const div = document.querySelector('.height-toggle');
+    const icon = document.getElementById('toggle-icon');
+    const currentState = div.getAttribute('data-state');
+
+    if (currentState === 'collapsed') {
+      div.setAttribute('data-state', 'expanded');
+      icon.src = '/images/arrow-down.svg';
+    } else {
+      div.setAttribute('data-state', 'collapsed');
+      icon.src = '/images/arrow-right.svg';
+    }
+  }
+
+
+</script>
+
+</html>
