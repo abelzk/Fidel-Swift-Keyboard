@@ -15,6 +15,7 @@
   --bg-light: #f1f1f1;
   --bg-slate: #F1F5F9;
   --bg-card: rgba(255, 84, 25, 0.1);
+  --bg-muted: #9b9b9b14;
   
   /* Text Colors */
   --text: #303030;
@@ -302,6 +303,14 @@ h3{
   font-weight: 700;
   font-size: clamp(1.6rem, 2.1vw, 2.4rem)
 }
+.h4-l{
+  font-weight: 700;
+  font-size: clamp(1.4rem, 1.8vw, 2.2rem)
+}
+.h5-l{
+   font-weight: 700;
+  font-size: clamp(1.2rem, 1.8vw, 1.8rem)
+}
 
 .bold {
   font-family: "Geist Mono", monospace;
@@ -324,6 +333,9 @@ h3{
 }
 .font-small {
   font-size: small;
+}
+.font-400{
+  font-weight: 400;
 }
 
 /* Text Colors */
@@ -571,6 +583,9 @@ h3{
 }
 
 /* Padding */
+.pd-top-1{
+  padding-top: 1rem;
+}
 .pd-top-2 {
   padding-top: 2rem;
 }
@@ -758,6 +773,9 @@ h3{
 .bg-main {
   background-color: var(--bg);
 }
+.bg-muted{
+  background-color: var(--bg-muted);
+}
 
 .bg-lime {
   background-color: lime;
@@ -766,9 +784,14 @@ h3{
 .bg-overlay {
   background-color: var(--overlay);
 }
-
+.border-main{
+  border: 1px solid var(--border-main);
+}
 .border-b {
   border-bottom: 1px solid var(--border-main);
+}
+.border-rdx-1{
+  border-radius: 10px;
 }
 
 .border-t {
@@ -776,6 +799,11 @@ h3{
 }
 .li-disc{
   list-style-type: disc;
+  font-weight: 400;
+}
+.li-number{
+  list-style: decimal;
+  font-weight: 400;
 }
 .li-disc::marker{
   color: hsl(var(--muted-foreground));
@@ -849,7 +877,9 @@ button {
   transition: all .1s ease-in-out;
   background-color: #9b9b9b14;
 }
-
+.note-container{
+  background-color: var(--bg-muted);
+}
 
 /* Navigation */
 .logo-brand {
@@ -876,6 +906,10 @@ button {
 .links-md {
   gap: 1rem;
   cursor: pointer;
+}
+.link-blank{
+  color: #4070b7;
+  font-weight: 400;
 }
 
 .nav-list-col {
@@ -1062,7 +1096,12 @@ button {
 .int-icon:hover {
   filter: grayscale(0%);
 }
-
+/* Screenshot Images */
+.scrn-shot{
+  width: 80%;
+  padding: 2rem;
+  align-self: center;
+}
 /* ==========================================================================
    SPECIAL COMPONENTS
    ========================================================================== */
@@ -1742,5 +1781,8 @@ html .mac-pointer {
   .mr-inline-2 {
   /* margin-inline: 2rem; */
   margin-inline: min(1.2rem, 2rem);
+}
+.scrn-shot{
+  width: 100%;
 }
 }
