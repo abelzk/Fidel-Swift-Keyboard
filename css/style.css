@@ -1785,4 +1785,7 @@ html .mac-pointer {
 .scrn-shot{
   width: 100%;
 }
+.note-container{
+  height: 8rem !important;
+}
 }
