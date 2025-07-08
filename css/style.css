@@ -934,7 +934,7 @@ button {
   color: var(--text);
   position: relative;
 }
-.menu-selected::before{
+/* .menu-selected::before{
   content: '';
   position: absolute;
   top: 40%;
@@ -943,6 +943,17 @@ button {
   height: 3.5px;
   border-radius: 20px;
   background-color: var(--primary);
+} */
+ .menu-selected::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -6.2%;
+  width: 3px;
+  height: 100%;
+  border-radius: 0 15px 15px 0;
+  background-color: var(--primary);
+  z-index: 1500;
 }
 .selected{
   color: var(--primary);
