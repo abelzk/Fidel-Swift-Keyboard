@@ -401,9 +401,23 @@ h3{
     line-height: 1.25rem;
     /* color: var(--text-light); */
 }
+.weight-400{
+  font-weight: 400;
+}
 .current-sm{
   font-weight: 400;
   color: var(--text);
+}
+.current-page{
+  font-weight: 400;
+  color: var(--primary) !important;
+}
+.li-nav-hover{
+  transition: all .3s ease-in-out;
+}
+.li-nav-hover:hover{
+  transition: all .3s ease-in-out;
+  color: rgb(114, 114, 114);
 }
 .op-5{
   opacity: .5;
