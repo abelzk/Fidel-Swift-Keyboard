@@ -776,6 +776,9 @@ h3{
 .text-center {
   text-align: center;
 }
+.text-align-center{
+  text-align: center;
+}
 
 .cursor-pointer {
   cursor: pointer;
@@ -845,7 +848,54 @@ h3{
 /* ==========================================================================
    COMPONENT STYLES
    ========================================================================== */
-
+/* Details */
+details{
+  /* border-bottom: 1px solid var(--border-main); */
+  padding: 10px;
+  transition: all 300ms ease-in-out;
+}
+details summary{
+  cursor: pointer;
+  list-style: none;
+  min-height: 40px;
+  padding-left: 10px;
+  /* padding-top: 1rem; */
+  margin-right: 0.5rem;
+  transition: all 300ms ease-in-out;
+  font-weight: 500;
+}
+details summary::-webkit-details-marker{
+  display: none;
+}
+details summary::before{
+  content: '➕';
+  color: var(--accent-color);
+  margin-right: 0.5rem;
+  font-weight: 700;
+  display: inline-block;
+  transform: rotate(0deg);
+  transition: all .5s ease-in-out;
+}
+:root{
+  interpolate-size: allow-keywords;
+}
+details::details-content{
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s, content-visibility 0.3s;
+  content-visibility: auto;
+  transition-behavior: allow-discrete;
+}
+details[open]::details-content{
+  transition: height .5s ease-in-out;
+  height: auto;
+}
+details[open] summary::before{
+  font-weight: 700;
+  display: inline-block;
+  transform: rotate(-45deg);
+  transition: all .3s ease-in-out;
+}
 /* Buttons */
 button {
   cursor: pointer;
@@ -1820,5 +1870,8 @@ html .mac-pointer {
 }
 .note-container{
   height: 8rem !important;
+}
+.details-container{
+  width: 100%;
 }
 }
