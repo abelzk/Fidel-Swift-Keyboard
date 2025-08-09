@@ -1153,6 +1153,11 @@ button {
   /* background-color: #00ca4e; */
   border-radius: 10px; 
 }
+.sm-win{
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+}
 .sm-inv-1{
   width: 16px;
 }
