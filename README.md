@@ -80,8 +80,8 @@ Unauthorized distribution, resale, or modification is strictly prohibited.
 ## 💬 Support
 
 Need help or want to provide feedback?  
-📧 Email:
-[fidelswiftapp@gmail.com](mailto:fidelswiftapp@gmail.com)   Email: [abelzeki24@gmail.com](mailto:abelzeki24@gmail.com)  
+Email:[fidelswiftapp@gmail.com](mailto:fidelswiftapp@gmail.com)
+Email: [abelzeki24@gmail.com](mailto:abelzeki24@gmail.com)  
 🌐 Website: [https://fidelswift.vercel.app](https://fidelswift.vercel.app)
 
 ---
