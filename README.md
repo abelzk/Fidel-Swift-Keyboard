@@ -1,7 +1,7 @@
 # Fidel Swift – Amharic Keyboard for Windows
 
 **Fidel Swift** is a modern **Amharic typing software** designed for Windows.  
-It allows users to type Amharic text quickly and intuitively using ** phonetic layout**.  
+It allows users to type Amharic text quickly and intuitively using **phonetic layout**.  
 Built for speed, accuracy, and ease of use, Fidel Swift helps you type Amharic seamlessly across all your desktop applications — from Word and browsers to messaging apps.
 
 🔗 **Official website:** [https://fidelswift.vercel.app](https://fidelswift.vercel.app)  
