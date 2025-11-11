@@ -1,67 +1,90 @@
-k# Fidel Swift
-[![Generic badge](https://img.shields.io/badge/badge-placeholder-green.svg)](https://shields.io/)
+# Fidel Swift – Amharic Keyboard for Windows
 
-## Introduction / Overview
-Fidel Swift is a modern, Unicode-compatible Amharic keyboard engine designed for Windows. It enables users to type Amharic characters seamlessly across any Windows application using an intuitive and customizable phonetic layout.
+**Fidel Swift** is a modern **Amharic typing software** designed for Windows.  
+It allows users to type Amharic text quickly and intuitively using an **intelligent phonetic layout**.  
+Built for speed, accuracy, and ease of use, Fidel Swift helps you type Amharic seamlessly across all your desktop applications — from Word and browsers to messaging apps.
 
-## Features
-- **Real-time Character Conversion**: Instantly converts keystrokes to Amharic characters.
-- **Customizable Hotkeys and Keyboard Mappings**: Tailor the keyboard behavior to your preferences.
-- **Toggleable Amharic/English Typing Mode**: Easily switch between Amharic and English input.
-- **Startup Launch Support**: Configure Fidel Swift to launch automatically when Windows starts.
-- **Clean, Modern UI**: Built with Flet for a user-friendly experience.
-- **Optimized Performance**: Designed for minimal CPU usage and efficient operation.
+🔗 **Official website:** [https://fidelswift.vercel.app](https://fidelswift.vercel.app)  
+📧 **Contact:** abelzeki24@gmail.com  
 
-## Screenshots
-...
+---
 
-## Installation Instructions
-Detailed installation instructions can be found on our official website: [fidelswift.vercel.app](https://fidelswift.vercel.app)
+## 🖥️ Overview
 
-## Usage Guide
-### Switching Modes
-You can switch between Amharic and English typing modes using customizable hotkeys. Refer to the settings within the application to configure your preferred hotkeys (e.g., `Alt + Shift`).
+Fidel Swift brings a smooth and responsive Amharic typing experience to your Windows PC.  
+With automatic layout switching, modern design, and offline functionality, it’s the perfect tool for anyone who works with Amharic text daily.
 
-### Tray Menu
-Fidel Swift runs discreetly in the system tray. Right-click the tray icon to:
-- Access application **Settings**.
-- **Exit** the application.
+### Key Features
 
-## Development Setup
-To contribute to Fidel Swift or run it locally for development, follow these steps:
+- 🇪🇹 **Phonetic Amharic typing** — Type Amharic using familiar English letter combinations.  
+- ⚡ **Fast & lightweight** — Runs efficiently in the background.  
+- 🧠 **Smart prediction engine** — Automatically suggests and corrects Fidel combinations.  
+- 🎨 **Modern UI** — Simple and minimal design for distraction-free typing.  
+- 🪶 **Offline support** — No internet required after installation.  
+- 🔐 **Secure & private** — Your typing data stays on your device.  
+- 💰 **Paid software** — One-time purchase for lifetime access.
 
-### Prerequisites
-- Python 3.8 or higher
-- Pip (Python package installer)
-- Git
+---
 
-### Getting Started
-1. **Download & install the setup:**
-   _( Visit https://fidelswift.vercel.app )_
-   
-2. **Running the software:**
+## 💽 Installation
 
-### Typing for the first time
+### Step 1 – Download the Installer
+Visit the official website and download the **latest Fidel Swift setup file**:  
+👉 [https://fidelswift.vercel.app](https://fidelswift.vercel.app)
 
+### Step 2 – Run the Installer
+1. Double-click the downloaded `.exe` file.  
+2. Follow the on-screen instructions to complete installation.  
+3. Once installed, you’ll see the **Fidel Swift icon** in your system tray.
 
-### Project Structure
-_(A brief overview of the project's directory structure will be added here, e.g., main application logic, UI components, utility modules.)_
+### Step 3 – Activate Your License
+After installation:
+1. Launch **Fidel Swift**.  
+2. Enter your **license key** (sent to your email after purchase).  
+3. Click **Activate** to unlock the full version.
 
-## Contributing Guidelines
-We warmly welcome contributions to enhance Fidel Swift! To contribute:
-1. **Fork** the repository on GitHub.
-2. Create a new **branch** for your feature or bug fix (e.g., `feature/new-layout` or `fix/typing-bug`).
-3. Make your changes, adhering to the project's coding style.
-4. **Test** your changes thoroughly.
-5. Submit a **Pull Request (PR)** with a clear and concise description of your work.
+---
 
-Please follow standard coding practices and ensure your code is well-commented. We may establish more detailed guidelines or a `CONTRIBUTING.md` file as the project grows.
+## ⌨️ Usage Guide
 
-## License
-This project is licensed under the **MIT License**. You can find the full license text in the [LICENSE](LICENSE) file.
+### Typing Amharic
+- Switch to Fidel Swift using the tray toggle or assigned shortcut.  
+- Start typing Amharic directly in any app (Word, Telegram, Chrome, etc.).  
+- Example:  
+  - Type `selam` → ሰላም  
+  - Type `ethiopia` → ኢትዮጵያ  
 
-## Contact / Credits
-- For support, suggestions, or bug reports, please use the [GitHub Issues](https://github.com/abelzk/fidel-swift-keyboard/issues) page.
-- For other inquiries, you can reach out at `abelzeki24@gmail.com`.
+### Keyboard Toggle
+- **On/Off shortcut:** `Ctrl + Space`  
+- A small tray icon will indicate the active mode.
 
-Special thanks to all contributors and inspirations that help Fidel Swift grow.
+---
+
+## 🧩 Troubleshooting
+
+| Problem | Solution |
+|----------|-----------|
+| Keyboard not switching | Restart Fidel Swift or press `Ctrl + Space` again |
+| Amharic letters not showing properly | Install Amharic fonts like *Nyala* or *Abyssinica SIL* |
+| License not activating | Ensure your key is correct and check your internet connection |
+
+If issues persist, contact **abelzeki24@gmail.com** for support.
+
+---
+
+## 📄 License
+
+Fidel Swift is a **paid proprietary software**.  
+Unauthorized distribution, resale, or modification is strictly prohibited.
+
+---
+
+## 💬 Support
+
+Need help or want to provide feedback?  
+📧 Email: [abelzeki24@gmail.com](mailto:abelzeki24@gmail.com)  
+🌐 Website: [https://fidelswift.vercel.app](https://fidelswift.vercel.app)
+
+---
+
+© 2025 **Fidel Swift** — All rights reserved.
