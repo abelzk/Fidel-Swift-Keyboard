@@ -1,4 +1,4 @@
-# Fidel Swift
+k# Fidel Swift
 [![Generic badge](https://img.shields.io/badge/badge-placeholder-green.svg)](https://shields.io/)
 
 ## Introduction / Overview
@@ -62,6 +62,6 @@ This project is licensed under the **MIT License**. You can find the full licens
 
 ## Contact / Credits
 - For support, suggestions, or bug reports, please use the [GitHub Issues](https://github.com/abelzk/fidel-swift-keyboard/issues) page.
-- For other inquiries, you can reach out at `abelzeki24@gmail.como`.
+- For other inquiries, you can reach out at `abelzeki24@gmail.com`.
 
 Special thanks to all contributors and inspirations that help Fidel Swift grow.
