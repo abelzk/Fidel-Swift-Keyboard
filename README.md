@@ -18,7 +18,6 @@ With automatic layout switching, modern design, and offline functionality, it’
 
 - 🇪🇹 **Phonetic Amharic typing** — Type Amharic using familiar English letter combinations.  
 - ⚡ **Fast & lightweight** — Runs efficiently in the background.  
-- 🧠 **Smart prediction engine** — Automatically suggests and corrects Fidel combinations.  
 - 🎨 **Modern UI** — Simple and minimal design for distraction-free typing.  
 - 🪶 **Offline support** — No internet required after installation.  
 - 🔐 **Secure & private** — Your typing data stays on your device.  
@@ -51,8 +50,7 @@ After installation:
 - Switch to Fidel Swift using the tray toggle or assigned shortcut.  
 - Start typing Amharic directly in any app (Word, Telegram, Chrome, etc.).  
 - Example:  
-  - Type `selam` → ሰላም  
-  - Type `ethiopia` → ኢትዮጵያ  
+  - Type `slame` → ሰላም    
 
 ### Keyboard Toggle
 - **On/Off shortcut:** `Ctrl + Space`  
