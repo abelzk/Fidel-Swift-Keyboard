@@ -5,6 +5,7 @@ It allows users to type Amharic text quickly and intuitively using **phonetic la
 Built for speed, accuracy, and ease of use, Fidel Swift helps you type Amharic seamlessly across all your desktop applications — from Word and browsers to messaging apps.
 
 🔗 **Official website:** [https://fidelswift.vercel.app](https://fidelswift.vercel.app)  
+📧 **Contact:** fidelswiftapp@gmail.com  
 📧 **Contact:** abelzeki24@gmail.com  
 
 ---
