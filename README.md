@@ -53,7 +53,7 @@ After installation:
   - Type `slame` → ሰላም    
 
 ### Keyboard Toggle
-- **On/Off shortcut:** `Ctrl + Space`  
+- **On/Off shortcut:** `Alt + A`  
 - A small tray icon will indicate the active mode.
 
 ---
