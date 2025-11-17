@@ -1,8 +1,8 @@
 {
-  "version": "2.1.0",
+  "version": "1.0.1",
   "download_url": "https://fidelswift.vercel.app/downloads/fidel-swift-2.1.0.exe",
-  "checksum": "f8d64e2c3a1b9e7d4f2c8a5b3d6e9f1a2c4d5e6f7a8b9c0d1e2f3a4b5c6d",
+  "checksum": "a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6a7b8c9d0e1f2",
   "file_size": 52428800,
-  "release_notes": "Version 2.1.0:\n- Added dark mode\n- Fixed keyboard input\n- Improved performance",
-  "released_at": "2024-11-17T10:30:00Z"
+  "release_notes": "- Fixed bugs\n- Improved performance\n- Added new features",
+  "released_at": "2024-01-15T10:30:00Z"
 }
