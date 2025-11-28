@@ -1880,3 +1880,15 @@ html .mac-pointer {
   width: 100%;
 }
 }
+<<<<<<< HEAD
+}
+@media (max-width: 322px){
+  .download-container{
+    padding: 0 !important;
+  }
+  .download-wrapper{
+    padding: 20px !important;
+  }
+}
+=======
+>>>>>>> parent of c6553b8 (update download page)
