@@ -2,6 +2,7 @@
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
     { "source": "/docs", "destination": "/docs/documentation.html" },
-    { "source": "/docs/installation", "destination": "/docs/installation.html" }
+    { "source": "/docs/installation", "destination": "/docs/installation.html" },
+     { "source": "/download", "destination": "/download.html" }
   ]
 }
