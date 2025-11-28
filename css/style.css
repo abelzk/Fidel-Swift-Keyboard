@@ -577,6 +577,9 @@ h3{
 .mr-btm-4 {
   margin-bottom: 4rem;
 }
+.mr-top-1{
+  margin-top: 1rem;
+}
 .mr-top-2{
   margin-top: calc(2rem - 4px);
 }
@@ -911,7 +914,6 @@ button {
 .btn-primary-x {
   background: radial-gradient(circle 80px at 80% -10%, #fa800d, var(--primary));
   color: #fff;
-  margin-top: 2rem;
   width: 220px;
   height: 50px;
   border-radius: 10px;
