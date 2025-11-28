@@ -1879,6 +1879,9 @@ html .mac-pointer {
 .details-container{
   width: 100%;
 }
+.download-container{
+  width: 100% !important;
+}
 }
 
 @media (max-width: 322px){
