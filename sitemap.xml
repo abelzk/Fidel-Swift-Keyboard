@@ -13,6 +13,14 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Download Page -->
+  <url>
+    <loc>https://fidelswift.vercel.app/download.html</loc>
+    <lastmod>2025-11-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
   <!-- Documentation Index -->
   <url>
     <loc>https://fidelswift.vercel.app/docs/</loc>
@@ -49,16 +57,21 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+
+  <!-- Privacy Policy -->
   <url>
     <loc>https://fidelswift.vercel.app/privacy.html</loc>
     <lastmod>2025-11-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
-<url>
-    <loc>https://fidelswift.vercel.app/download.html</loc>
+
+  <!-- FAQ -->
+  <url>
+    <loc>https://fidelswift.vercel.app/faq.html</loc>
     <lastmod>2025-11-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+
 </urlset>
