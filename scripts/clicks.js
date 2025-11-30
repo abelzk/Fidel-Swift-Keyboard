@@ -1,17 +1,36 @@
 class ClickTracker {
   constructor() {
-    this.supabaseUrl = window.__SUPABASE_URL__
-    this.supabaseAnonKey = window.__SUPABASE_ANON_KEY__
+    this.supabaseUrl = null
+    this.supabaseAnonKey = null
     this.tableName = "click_counts"
     this.trackerId = "btnDownload"
+    this.credentialsPromise = this.fetchCredentials()
+  }
 
-    if (!this.supabaseUrl || !this.supabaseAnonKey) {
-      console.error(
-        "Supabase credentials not found. Make sure NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY are set.",
-      )
+  async fetchCredentials() {
+    try {
+      const response = await fetch("/api/supabase-config")
+      if (!response.ok) {
+        throw new Error(`Failed to fetch credentials: ${response.status}`)
+      }
+      const data = await response.json()
+      this.supabaseUrl = data.supabaseUrl
+      this.supabaseAnonKey = data.supabaseAnonKey
+      return true
+    } catch (error) {
+      console.error("Error fetching Supabase credentials:", error)
+      return false
     }
   }
+
   async getClickCount() {
+    await this.credentialsPromise
+
+    if (!this.supabaseUrl || !this.supabaseAnonKey) {
+      console.error("Supabase credentials not available")
+      return 0
+    }
+
     try {
       const response = await fetch(
         `${this.supabaseUrl}/rest/v1/${this.tableName}?id=eq.${this.trackerId}&select=count`,
@@ -32,18 +51,23 @@ class ClickTracker {
       const data = await response.json()
       return data.length > 0 ? data[0].count : 0
     } catch (error) {
-      console.error("rror fetching click count:", error)
+      console.error("Error fetching click count:", error)
       return 0
     }
   }
 
-  // Increment click count and save to Supabase
   async trackClick() {
+    await this.credentialsPromise
+
+    if (!this.supabaseUrl || !this.supabaseAnonKey) {
+      throw new Error("Supabase credentials not available")
+    }
+
     try {
       const currentCount = await this.getClickCount()
       const newCount = currentCount + 1
 
-      // Try to update existing record, if it doesn't exist, insert new one
+      // Try to update existing record
       const upsertResponse = await fetch(`${this.supabaseUrl}/rest/v1/${this.tableName}?id=eq.${this.trackerId}`, {
         method: "PATCH",
         headers: {
@@ -55,7 +79,6 @@ class ClickTracker {
         body: JSON.stringify({ count: newCount }),
       })
 
-      // If no rows were updated, insert a new record
       if (upsertResponse.status === 204 || upsertResponse.status === 200) {
         const checkResponse = await fetch(`${this.supabaseUrl}/rest/v1/${this.tableName}?id=eq.${this.trackerId}`, {
           method: "GET",
@@ -69,7 +92,7 @@ class ClickTracker {
         const checkData = await checkResponse.json()
 
         if (checkData.length === 0) {
-          // Insert new record
+          // Insert new record if it doesn't exist
           const insertResponse = await fetch(`${this.supabaseUrl}/rest/v1/${this.tableName}`, {
             method: "POST",
             headers: {
@@ -97,4 +120,5 @@ class ClickTracker {
   }
 }
 
+// Initialize and expose to window
 window.clickTracker = new ClickTracker()
