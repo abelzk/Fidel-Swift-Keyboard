@@ -1,31 +1,12 @@
 class ClickTracker {
   constructor() {
-    this.supabaseUrl = null
-    this.supabaseAnonKey = null
+    this.supabaseUrl = window.NEXT_PUBLIC_SUPABASE_URL
+    this.supabaseAnonKey = window.NEXT_PUBLIC_SUPABASE_ANON_KEY
     this.tableName = "click_counts"
     this.trackerId = "btnDownload"
-    this.credentialsPromise = this.fetchCredentials()
-  }
-
-  async fetchCredentials() {
-    try {
-      const response = await fetch("/api/supabase-config")
-      if (!response.ok) {
-        throw new Error(`Failed to fetch credentials: ${response.status}`)
-      }
-      const data = await response.json()
-      this.supabaseUrl = data.supabaseUrl
-      this.supabaseAnonKey = data.supabaseAnonKey
-      return true
-    } catch (error) {
-      console.error("Error fetching Supabase credentials:", error)
-      return false
-    }
   }
 
   async getClickCount() {
-    await this.credentialsPromise
-
     if (!this.supabaseUrl || !this.supabaseAnonKey) {
       console.error("Supabase credentials not available")
       return 0
@@ -57,8 +38,6 @@ class ClickTracker {
   }
 
   async trackClick() {
-    await this.credentialsPromise
-
     if (!this.supabaseUrl || !this.supabaseAnonKey) {
       throw new Error("Supabase credentials not available")
     }
