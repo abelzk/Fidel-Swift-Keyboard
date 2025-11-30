@@ -2,7 +2,7 @@ class ClickTracker {
   constructor() {
     this.supabaseUrl = window.__SUPABASE_URL__
     this.supabaseAnonKey = window.__SUPABASE_ANON_KEY__
-    this.tableName = "downloadS"
+    this.tableName = "click_counts"
     this.trackerId = "btnDownload"
 
     if (!this.supabaseUrl || !this.supabaseAnonKey) {
