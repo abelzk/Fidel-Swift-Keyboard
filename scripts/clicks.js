@@ -1,7 +1,8 @@
 class ClickTracker {
   constructor() {
-    this.supabaseUrl = window.NEXT_PUBLIC_SUPABASE_URL
-    this.supabaseAnonKey = window.NEXT_PUBLIC_SUPABASE_ANON_KEY
+this.supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+this.supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+
     this.tableName = "click_counts"
     this.trackerId = "btnDownload"
 
