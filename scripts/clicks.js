@@ -7,6 +7,8 @@ class ClickTracker {
 
     if (!this.supabaseUrl || !this.supabaseAnonKey) {
       console.error("[ClickTracker] Supabase credentials are missing. Check your environment variables.")
+    } else {
+      console.log("[ClickTracker] Initialized successfully with Supabase credentials.")
     }
   }
 
@@ -35,7 +37,9 @@ class ClickTracker {
       }
 
       const data = await response.json()
-      return data.length > 0 ? data[0].count : 0
+      const count = data.length > 0 ? data[0].count : 0
+      console.log(`[ClickTracker] Successfully fetched click count: ${count}`)
+      return count
     } catch (error) {
       console.error("[ClickTracker] Error fetching click count:", error)
       return 0
@@ -68,6 +72,8 @@ class ClickTracker {
         console.error(`[ClickTracker] Failed to update record. HTTP status: ${upsertResponse.status}`)
         return currentCount
       }
+
+      console.log(`[ClickTracker] Successfully updated click count to ${newCount}`)
 
       // Verify record exists
       const checkResponse = await fetch(`${this.supabaseUrl}/rest/v1/${this.tableName}?id=eq.${this.trackerId}`, {
@@ -104,6 +110,7 @@ class ClickTracker {
           return currentCount
         }
 
+        console.log("[ClickTracker] Successfully inserted new record with count = 1")
         return 1
       }
 
