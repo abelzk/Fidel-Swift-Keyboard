@@ -3,6 +3,11 @@
     { "source": "/", "destination": "/index.html" },
     { "source": "/docs", "destination": "/docs/documentation.html" },
     { "source": "/docs/installation", "destination": "/docs/installation.html" },
-     { "source": "/download", "destination": "/download.html" }
+    { "source": "/docs/quickstart", "destination": "/docs/quick-start-guide.html" },
+    { "source": "/docs/settings", "destination": "/docs/settings.html" },
+     { "source": "/download", "destination": "/download.html" },
+     { "source": "/faq", "destination": "/faq.html" },
+     { "source": "/privacy", "destination": "/privacy.html" }
+
   ]
 }
