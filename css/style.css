@@ -586,12 +586,17 @@ h3{
 .mr-top-2{
   margin-top: calc(2rem - 4px);
 }
-
+.mr-top-3{
+  margin-top: 3rem;
+}
 .mr-top-4 {
   margin-top: 4rem;
 }
 .mr-top-5{
   margin-top: 5rem;
+}
+.mr-left-05{
+  margin-left: 0.25rem;
 }
 .mr-left-1 {
   margin-left: 0.7rem;
@@ -680,7 +685,9 @@ h3{
 .pd-inline-2 {
   padding-inline: 2rem;
 }
-
+.pd-mini{
+  padding: 0.125rem;
+}
 .pd-small {
   padding: 0.25rem;
 }
@@ -820,8 +827,14 @@ h3{
 .border-main{
   border: 1px solid var(--border-main);
 }
+.border-secondary{
+  border: 1.5px solid var(--border-main);
+}
 .border-b {
   border-bottom: 1px solid var(--border-main);
+}
+.border-rdx-0{
+  border-radius: 5px;
 }
 .border-rdx-1{
   border-radius: 10px;
@@ -915,14 +928,21 @@ button {
 .btn-menu {
   display: none;
 }
-
+.x{
+    width: 220px;
+  height: 50px;
+  font-size: 14px;
+}
+.xl{
+    width: 300px;
+  height: 60px;
+  font-size: 16px;
+}
 .btn-primary-x {
   background: radial-gradient(circle 80px at 80% -10%, #fa800d, var(--primary));
   color: #fff;
-  width: 220px;
-  height: 50px;
   border-radius: 10px;
-  font-size: 14px;
+  
   transition: all 0.3s ease-in-out;
 }
 
@@ -1098,7 +1118,13 @@ button {
   text-align: start;
   font-weight: bold;
 }
-
+.hero-download{
+  font-size: clamp(2rem, 10vw, 3.8rem);
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  text-align: start;
+  font-weight: bold;
+}
 .hero-tagline {
   text-align: start;
   font-size: clamp(0.85rem, 4vw, 14px);
@@ -1163,6 +1189,11 @@ button {
 .sm-win{
   width: 24px;
   height: 24px;
+  filter: invert(1);
+}
+.sm-win-x{
+  width: 28px;
+  height: 28px;
   filter: invert(1);
 }
 .sm-inv-1{
@@ -1896,6 +1927,16 @@ html .mac-pointer {
     padding: 0 !important;
   }
   .download-wrapper{
-    padding: 20px !important;
+    padding: 16px !important;
   }
+  .xl{
+    width: 280px;
+  height: 60px;
+  font-size: 16px;
+}
+.sm-win-x{
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+}
 }
