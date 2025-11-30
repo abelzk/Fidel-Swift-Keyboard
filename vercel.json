@@ -2,6 +2,7 @@
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
     { "source": "/docs", "destination": "/docs/documentation.html" },
+    { "source": "/docs/documentation", "destination": "/docs/documentation.html" },
     { "source": "/docs/installation", "destination": "/docs/installation.html" },
     { "source": "/docs/quickstart", "destination": "/docs/quick-start-guide.html" },
     { "source": "/docs/settings", "destination": "/docs/settings.html" },
