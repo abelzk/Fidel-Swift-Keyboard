@@ -1593,6 +1593,124 @@ html .mac-pointer {
       100% { background-position: 0% 50%; }
     }
 
+/* ==========================================================================
+   SCROLL ANIMATION KEYFRAMES
+   ========================================================================== */
+@keyframes scrollFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollFadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scrollFadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scrollScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scrollSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   SCROLL ANIMATION CLASSES
+   ========================================================================== */
+/* Fade in from bottom on scroll */
+.scroll-fade-up {
+  animation: scrollFadeInUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+/* Fade in from left on scroll */
+.scroll-fade-left {
+  animation: scrollFadeInLeft 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+/* Fade in from right on scroll */
+.scroll-fade-right {
+  animation: scrollFadeInRight 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+/* Scale up on scroll */
+.scroll-scale {
+  animation: scrollScale 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+/* Staggered animations for multiple elements */
+.scroll-stagger-1 {
+  animation: scrollFadeInUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+  animation-delay: 0.05s;
+}
+
+.scroll-stagger-2 {
+  animation: scrollFadeInUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+  animation-delay: 0.1s;
+}
+
+.scroll-stagger-3 {
+  animation: scrollFadeInUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+  animation-delay: 0.15s;
+}
+
+/* Slide down with fade */
+.scroll-slide-down {
+  animation: scrollSlideDown 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
 /* Animation Classes */
 .fade-in {
   opacity: 0;
