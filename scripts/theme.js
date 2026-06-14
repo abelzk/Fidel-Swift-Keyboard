@@ -17,4 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
       icon.src = isDark ? '/images/toggle-dark.svg' : '/images/toggle.svg';
     }
   });
+
+  const yearSpan = document.getElementById('year');
+  if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 });
