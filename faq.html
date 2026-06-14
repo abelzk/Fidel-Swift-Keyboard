@@ -260,4 +260,17 @@
 <script src="/scripts/navToggle.js"></script>
 <script src="/scripts/move.js"></script>
 <script src="/scripts/preloader-def.js"></script>
+<script>
+  (function() {
+    var details = document.querySelectorAll('.details-container details');
+    for (var i = 0; i < details.length; i++) {
+      details[i].addEventListener('toggle', function() {
+        if (!this.open) return;
+        for (var j = 0; j < details.length; j++) {
+          if (details[j] !== this) details[j].removeAttribute('open');
+        }
+      });
+    }
+  })();
+</script>
 </html>
