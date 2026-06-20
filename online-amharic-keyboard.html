@@ -243,126 +243,6 @@
     }
   </style>
 
-  <style>
-    /* Font hierarchy balance */
-    h1.hero-title {
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      line-height: 1.15;
-    }
-    h2 {
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      line-height: 1.25;
-    }
-    h2 + :where(p, .text-muted-foreground) {
-      max-width: 70ch;
-    }
-    .hero-title + p {
-      font-size: clamp(0.95rem, 2vw, 1.1rem);
-      max-width: 65ch;
-    }
-
-    /* =====================================================
-       Scroll-reveal animations — dramatic fade-up with tilt.
-       Uses animation-timeline (Chrome 115+). Falls back
-       gracefully to visible (no-op) on other browsers.
-       ===================================================== */
-    @keyframes scrollFadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(80px) scale(0.97);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-    }
-
-    .animate-section {
-      animation: scrollFadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
-      animation-timeline: view();
-      animation-range: entry -5% cover 35%;
-    }
-
-    /* Staggered children — each animates independently as it
-       enters the viewport. Override animation-range per index
-       since animation-delay is ignored by scroll timelines. */
-    .stagger-in > * {
-      animation: scrollFadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
-      animation-timeline: view();
-      animation-range: entry -5% cover 35%;
-    }
-    .stagger-in > *:nth-child(1) { animation-range: entry -5% cover 30%; }
-    .stagger-in > *:nth-child(2) { animation-range: entry -5% cover 35%; }
-    .stagger-in > *:nth-child(3) { animation-range: entry -5% cover 40%; }
-    .stagger-in > *:nth-child(4) { animation-range: entry -5% cover 45%; }
-    .stagger-in > *:nth-child(5) { animation-range: entry -5% cover 50%; }
-    .stagger-in > *:nth-child(6) { animation-range: entry -5% cover 55%; }
-    .stagger-in > *:nth-child(7) { animation-range: entry -5% cover 60%; }
-    .stagger-in > *:nth-child(8) { animation-range: entry -5% cover 65%; }
-    .stagger-in > *:nth-child(9) { animation-range: entry -5% cover 70%; }
-
-    /* Hover effects */
-    .hover-card {
-      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
-    }
-    .hover-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-    }
-    html.dark .hover-card:hover {
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    .hover-pill {
-      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
-      cursor: default;
-    }
-    .hover-pill:hover {
-      transform: scale(1.04);
-      border-color: var(--primary) !important;
-      background: var(--bg-card) !important;
-    }
-
-    .hover-stats {
-      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s ease;
-      cursor: default;
-    }
-    .hover-stats:hover {
-      transform: translateY(-2px) scale(1.02);
-      background: var(--bg-card) !important;
-    }
-
-    .hover-cta-block {
-      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
-    }
-    .hover-cta-block:hover {
-      transform: scale(1.01);
-    }
-
-    .action-btn, .toolbar-btn {
-      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s ease;
-    }
-    .action-btn:hover, .toolbar-btn:hover {
-      transform: translateY(-1px);
-    }
-
-    /* Smooth anchor offset for sticky nav */
-    html {
-      scroll-padding-top: 5rem;
-    }
-
-    /* Divider between major sections */
-    .section-divider {
-      height: 1px;
-      background: linear-gradient(to right, transparent, var(--border-main), transparent);
-      margin: 0 auto;
-      width: 60%;
-      opacity: 0.5;
-    }
-  </style>
-
   <script defer src="scripts/theme.js"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9639206931654333" crossorigin="anonymous"></script>
 </head>
@@ -435,18 +315,11 @@
 
   <main class="pd-top-5 pd-btm-1 animate-on-scroll">
     <div class="w-full flex flex-center pd-1">
-      <div class="w-full flex align-center flex-col animate-section" style="max-width: 900px;">
+      <div class="w-full flex align-center flex-col" style="max-width: 900px;">
         <h1 class="text-align-center hero-title">Online Amharic Keyboard – የአማርኛ ኪቦርድ</h1>
-        <p class="text-muted-foreground text-align-center pd-btm-05">Type Amharic (Ge'ez/Fidel script) online using English letters — free, instant, no installation. Works on mobile, tablet &amp; desktop.</p>
+        <p class="text-muted-foreground text-align-center pd-btm-1">Type Amharic (Ge'ez/Fidel script) online using English letters — free, instant, no installation. Works on mobile, tablet &amp; desktop.</p>
 
-        <div class="flex flex-wrap gap-1 justify-center pd-btm-1 stagger-in" style="max-width: 600px; margin: 0 auto;">
-          <span class="font-small hover-pill" style="display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.3rem 0.6rem; background: var(--bg-muted); border-radius: 20px; border: 1px solid var(--border-main);"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--primary); flex-shrink: 0;"></span>230+ Fidel characters</span>
-          <span class="font-small hover-pill" style="display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.3rem 0.6rem; background: var(--bg-muted); border-radius: 20px; border: 1px solid var(--border-main);"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--primary); flex-shrink: 0;"></span>Phonetic input</span>
-          <span class="font-small hover-pill" style="display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.3rem 0.6rem; background: var(--bg-muted); border-radius: 20px; border: 1px solid var(--border-main);"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--primary); flex-shrink: 0;"></span>Export .txt / .doc</span>
-          <span class="font-small hover-pill" style="display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.3rem 0.6rem; background: var(--bg-muted); border-radius: 20px; border: 1px solid var(--border-main);"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--primary); flex-shrink: 0;"></span>100% free</span>
-        </div>
-
-          <div id="editor-container" class="w-full border-main border-rdx-1 pd-2 bg-main mr-btm-2 animate-section" style="position: relative;">
+          <div id="editor-container" class="w-full border-main border-rdx-1 pd-2 bg-main mr-btm-2" style="position: relative;">
           <div class="flex flex-wrap gap-1 mr-btm-1">
             <input id="doc-title" type="text" class="w-full border-main border-rdx-0 pd-1" style="font-size: 1.1rem; font-weight: 600; background: var(--bg); color: var(--text); outline: none;" placeholder="Untitled Amharic Document" aria-label="Document title" />
           </div>
@@ -658,188 +531,120 @@
           </div>
         </div>
 
-        <div class="w-full mr-btm-2 animate-section">
+        <div class="w-full mr-btm-2">
           <h2 class="mr-btm-05">How to Type</h2>
-
           <p class="text-muted-foreground mr-btm-1">
-            Fidel Swift uses a <strong>consonant + vowel</strong> key system. Each consonant has
-            <strong>8 vowel orders</strong> (forms). Type a consonant, then a vowel key to change its order:
+            Fidel Swift uses a consonant + vowel key system. Type a consonant first, then press a vowel key to change its order.
+            Standalone vowel keys like <span class="color-primary">a</span>, <span class="color-primary">e</span>,
+            <span class="color-primary">i</span>, <span class="color-primary">o</span>, and <span class="color-primary">u</span>
+            are vowel modifiers, not independent letters. To type independent vowels, use the
+            <span class="color-primary">x</span> family.
           </p>
 
-          <div class="w-full border-main border-rdx-1 pd-1 mr-btm-1" style="background: var(--bg-muted);">
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.375rem 0.75rem;">
-              <div class="font-small"><span class="color-primary">base</span> → <span class="color-primary">h</span> → ሀ <span style="color: var(--muted-foreground); font-size: 0.75em;">1st</span></div>
-              <div class="font-small"><span class="color-primary">u</span> → <span class="color-primary">hu</span> → ሁ <span style="color: var(--muted-foreground); font-size: 0.75em;">2nd</span></div>
-              <div class="font-small"><span class="color-primary">i</span> → <span class="color-primary">hi</span> → ሂ <span style="color: var(--muted-foreground); font-size: 0.75em;">3rd</span></div>
-              <div class="font-small"><span class="color-primary">a</span> → <span class="color-primary">ha</span> → ሃ <span style="color: var(--muted-foreground); font-size: 0.75em;">4th</span></div>
-              <div class="font-small"><span class="color-primary">y</span> → <span class="color-primary">hy</span> → ሄ <span style="color: var(--muted-foreground); font-size: 0.75em;">5th</span></div>
-              <div class="font-small"><span class="color-primary">e</span> → <span class="color-primary">he</span> → ህ <span style="color: var(--muted-foreground); font-size: 0.75em;">6th</span></div>
-              <div class="font-small"><span class="color-primary">o</span> → <span class="color-primary">ho</span> → ሆ <span style="color: var(--muted-foreground); font-size: 0.75em;">7th</span></div>
-              <div class="font-small"><span class="color-primary">]</span> → <span class="color-primary">h]</span> → ኋ <span style="color: var(--muted-foreground); font-size: 0.75em;">8th</span></div>
+          <div id="mode-cards-wrapper" style="position: relative;">
+            <button id="scroll-left-btn" class="scroll-arrow-btn" aria-label="Scroll left" title="Scroll left" style="display: none;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+
+            <div id="mode-cards-container" class="w-full" style="overflow-x: auto; white-space: nowrap; scroll-behavior: smooth; display: flex; gap: 0.5rem; padding-bottom: 0.25rem;">
+
+              <div class="border-main border-rdx-1 pd-1" style="flex: 0 0 auto; min-width: 210px; white-space: normal;">
+                <p class="font-small font-bold mr-btm-05">Vowel Order</p>
+                <div class="font-small"><span class="color-primary">base</span> → 1st order</div>
+                <div class="font-small"><span class="color-primary">u</span> → 2nd order</div>
+                <div class="font-small"><span class="color-primary">i</span> → 3rd order</div>
+                <div class="font-small"><span class="color-primary">a</span> → 4th order</div>
+                <div class="font-small"><span class="color-primary">y</span> → 5th order</div>
+                <div class="font-small"><span class="color-primary">e</span> → 6th order</div>
+                <div class="font-small"><span class="color-primary">o</span> → 7th order</div>
+                <div class="font-small"><span class="color-primary">]</span> → 8th order</div>
+              </div>
+
+              <div class="border-main border-rdx-1 pd-1" style="flex: 0 0 auto; min-width: 210px; white-space: normal;">
+                <p class="font-small font-bold mr-btm-05">h Family Example</p>
+                <div class="font-small"><span class="color-primary">h</span> → ሀ</div>
+                <div class="font-small"><span class="color-primary">hu</span> → ሁ</div>
+                <div class="font-small"><span class="color-primary">hi</span> → ሂ</div>
+                <div class="font-small"><span class="color-primary">ha</span> → ሃ</div>
+                <div class="font-small"><span class="color-primary">hy</span> → ሄ</div>
+                <div class="font-small"><span class="color-primary">he</span> → ህ</div>
+                <div class="font-small"><span class="color-primary">ho</span> → ሆ</div>
+                <div class="font-small"><span class="color-primary">h]</span> → ኋ</div>
+              </div>
+
+              <div class="border-main border-rdx-1 pd-1" style="flex: 0 0 auto; min-width: 210px; white-space: normal;">
+                <p class="font-small font-bold mr-btm-05">Independent Vowels</p>
+                <div class="font-small"><span class="color-primary">x</span> → አ</div>
+                <div class="font-small"><span class="color-primary">xu</span> → ኡ</div>
+                <div class="font-small"><span class="color-primary">xi</span> → ኢ</div>
+                <div class="font-small"><span class="color-primary">xa</span> → ኣ</div>
+                <div class="font-small"><span class="color-primary">xy</span> → ኤ</div>
+                <div class="font-small"><span class="color-primary">xe</span> → እ</div>
+                <div class="font-small"><span class="color-primary">xo</span> → ኦ</div>
+                <div class="font-small"><span class="color-primary">x]</span> → ኧ</div>
+              </div>
+
+              <div class="border-main border-rdx-1 pd-1" style="flex: 0 0 auto; min-width: 260px; white-space: normal;">
+                <p class="font-small font-bold mr-btm-05">Word Examples</p>
+                <div class="font-small"><span class="color-primary">s l a m e</span> → ሰላም</div>
+                <div class="font-small"><span class="color-primary">x d a m e</span> → አዳም</div>
+                <div class="font-small"><span class="color-primary">S+Y o s y f e</span> → ዮሴፍ</div>
+                <div class="font-small"><span class="color-primary">x m s e g n a l hu</span> → አመስግናልሁ</div>
+              </div>
+
+              <div class="border-main border-rdx-1 pd-1" style="flex: 0 0 auto; min-width: 220px; white-space: normal;">
+                <p class="font-small font-bold mr-btm-05">Uppercase Keys</p>
+                <div class="font-small"><span class="color-primary">S</span> → ሸ</div>
+                <div class="font-small"><span class="color-primary">Shift+Y</span> → የ</div>
+                <div class="font-small"><span class="color-primary">T</span> → ጠ</div>
+                <div class="font-small"><span class="color-primary">C</span> → ጨ</div>
+                <div class="font-small"><span class="color-primary">P</span> → ጰ</div>
+                <div class="font-small"><span class="color-primary">X</span> → ፀ</div>
+              </div>
+
+              <div class="border-main border-rdx-1 pd-1" style="flex: 0 0 auto; min-width: 210px; white-space: normal;">
+                <p class="font-small font-bold mr-btm-05">Punctuation</p>
+                <div class="font-small"><span class="color-primary">,</span> → ፣</div>
+                <div class="font-small"><span class="color-primary">.</span> → ።</div>
+                <div class="font-small"><span class="color-primary">;</span> → ፤</div>
+                <div class="font-small"><span class="color-primary">:</span> → ፡</div>
+              </div>
+
             </div>
-            <div style="margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid var(--border-main);">
-              <span class="font-small text-muted-foreground"><strong>Independent vowels</strong> — use <span class="color-primary">x</span> instead of a consonant:</span>
-              <span class="font-small" style="margin-left: 0.5rem;"><span class="color-primary">xa</span> → ኣ</span>
-              <span class="font-small" style="margin-left: 0.5rem;"><span class="color-primary">xi</span> → ኢ</span>
-              <span class="font-small" style="margin-left: 0.5rem;"><span class="color-primary">xo</span> → ኦ</span>
-              <span class="font-small"><span class="color-primary">x]</span> → ኧ</span>
-            </div>
+
+            <button id="scroll-right-btn" class="scroll-arrow-btn" aria-label="Scroll right" title="Scroll right">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
           </div>
-
-          <div class="stagger-in" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 0.5rem;">
-
-            <div class="border-main border-rdx-1 pd-1 hover-card">
-              <p class="font-small font-bold mr-btm-05">Independent Vowels</p>
-              <div class="font-small"><span class="color-primary">x</span> → አ</div>
-              <div class="font-small"><span class="color-primary">xu</span> → ኡ</div>
-              <div class="font-small"><span class="color-primary">xi</span> → ኢ</div>
-              <div class="font-small"><span class="color-primary">xa</span> → ኣ</div>
-              <div class="font-small"><span class="color-primary">xy</span> → ኤ</div>
-              <div class="font-small"><span class="color-primary">xe</span> → እ</div>
-              <div class="font-small"><span class="color-primary">xo</span> → ኦ</div>
-              <div class="font-small"><span class="color-primary">x]</span> → ኧ</div>
-            </div>
-
-            <div class="border-main border-rdx-1 pd-1 hover-card">
-              <p class="font-small font-bold mr-btm-05">Uppercase Keys</p>
-              <div class="font-small"><span class="color-primary">S</span> → ሸ (palatal s)</div>
-              <div class="font-small"><span class="color-primary">C</span> → ጨ (palatal ch)</div>
-              <div class="font-small"><span class="color-primary">T</span> → ጠ (emphatic t)</div>
-              <div class="font-small"><span class="color-primary">P</span> → ጰ (emphatic p)</div>
-              <div class="font-small"><span class="color-primary">X</span> → ፀ (emphatic ts)</div>
-              <div class="font-small"><span class="color-primary">Shift+Y</span> → የ (y consonant)</div>
-            </div>
-
-            <div class="border-main border-rdx-1 pd-1 hover-card">
-              <p class="font-small font-bold mr-btm-05">Word Examples</p>
-              <div class="font-small"><span class="color-primary">s l a m e</span> → ሰላም <span class="text-muted-foreground" style="font-size: 0.75em;">peace</span></div>
-              <div class="font-small"><span class="color-primary">x d a m e</span> → አዳም <span class="text-muted-foreground" style="font-size: 0.75em;">Adam</span></div>
-              <div class="font-small"><span class="color-primary">S+Y o s y f e</span> → ዮሴፍ <span class="text-muted-foreground" style="font-size: 0.75em;">Joseph</span></div>
-              <div class="font-small"><span class="color-primary">x m s e g n a l hu</span> → አመስግናልሁ <span class="text-muted-foreground" style="font-size: 0.75em;">I thank</span></div>
-            </div>
-
-            <div class="border-main border-rdx-1 pd-1 hover-card">
-              <p class="font-small font-bold mr-btm-05">Punctuation</p>
-              <div class="font-small"><span class="color-primary">,</span> → ፣ <span class="text-muted-foreground" style="font-size: 0.75em;">comma</span></div>
-              <div class="font-small"><span class="color-primary">.</span> → ። <span class="text-muted-foreground" style="font-size: 0.75em;">period</span></div>
-              <div class="font-small"><span class="color-primary">;</span> → ፤ <span class="text-muted-foreground" style="font-size: 0.75em;">semicolon</span></div>
-              <div class="font-small"><span class="color-primary">:</span> → ፡ <span class="text-muted-foreground" style="font-size: 0.75em;">colon</span></div>
-            </div>
-
-          </div>
-
-          <details class="mr-top-1" style="border: 1px solid var(--border-main); border-radius: 8px; padding: 0.5rem 0.75rem;">
-            <summary style="cursor: pointer; font-size: 0.85rem; font-weight: 600; color: var(--text); user-select: none; list-style: none; display: flex; align-items: center; gap: 0.5rem;">
-              <span style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; flex-shrink: 0; font-size: 14px; background: var(--bg-muted); border-radius: 4px;">+</span>
-              Full consonant family reference
-            </summary>
-            <div style="margin-top: 0.75rem; overflow-x: auto;">
-              <table style="width: 100%; border-collapse: collapse; font-size: 0.8rem; text-align: left;">
-                <thead>
-                  <tr style="border-bottom: 1px solid var(--border-main);">
-                    <th style="padding: 0.25rem 0.5rem;">Key</th>
-                    <th style="padding: 0.25rem 0.5rem;">base</th>
-                    <th style="padding: 0.25rem 0.5rem;">u</th>
-                    <th style="padding: 0.25rem 0.5rem;">i</th>
-                    <th style="padding: 0.25rem 0.5rem;">a</th>
-                    <th style="padding: 0.25rem 0.5rem;">y</th>
-                    <th style="padding: 0.25rem 0.5rem;">e</th>
-                    <th style="padding: 0.25rem 0.5rem;">o</th>
-                    <th style="padding: 0.25rem 0.5rem;">]</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr style="border-bottom: 1px solid var(--border-main);"><td style="padding: 0.2rem 0.5rem;"><span class="color-primary">h</span></td><td style="padding: 0.2rem 0.5rem;">ሀ</td><td style="padding: 0.2rem 0.5rem;">ሁ</td><td style="padding: 0.2rem 0.5rem;">ሂ</td><td style="padding: 0.2rem 0.5rem;">ሃ</td><td style="padding: 0.2rem 0.5rem;">ሄ</td><td style="padding: 0.2rem 0.5rem;">ህ</td><td style="padding: 0.2rem 0.5rem;">ሆ</td><td style="padding: 0.2rem 0.5rem;">ኋ</td></tr>
-                  <tr style="border-bottom: 1px solid var(--border-main);"><td style="padding: 0.2rem 0.5rem;"><span class="color-primary">l</span></td><td style="padding: 0.2rem 0.5rem;">ለ</td><td style="padding: 0.2rem 0.5rem;">ሉ</td><td style="padding: 0.2rem 0.5rem;">ሊ</td><td style="padding: 0.2rem 0.5rem;">ላ</td><td style="padding: 0.2rem 0.5rem;">ሌ</td><td style="padding: 0.2rem 0.5rem;">ል</td><td style="padding: 0.2rem 0.5rem;">ሎ</td><td style="padding: 0.2rem 0.5rem;">ሏ</td></tr>
-                  <tr style="border-bottom: 1px solid var(--border-main);"><td style="padding: 0.2rem 0.5rem;"><span class="color-primary">m</span></td><td style="padding: 0.2rem 0.5rem;">መ</td><td style="padding: 0.2rem 0.5rem;">ሙ</td><td style="padding: 0.2rem 0.5rem;">ሚ</td><td style="padding: 0.2rem 0.5rem;">ማ</td><td style="padding: 0.2rem 0.5rem;">ሜ</td><td style="padding: 0.2rem 0.5rem;">ም</td><td style="padding: 0.2rem 0.5rem;">ሞ</td><td style="padding: 0.2rem 0.5rem;">ሟ</td></tr>
-                  <tr style="border-bottom: 1px solid var(--border-main);"><td style="padding: 0.2rem 0.5rem;"><span class="color-primary">s</span></td><td style="padding: 0.2rem 0.5rem;">ሰ</td><td style="padding: 0.2rem 0.5rem;">ሱ</td><td style="padding: 0.2rem 0.5rem;">ሲ</td><td style="padding: 0.2rem 0.5rem;">ሳ</td><td style="padding: 0.2rem 0.5rem;">ሴ</td><td style="padding: 0.2rem 0.5rem;">ስ</td><td style="padding: 0.2rem 0.5rem;">ሶ</td><td style="padding: 0.2rem 0.5rem;">ሷ</td></tr>
-                  <tr style="border-bottom: 1px solid var(--border-main);"><td style="padding: 0.2rem 0.5rem;"><span class="color-primary">r</span></td><td style="padding: 0.2rem 0.5rem;">ረ</td><td style="padding: 0.2rem 0.5rem;">ሩ</td><td style="padding: 0.2rem 0.5rem;">ሪ</td><td style="padding: 0.2rem 0.5rem;">ራ</td><td style="padding: 0.2rem 0.5rem;">ሬ</td><td style="padding: 0.2rem 0.5rem;">ር</td><td style="padding: 0.2rem 0.5rem;">ሮ</td><td style="padding: 0.2rem 0.5rem;">ሯ</td></tr>
-                  <tr style="border-bottom: 1px solid var(--border-main);"><td style="padding: 0.2rem 0.5rem;"><span class="color-primary">q</span></td><td style="padding: 0.2rem 0.5rem;">ቀ</td><td style="padding: 0.2rem 0.5rem;">ቁ</td><td style="padding: 0.2rem 0.5rem;">ቂ</td><td style="padding: 0.2rem 0.5rem;">ቃ</td><td style="padding: 0.2rem 0.5rem;">ቄ</td><td style="padding: 0.2rem 0.5rem;">ቅ</td><td style="padding: 0.2rem 0.5rem;">ቆ</td><td style="padding: 0.2rem 0.5rem;">ቋ</td></tr>
-                  <tr style="border-bottom: 1px solid var(--border-main);"><td style="padding: 0.2rem 0.5rem;"><span class="color-primary">b</span></td><td style="padding: 0.2rem 0.5rem;">በ</td><td style="padding: 0.2rem 0.5rem;">ቡ</td><td style="padding: 0.2rem 0.5rem;">ቢ</td><td style="padding: 0.2rem 0.5rem;">ባ</td><td style="padding: 0.2rem 0.5rem;">ቤ</td><td style="padding: 0.2rem 0.5rem;">ብ</td><td style="padding: 0.2rem 0.5rem;">ቦ</td><td style="padding: 0.2rem 0.5rem;">ቧ</td></tr>
-                  <tr style="border-bottom: 1px solid var(--border-main);"><td style="padding: 0.2rem 0.5rem;"><span class="color-primary">t</span></td><td style="padding: 0.2rem 0.5rem;">ተ</td><td style="padding: 0.2rem 0.5rem;">ቱ</td><td style="padding: 0.2rem 0.5rem;">ቲ</td><td style="padding: 0.2rem 0.5rem;">ታ</td><td style="padding: 0.2rem 0.5rem;">ቴ</td><td style="padding: 0.2rem 0.5rem;">ት</td><td style="padding: 0.2rem 0.5rem;">ቶ</td><td style="padding: 0.2rem 0.5rem;">ቷ</td></tr>
-                  <tr style="border-bottom: 1px solid var(--border-main);"><td style="padding: 0.2rem 0.5rem;"><span class="color-primary">n</span></td><td style="padding: 0.2rem 0.5rem;">ነ</td><td style="padding: 0.2rem 0.5rem;">ኑ</td><td style="padding: 0.2rem 0.5rem;">ኒ</td><td style="padding: 0.2rem 0.5rem;">ና</td><td style="padding: 0.2rem 0.5rem;">ኔ</td><td style="padding: 0.2rem 0.5rem;">ን</td><td style="padding: 0.2rem 0.5rem;">ኖ</td><td style="padding: 0.2rem 0.5rem;">ኗ</td></tr>
-                  <tr style="border-bottom: 1px solid var(--border-main);"><td style="padding: 0.2rem 0.5rem;"><span class="color-primary">k</span></td><td style="padding: 0.2rem 0.5rem;">ከ</td><td style="padding: 0.2rem 0.5rem;">ኩ</td><td style="padding: 0.2rem 0.5rem;">ኪ</td><td style="padding: 0.2rem 0.5rem;">ካ</td><td style="padding: 0.2rem 0.5rem;">ኬ</td><td style="padding: 0.2rem 0.5rem;">ክ</td><td style="padding: 0.2rem 0.5rem;">ኮ</td><td style="padding: 0.2rem 0.5rem;">ኳ</td></tr>
-                  <tr style="border-bottom: 1px solid var(--border-main);"><td style="padding: 0.2rem 0.5rem;"><span class="color-primary">w</span></td><td style="padding: 0.2rem 0.5rem;">ወ</td><td style="padding: 0.2rem 0.5rem;">ዉ</td><td style="padding: 0.2rem 0.5rem;">ዊ</td><td style="padding: 0.2rem 0.5rem;">ዋ</td><td style="padding: 0.2rem 0.5rem;">ዌ</td><td style="padding: 0.2rem 0.5rem;">ው</td><td style="padding: 0.2rem 0.5rem;">ዎ</td><td style="padding: 0.2rem 0.5rem;">ዏ</td></tr>
-                  <tr style="border-bottom: 1px solid var(--border-main);"><td style="padding: 0.2rem 0.5rem;"><span class="color-primary">z</span></td><td style="padding: 0.2rem 0.5rem;">ዘ</td><td style="padding: 0.2rem 0.5rem;">ዙ</td><td style="padding: 0.2rem 0.5rem;">ዚ</td><td style="padding: 0.2rem 0.5rem;">ዛ</td><td style="padding: 0.2rem 0.5rem;">ዜ</td><td style="padding: 0.2rem 0.5rem;">ዝ</td><td style="padding: 0.2rem 0.5rem;">ዞ</td><td style="padding: 0.2rem 0.5rem;">ዟ</td></tr>
-                  <tr style="border-bottom: 1px solid var(--border-main);"><td style="padding: 0.2rem 0.5rem;"><span class="color-primary">d</span></td><td style="padding: 0.2rem 0.5rem;">ደ</td><td style="padding: 0.2rem 0.5rem;">ዱ</td><td style="padding: 0.2rem 0.5rem;">ዲ</td><td style="padding: 0.2rem 0.5rem;">ዳ</td><td style="padding: 0.2rem 0.5rem;">ዴ</td><td style="padding: 0.2rem 0.5rem;">ድ</td><td style="padding: 0.2rem 0.5rem;">ዶ</td><td style="padding: 0.2rem 0.5rem;">ዷ</td></tr>
-                  <tr style="border-bottom: 1px solid var(--border-main);"><td style="padding: 0.2rem 0.5rem;"><span class="color-primary">g</span></td><td style="padding: 0.2rem 0.5rem;">ገ</td><td style="padding: 0.2rem 0.5rem;">ጉ</td><td style="padding: 0.2rem 0.5rem;">ጊ</td><td style="padding: 0.2rem 0.5rem;">ጋ</td><td style="padding: 0.2rem 0.5rem;">ጌ</td><td style="padding: 0.2rem 0.5rem;">ግ</td><td style="padding: 0.2rem 0.5rem;">ጎ</td><td style="padding: 0.2rem 0.5rem;">ጓ</td></tr>
-                  <tr style="border-bottom: 1px solid var(--border-main);"><td style="padding: 0.2rem 0.5rem;"><span class="color-primary">f</span></td><td style="padding: 0.2rem 0.5rem;">ፈ</td><td style="padding: 0.2rem 0.5rem;">ፉ</td><td style="padding: 0.2rem 0.5rem;">ፊ</td><td style="padding: 0.2rem 0.5rem;">ፋ</td><td style="padding: 0.2rem 0.5rem;">ፌ</td><td style="padding: 0.2rem 0.5rem;">ፍ</td><td style="padding: 0.2rem 0.5rem;">ፎ</td><td style="padding: 0.2rem 0.5rem;">ፏ</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <p class="font-small text-muted-foreground mr-top-1" style="padding-top: 0.5rem; border-top: 1px solid var(--border-main);">For uppercase (<span class="color-primary">S, C, T, P, X</span>) and labiovelar (<span class="color-primary">kw, gw, xw</span>) families, type the uppercase key then vowel modifiers.</p>
-          </details>
-
         </div>
 
-          <div class="w-full mr-btm-2 animate-section">
+        <div class="w-full mr-btm-2">
           <h2 class="mr-btm-05">Why Use Fidel Swift's Online Amharic Keyboard?</h2>
-          <div class="stagger-in" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem 1.25rem;">
-            <div>
-              <p class="font-small font-bold" style="margin-bottom: 0.15rem;">Phonetic Input</p>
-              <p class="font-small text-muted-foreground" style="line-height: 1.6;">Type Amharic using familiar English letters — no keyboard layout to memorize. Just type how it sounds.</p>
-            </div>
-            <div>
-              <p class="font-small font-bold" style="margin-bottom: 0.15rem;">Full Ge'ez Script</p>
-              <p class="font-small text-muted-foreground" style="line-height: 1.6;">All 230+ Amharic Fidel characters — consonants, vowel orders, labiovelars, and punctuation — fully supported.</p>
-            </div>
-            <div>
-              <p class="font-small font-bold" style="margin-bottom: 0.15rem;">No Installation Required</p>
-              <p class="font-small text-muted-foreground" style="line-height: 1.6;">Open in any browser on Windows, macOS, Linux, Android, or iOS and start typing immediately. No downloads.</p>
-            </div>
-            <div>
-              <p class="font-small font-bold" style="margin-bottom: 0.15rem;">Works on All Devices</p>
-              <p class="font-small text-muted-foreground" style="line-height: 1.6;">Responsive design optimized for phones, tablets, and desktops — type Amharic wherever you are.</p>
-            </div>
-            <div>
-              <p class="font-small font-bold" style="margin-bottom: 0.15rem;">Export &amp; Share</p>
-              <p class="font-small text-muted-foreground" style="line-height: 1.6;">Copy to clipboard, download as .txt or .doc, or print directly from your browser in one click.</p>
-            </div>
-            <div>
-              <p class="font-small font-bold" style="margin-bottom: 0.15rem;">Completely Free</p>
-              <p class="font-small text-muted-foreground" style="line-height: 1.6;">No sign-up, no usage limits, no hidden fees. Free for everyone, forever.</p>
-            </div>
-            <div>
-              <p class="font-small font-bold" style="margin-bottom: 0.15rem;">Dark Mode</p>
-              <p class="font-small text-muted-foreground" style="line-height: 1.6;">Comfortable typing day or night with automatic dark mode that follows your system preference.</p>
-            </div>
-          </div>
+          <ul style="list-style: disc; padding-left: 1.5rem;">
+            <li class="li-disc mr-btm-0"><strong>Phonetic input</strong> — type Amharic using familiar English letters; no need to memorize a new keyboard layout</li>
+            <li class="li-disc mr-btm-0"><strong>Full Ge'ez/Fidel script</strong> — supports all 230+ Amharic characters including consonants, vowel orders, and punctuation</li>
+            <li class="li-disc mr-btm-0"><strong>No installation required</strong> — open in any browser on Windows, macOS, Linux, Android, or iOS and start typing immediately</li>
+            <li class="li-disc mr-btm-0"><strong>Works on all devices</strong> — optimized for mobile phones, tablets, and desktop computers</li>
+            <li class="li-disc mr-btm-0"><strong>Export options</strong> — copy to clipboard, download as .txt or .doc, or print directly</li>
+            <li class="li-disc mr-btm-0"><strong>Completely free</strong> — no sign-up, no limits, no hidden fees</li>
+            <li class="li-disc mr-btm-0"><strong>Dark mode support</strong> — comfortable typing day or night</li>
+          </ul>
         </div>
 
-        <div class="w-full mr-btm-2 animate-section">
+        <div class="w-full mr-btm-2">
           <h2 class="mr-btm-05">About the Amharic Language &amp; Ge'ez Script (ፊደል)</h2>
-
-          <div class="stagger-in" style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem;">
-            <div class="border-main border-rdx-1 pd-1 flex flex-col align-center hover-stats" style="flex: 1; min-width: 110px; background: var(--bg-muted);">
-              <span class="count-up" data-num="35" data-suffix="M+" style="font-size: 1.5rem; font-weight: 700; line-height: 1.2; color: var(--primary);">0</span>
-              <span class="font-small text-muted-foreground" style="text-align: center;">Native Speakers</span>
-            </div>
-            <div class="border-main border-rdx-1 pd-1 flex flex-col align-center hover-stats" style="flex: 1; min-width: 110px; background: var(--bg-muted);">
-              <span class="count-up" data-num="230" data-suffix="+" style="font-size: 1.5rem; font-weight: 700; line-height: 1.2; color: var(--primary);">0</span>
-              <span class="font-small text-muted-foreground" style="text-align: center;">Fidel Characters</span>
-            </div>
-            <div class="border-main border-rdx-1 pd-1 flex flex-col align-center hover-stats" style="flex: 1; min-width: 110px; background: var(--bg-muted);">
-              <span class="count-up" data-num="33" data-suffix="" style="font-size: 1.5rem; font-weight: 700; line-height: 1.2; color: var(--primary);">0</span>
-              <span class="font-small text-muted-foreground" style="text-align: center;">Base Consonants</span>
-            </div>
-            <div class="border-main border-rdx-1 pd-1 flex flex-col align-center hover-stats" style="flex: 1; min-width: 110px; background: var(--bg-muted);">
-              <span class="count-up" data-num="2000" data-suffix="+" style="font-size: 1.5rem; font-weight: 700; line-height: 1.2; color: var(--primary);">0</span>
-              <span class="font-small text-muted-foreground" style="text-align: center;">Years Old</span>
-            </div>
-          </div>
-
           <p class="text-muted-foreground mr-btm-05">
-            Amharic (አማርኛ) is the official working language of Ethiopia and is spoken by over <strong>35 million native speakers</strong> and <strong>25 million second-language speakers</strong> worldwide — including large Ethiopian diaspora communities in the United States, Israel, Germany, the United Kingdom, and the Middle East. It is the second most spoken Semitic language after Arabic.
+            Amharic (አማርኛ) is the official working language of Ethiopia and is spoken by over 35 million native speakers and 25 million second-language speakers worldwide — including large Ethiopian diaspora communities in the United States, Israel, Germany, the United Kingdom, and the Middle East.
           </p>
           <p class="text-muted-foreground mr-btm-05">
-            Amharic is written in the <strong>Ge'ez script</strong> (also called <strong>Fidel</strong>, ፊደል), one of the world's oldest writing systems still in active use — over <strong>2,000 years old</strong>. It is an <em>abugida</em> (syllabary) where each character represents a consonant-vowel combination. Amharic has <strong>33 base consonants</strong>, each with <strong>7 vowel forms</strong>, producing over <strong>230 unique characters</strong>. The script is written left-to-right and is also used for Tigrinya, Tigre, and other Ethiopic languages.
+            Amharic is written in the <strong>Ge'ez script</strong> (also called <strong>Fidel</strong>, ፊደል), one of the world's oldest writing systems still in active use — over 2,000 years old. It is an <em>abugida</em> (syllabary) where each character represents a consonant-vowel combination. Amharic has <strong>33 base consonants</strong>, each with <strong>7 vowel forms</strong>, producing over <strong>230 unique characters</strong>. The script is written left-to-right and is also used for Tigrinya, Tigre, and other Ethiopic languages.
           </p>
           <p class="text-muted-foreground">
             Most standard keyboards do not include Amharic characters, making online tools like Fidel Swift essential for Ethiopians abroad, students of the language, and anyone who needs to write in Amharic without reconfiguring their system settings.
           </p>
         </div>
 
-        <div class="w-full mr-btm-2 animate-section">
+        <div class="w-full mr-btm-2">
           <h2 class="mr-btm-05">Frequently Asked Questions</h2>
 
           <div class="details-container">
@@ -880,24 +685,9 @@
           </div>
         </div>
 
-        <div class="w-full mr-btm-2 animate-section">
-          <div class="border-main border-rdx-1 hover-cta-block" style="overflow: hidden;">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0;">
-              <div class="pd-1 flex flex-col justify-center" style="background: var(--bg-muted);">
-                <h2 class="mr-btm-05" style="font-size: 1.05rem;">Need Amharic typing everywhere on Windows?</h2>
-                <p class="font-small text-muted-foreground mr-btm-05" style="line-height: 1.5;">The Fidel Swift desktop app puts Amharic input across every app on your PC — no browser needed.</p>
-                <div class="font-small" style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.25rem 1rem;">
-                  <span style="display: flex; align-items: center; gap: 0.3rem;"><span style="color: var(--primary);">✓</span> Global hotkey</span>
-                  <span style="display: flex; align-items: center; gap: 0.3rem;"><span style="color: var(--primary);">✓</span> System tray quick-switch</span>
-                  <span style="display: flex; align-items: center; gap: 0.3rem;"><span style="color: var(--primary);">✓</span> Works offline</span>
-                  <span style="display: flex; align-items: center; gap: 0.3rem;"><span style="color: var(--primary);">✓</span> Windows 10 &amp; 11</span>
-                </div>
-              </div>
-              <div class="pd-1 flex flex-col align-center justify-center" style="text-align: center;">
-                <a href="/download"><button class="btn-primary-x xl flex align-center justify-center gap-0" style="width: auto; height: auto; padding: 0.75rem 1.5rem; font-size: 0.875rem; cursor: pointer;"><img class="sm-win-x" src="images/windows11.svg" alt=""> Download for Windows</button></a>
-              </div>
-            </div>
-          </div>
+        <div class="w-full mr-btm-2 bg-muted border-main border-rdx-1 pd-1 flex flex-col align-center justify-center">
+          <p class="text-align-center font-small text-muted-foreground mb-1">Need Amharic typing everywhere on Windows?</p>
+          <a href="/download"><button class="btn-primary-x xl mr-top-1 flex align-center justify-center gap-0" style="width: auto; height: auto; padding: 0.75rem 1.5rem; font-size: 0.875rem;"><img class="sm-win-x" src="images/windows11.svg" alt=""> Download for Windows</button></a>
         </div>
 
 
@@ -937,31 +727,6 @@
         animating = false;
       });
     }
-  })();
-
-  (function countUp() {
-    var els = document.querySelectorAll('.count-up');
-    if (!els.length) return;
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        var el = entry.target;
-        observer.unobserve(el);
-        var target = parseInt(el.getAttribute('data-num'), 10);
-        var suffix = el.getAttribute('data-suffix') || '';
-        var duration = 2000;
-        var start = performance.now();
-        function tick(now) {
-          var t = Math.min((now - start) / duration, 1);
-          var eased = 1 - Math.pow(1 - t, 3);
-          var current = Math.round(eased * target);
-          el.textContent = current.toLocaleString('en-US') + suffix;
-          if (t < 1) requestAnimationFrame(tick);
-        }
-        requestAnimationFrame(tick);
-      });
-    }, { threshold: 0.3 });
-    els.forEach(function (el) { observer.observe(el); });
   })();
 </script>
 </html>
