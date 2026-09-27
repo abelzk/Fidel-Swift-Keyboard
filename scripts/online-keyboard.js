@@ -972,4 +972,15 @@
   wireFsBtn('fs-print-btn', printBtn);
   wireFsBtn('fs-dl-txt-btn', downloadBtn);
   wireFsBtn('fs-dl-doc-btn', exportDocBtn);
+
+  /*
+   * Expose key functions on the editor element for use by the
+   * speech-to-text module (scripts/speech-to-text.js).
+   * This avoids duplicating counting, saving, and state-reset logic.
+   */
+  editor._fidelSwift = {
+    resetActiveConsonant: resetActiveConsonant,
+    updateCounts: updateCounts,
+    debounceSave: debounceSave
+  };
 })();

@@ -442,6 +442,18 @@
             <button type="button" data-format="clear-format" class="toolbar-btn" aria-label="Clear formatting" title="Clear formatting">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M8.73792 7.78021L4.84693 11.7574C3.67722 12.953 3.09236 13.5508 3.01263 14.2802C2.99579 14.4343 2.99579 14.5899 3.01263 14.744C3.09236 15.4733 3.67722 16.0711 4.84693 17.2668L4.99601 17.4191C5.62049 18.0575 5.93274 18.3766 6.30638 18.5911C6.5236 18.7157 6.75482 18.8134 6.99505 18.882C7.40827 19 7.85149 19 8.73792 19C9.62436 19 10.0676 19 10.4808 18.882C10.721 18.8134 10.9522 18.7157 11.1695 18.5911C11.5431 18.3766 11.8554 18.0575 12.4798 17.4191L15.3239 14.5121M8.73792 7.78021L12.3199 4.12313C13.7065 2.70754 14.3997 1.99974 15.2627 2C16.1256 2.00026 16.8185 2.70846 18.2042 4.12487L18.9473 4.8845C20.3159 6.28342 21.0002 6.98288 21 7.85008C20.9997 8.71728 20.315 9.41633 18.9456 10.8144L15.3239 14.5121M8.73792 7.78021L15.3239 14.5121" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 22L21 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
+            <div class="toolbar-divider"></div>
+            <button type="button" id="stt-mic-btn" class="stt-mic-btn" aria-label="Start voice dictation" aria-pressed="false" data-stt-state="idle" title="Voice dictation (Amharic)">
+              <span class="stt-ring"></span>
+              <!-- Hugeicons: Microphone 01 (stroke) — https://hugeicons.com — MIT-licensed -->
+              <svg class="stt-icon-mic" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M17 7V11C17 13.7614 14.7614 16 12 16C9.23858 16 7 13.7614 7 11V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 7H14M17 11H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 11C20 15.4183 16.4183 19 12 19M4 11C4 15.4183 7.58172 19 12 19M12 19V22M12 22H15M12 22H9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <!-- Hugeicons: Stop (stroke) — https://hugeicons.com — MIT-licensed -->
+              <svg class="stt-icon-stop" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div id="stt-waveform" class="stt-waveform" aria-hidden="true">
+              <div class="stt-bar"></div><div class="stt-bar"></div><div class="stt-bar"></div>
+              <div class="stt-bar"></div><div class="stt-bar"></div>
+            </div>
           </div>
             <button id="toolbar-scroll-right" class="toolbar-scroll-arrow" aria-label="Scroll toolbar right" title="Scroll right">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -457,10 +469,18 @@
             data-placeholder="Start typing Amharic here..."
             style="min-height: 220px; max-height: 70vh; overflow-y: auto; font-size: 1.2rem; line-height: 1.8; color: var(--text); outline: none;"></div>
 
+          <div id="stt-interim-bar" class="stt-interim-bar" aria-hidden="true">
+            <span class="stt-interim-label">Hearing</span>
+            <span id="stt-interim-text" class="stt-interim-text"></span>
+          </div>
+
+          <div id="stt-live-region" class="sr-only" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;"></div>
+
           <div class="flex flex-wrap gap-1 align-center mr-top-1">
             <span class="txt-small text-muted-foreground">Chars: <span id="char-count">0</span></span>
             <span class="txt-small text-muted-foreground">Words: <span id="word-count">0</span></span>
             <span class="txt-small text-muted-foreground">Status: <span id="save-status"></span></span>
+            <span id="stt-status" class="stt-status-text" data-stt-level="" aria-live="off"></span>
           </div>
 
           <div class="flex flex-wrap gap-1 mr-top-1">
@@ -527,6 +547,11 @@
             <button id="fs-dl-doc-btn" class="action-btn" style="justify-content: flex-start;" aria-label="Export as DOC file" title="Export as DOC file">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M8 7L16 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 11L12 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 21.5V21C13 18.1716 13 16.7574 13.8787 15.8787C14.7574 15 16.1716 15 19 15H19.5M20 13.3431V10C20 6.22876 20 4.34315 18.8284 3.17157C17.6569 2 15.7712 2 12 2C8.22877 2 6.34315 2 5.17157 3.17157C4 4.34314 4 6.22876 4 10L4 14.5442C4 17.7892 4 19.4117 4.88607 20.5107C5.06508 20.7327 5.26731 20.9349 5.48933 21.1139C6.58831 22 8.21082 22 11.4558 22C12.1614 22 12.5141 22 12.8372 21.886C12.9044 21.8623 12.9702 21.835 13.0345 21.8043C13.3436 21.6564 13.593 21.407 14.0919 20.9081L18.8284 16.1716C19.4065 15.5935 19.6955 15.3045 19.8478 14.9369C20 14.5694 20 14.1606 20 13.3431Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               .doc
+            </button>
+            <button id="fs-stt-mic-btn" class="action-btn stt-fs-mic-btn" style="justify-content: flex-start;" aria-label="Voice dictation" aria-pressed="false" title="Voice dictation (Amharic)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M17 7V11C17 13.7614 14.7614 16 12 16C9.23858 16 7 13.7614 7 11V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 7H14M17 11H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 11C20 15.4183 16.4183 19 12 19M4 11C4 15.4183 7.58172 19 12 19M12 19V22M12 22H15M12 22H9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="stt-fs-label-start">Dictate</span>
+              <span class="stt-fs-label-stop">Stop</span>
             </button>
           </div>
         </div>
@@ -679,7 +704,7 @@
             <details>
               <summary>Is my typed Amharic text saved or stored?</summary>
               <div class="details-content">
-                <p>No. All typing happens locally in your browser. Your text is never sent to any server or stored online, ensuring complete privacy.</p>
+                <p>All typing and phonetic conversion happens locally in your browser. Your text is never sent to any server or stored online. If you use the optional voice dictation feature, your browser's built-in speech recognition may send audio to the browser provider's cloud speech service (e.g., Google servers for Chrome) for processing. The recognized text is returned to your browser and stays local — it is not stored by Fidel Swift. If you prefer full privacy, you can type normally without enabling the microphone.</p>
               </div>
             </details>
           </div>
@@ -710,6 +735,7 @@
 <script src="scripts/navToggle.js"></script>
 <script src="scripts/preloader-def.js"></script>
 <script src="scripts/online-keyboard.js"></script>
+<script src="scripts/speech-to-text.js"></script>
 <script>
   (function() {
     var details = document.querySelectorAll('.details-container details');
